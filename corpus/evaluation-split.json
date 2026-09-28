@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "page_numbering": "one-based PDF order",
+  "pages": [
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 7,
+      "layout_tags": [
+        "grid",
+        "horizontal-strips"
+      ],
+      "rationale": "Five stacked story panels provide a simple reading-order baseline.",
+      "split": "dev"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 10,
+      "layout_tags": [
+        "irregular",
+        "inset",
+        "difficult-lettering"
+      ],
+      "rationale": "Action panels overlap a larger background and include stylized impact lettering.",
+      "split": "dev"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 17,
+      "layout_tags": [
+        "borderless",
+        "irregular"
+      ],
+      "rationale": "Floating figures in the white central area interrupt conventional gutters.",
+      "split": "dev"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 33,
+      "layout_tags": [
+        "grid",
+        "dense-lettering"
+      ],
+      "rationale": "Narrow vertical panels carry crowded balloons and captions.",
+      "split": "dev"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 49,
+      "layout_tags": [
+        "irregular",
+        "dense-lettering"
+      ],
+      "rationale": "Stair-stepped vertical panels and balloon chains complicate region boundaries.",
+      "split": "dev"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 67,
+      "layout_tags": [
+        "grid"
+      ],
+      "rationale": "A clear three-by-three face grid provides a regular nine-panel baseline.",
+      "split": "dev"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 54,
+      "layout_tags": [
+        "irregular"
+      ],
+      "rationale": "Three curved stained-glass panels sit above a large lower panel.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 80,
+      "layout_tags": [
+        "splash",
+        "difficult-lettering"
+      ],
+      "rationale": "Full-page figures share a background with floating captions and a large story title.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 91,
+      "layout_tags": [
+        "inset",
+        "irregular"
+      ],
+      "rationale": "A large diagonal action scene contains a tall inset above a lower strip.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "pdf_page_number": 95,
+      "layout_tags": [
+        "horizontal-strips",
+        "difficult-lettering"
+      ],
+      "rationale": "Large sound-effect lettering crosses the action strip and competes with balloons.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 11,
+      "layout_tags": [
+        "horizontal-strips",
+        "dense-lettering"
+      ],
+      "rationale": "The lower panel is covered by a dense field of overlapping thought balloons.",
+      "split": "dev"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 23,
+      "layout_tags": [
+        "irregular",
+        "borderless"
+      ],
+      "rationale": "A standing figure crosses several inset frames on a black background.",
+      "split": "dev"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 34,
+      "layout_tags": [
+        "grid",
+        "monochrome"
+      ],
+      "rationale": "Unlettered black-and-white ink artwork tests boundaries without color or balloons.",
+      "split": "dev"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 44,
+      "layout_tags": [
+        "horizontal-strips",
+        "dark",
+        "dense-lettering"
+      ],
+      "rationale": "Dark stacked panels contain small light-on-dark narration boxes.",
+      "split": "dev"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 58,
+      "layout_tags": [
+        "grid",
+        "dense-lettering"
+      ],
+      "rationale": "A face grid with uneven cell widths and a shout balloon challenges ordering.",
+      "split": "dev"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 141,
+      "layout_tags": [
+        "spread",
+        "inset",
+        "dense-lettering"
+      ],
+      "rationale": "Landscape two-page composition uses a continuous falling scene with inset panels and balloons.",
+      "split": "dev"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 20,
+      "layout_tags": [
+        "irregular",
+        "vertical-panels"
+      ],
+      "rationale": "Wide upper panels transition into three tall action panels.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 37,
+      "layout_tags": [
+        "splash",
+        "cover"
+      ],
+      "rationale": "Full-bleed cover art with a masthead and sparse speech provides a no-grid case.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 52,
+      "layout_tags": [
+        "irregular",
+        "difficult-lettering"
+      ],
+      "rationale": "Slanted panels and large sound effects cross a dark action composition.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "pdf_page_number": 59,
+      "layout_tags": [
+        "irregular",
+        "dark"
+      ],
+      "rationale": "Inset conversation panels overlap a dark larger scene.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 10,
+      "layout_tags": [
+        "grid",
+        "dense-lettering"
+      ],
+      "rationale": "Rectangular conversation panels and a black intertitle strip test caption handling.",
+      "split": "dev"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 12,
+      "layout_tags": [
+        "irregular",
+        "inset",
+        "difficult-lettering"
+      ],
+      "rationale": "Large action panel, narrow insets and impact lettering have unequal visual weight.",
+      "split": "dev"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 20,
+      "layout_tags": [
+        "grid",
+        "dense-lettering"
+      ],
+      "rationale": "Many small conversation panels create a dense grid with closely spaced balloons.",
+      "split": "dev"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 29,
+      "layout_tags": [
+        "irregular",
+        "low-contrast"
+      ],
+      "rationale": "Pale blue energy effects weaken borders around uneven panels.",
+      "split": "dev"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 31,
+      "layout_tags": [
+        "splash"
+      ],
+      "rationale": "A continuous full-page action image with floating balloons offers a story splash baseline.",
+      "split": "dev"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 37,
+      "layout_tags": [
+        "irregular",
+        "difficult-lettering"
+      ],
+      "rationale": "Explosion panels contain oversized sound effects and bright areas crossing borders.",
+      "split": "dev"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 65,
+      "layout_tags": [
+        "irregular",
+        "diagonal"
+      ],
+      "rationale": "Strongly slanted panels combine with pale blue effects and narrow side frames.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 73,
+      "layout_tags": [
+        "grid",
+        "difficult-lettering"
+      ],
+      "rationale": "A black intertitle divides the page; tall bottom panels include a large impact word.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 79,
+      "layout_tags": [
+        "grid",
+        "dense-lettering"
+      ],
+      "rationale": "A crowded multi-panel grid includes many small dialogue balloons.",
+      "split": "heldout"
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "pdf_page_number": 80,
+      "layout_tags": [
+        "splash",
+        "dense-lettering"
+      ],
+      "rationale": "A full-page circular chamber composition has floating balloons and no panel grid.",
+      "split": "heldout"
+    }
+  ]
+}
