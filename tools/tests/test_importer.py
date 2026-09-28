@@ -84,11 +84,11 @@ def test_failure_resume_and_identity(source, monkeypatch):
     assert annotation.read_text() == "curated bytes"
     assert validate_package(package)["page_order"] == manifest["page_order"]
     with pytest.raises(ValueError, match="differs"):
-        importer.import_pdf(source, profile=importer.RenderProfile(quality=85))
+        importer.import_pdf(source, profile=importer.RenderProfile(quality=90))
     alternate = importer.import_pdf(
         source,
         output=source.parent / "work/alternate",
-        profile=importer.RenderProfile(quality=85),
+        profile=importer.RenderProfile(quality=90),
     )
     assert validate_package(alternate)["page_order"] == manifest["page_order"]
     assert (
@@ -238,4 +238,51 @@ def test_nonfinite_regions_and_schema_documents(source):
 def test_invalid_profile_does_not_create_package(source):
     with pytest.raises(ValueError, match="Invalid render profile"):
         importer.import_pdf(source, profile=importer.RenderProfile(long_edge_px=0))
+    with pytest.raises(ValueError, match="Unsupported resolution policy"):
+        importer.import_pdf(
+            source, profile=importer.RenderProfile(resolution_policy="invalid")
+        )
     assert not (source.parent / "work/packages").exists()
+
+
+def test_resolution_policies_and_spreads(tmp_path, monkeypatch):
+    monkeypatch.setattr(importer, "ROOT", tmp_path)
+    pdf_path = tmp_path / "mixed.pdf"
+    # Create portrait page (100x200) and spread page (400x200)
+    p1 = Image.new("RGB", (100, 200), "red")
+    p2 = Image.new("RGB", (400, 200), "blue")
+    p1.save(pdf_path, save_all=True, append_images=[p2], resolution=72)
+
+    # 1. Fixed long edge (long_edge_px = 300)
+    pkg_fixed = importer.import_pdf(
+        pdf_path,
+        output=tmp_path / "work/pkg_fixed",
+        profile=importer.RenderProfile(
+            long_edge_px=300, resolution_policy="fixed-long-edge"
+        ),
+    )
+    manifest_fixed = validate_package(pkg_fixed)
+    p_fixed_1 = manifest_fixed["pages"][0]
+    p_fixed_2 = manifest_fixed["pages"][1]
+    assert p_fixed_1["orientation"] == "portrait"
+    assert p_fixed_1["height"] == 300
+    assert p_fixed_1["width"] == 150
+    assert p_fixed_2["orientation"] == "landscape"
+    assert p_fixed_2["width"] == 300
+    assert p_fixed_2["height"] == 150
+
+    # 2. Native embedded capped (native is 200 / 400; cap is 500)
+    pkg_native = importer.import_pdf(
+        pdf_path,
+        output=tmp_path / "work/pkg_native",
+        profile=importer.RenderProfile(
+            long_edge_px=500, resolution_policy="native-embedded-capped"
+        ),
+    )
+    manifest_native = validate_package(pkg_native)
+    p_native_1 = manifest_native["pages"][0]
+    p_native_2 = manifest_native["pages"][1]
+    assert p_native_1["height"] == 200
+    assert p_native_1["width"] == 100
+    assert p_native_2["width"] == 400
+    assert p_native_2["height"] == 200

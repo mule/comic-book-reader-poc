@@ -69,7 +69,7 @@ Use the exact source filenames from `corpus/inventory.json`. `--pages` takes one
 `--profile profile.json` accepts rendering parameters (without the computed `id`):
 
 ```json
-{"format":"webp","quality":90,"long_edge_px":3056,"resolution_policy":"native-embedded-capped","thumbnail":{"format":"webp","quality":80,"long_edge_px":360}}
+{"format":"webp","quality":85,"long_edge_px":2400,"resolution_policy":"fixed-long-edge","thumbnail":{"format":"webp","quality":80,"long_edge_px":360}}
 ```
 
 The complete format and annotation contract is in [docs/format.md](docs/format.md). `comicpoc validate PACKAGE --annotations FILE` also checks an exported annotation document against its book/source/page identity. All artwork remains untracked under `work/`; the source PDFs remain untouched.

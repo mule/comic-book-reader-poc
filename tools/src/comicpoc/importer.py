@@ -25,9 +25,9 @@ class ThumbnailSettings:
 @dataclass(frozen=True)
 class RenderProfile:
     format: str = "webp"
-    quality: int = 90
-    long_edge_px: int = 3056
-    resolution_policy: str = "native-embedded-capped"
+    quality: int = 85
+    long_edge_px: int = 2400
+    resolution_policy: str = "fixed-long-edge"
     thumbnail: ThumbnailSettings = field(default_factory=ThumbnailSettings)
 
     def manifest(self) -> dict:
@@ -41,7 +41,7 @@ class RenderProfile:
                 raise ValueError(
                     "Invalid render profile settings (edge must be 1..16384)"
                 )
-        if self.resolution_policy != "native-embedded-capped":
+        if self.resolution_policy not in ["fixed-long-edge", "native-embedded-capped"]:
             raise ValueError("Unsupported resolution policy")
         return {"id": profile_id(params), **params}
 
@@ -73,12 +73,21 @@ def render_page(
         ]
         largest = max(images, key=lambda size: size[0] * size[1], default=None)
         width, height = page.get_size()
-        # Render all PDF content, using the dominant embedded image only to choose resolution.
-        edge = min(
-            max(largest) if largest else round(max(width, height) * 2),
-            profile.long_edge_px,
-        )
-        with closing(page.render(scale=edge / max(width, height))) as bitmap:
+        max_pt = max(width, height)
+        # Render all PDF content, applying the requested resolution policy.
+        if profile.resolution_policy == "fixed-long-edge":
+            edge = profile.long_edge_px
+        elif profile.resolution_policy == "native-embedded-capped":
+            edge = min(
+                max(largest) if largest else round(max_pt * 2),
+                profile.long_edge_px,
+            )
+        else:
+            raise ValueError(
+                f"Unsupported resolution policy: {profile.resolution_policy}"
+            )
+        scale = edge / max_pt
+        with closing(page.render(scale=scale)) as bitmap:
             image = bitmap.to_pil().convert("RGB")
         try:
             image.thumbnail((edge, edge), Image.Resampling.LANCZOS)
