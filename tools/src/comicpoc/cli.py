@@ -11,6 +11,8 @@ from comicpoc.manifest import validate_annotations, validate_package
 from comicpoc.preview import contact_sheets
 from comicpoc.representation import (
     format_benchmark_table,
+    format_corpus_raster_distribution_table,
+    format_dev_pages_raster_table,
     format_extraction_table,
     run_benchmark,
 )
@@ -57,6 +59,18 @@ def main() -> int:
     )
     comp.add_argument("--book", type=str, help="Specific book_id to evaluate")
     comp.add_argument(
+        "--page-resolutions",
+        type=int,
+        nargs="+",
+        help="Custom page resolutions for benchmark",
+    )
+    comp.add_argument(
+        "--thumbnail-resolutions",
+        type=int,
+        nargs="+",
+        help="Custom thumbnail resolutions for benchmark",
+    )
+    comp.add_argument(
         "--no-visuals", action="store_true", help="Skip generating visual crops/fits"
     )
     comp.add_argument(
@@ -97,18 +111,33 @@ def main() -> int:
                 output_dir=args.output,
                 generate_visuals=not args.no_visuals,
                 evaluate_extraction_audit=not args.no_extraction,
+                page_resolutions=args.page_resolutions,
+                thumbnail_resolutions=args.thumbnail_resolutions,
                 selected_pages=args.pages,
                 selected_book=args.book,
             )
             print("# Representation Benchmark Results\n")
             print(f"Evaluated {results['dev_page_count']} DEV pages.\n")
+            if "corpus_distribution" in results:
+                print("## Corpus-Wide Embedded Raster Distribution\n")
+                print(
+                    format_corpus_raster_distribution_table(
+                        results["corpus_distribution"]
+                    )
+                )
+                print()
+            if "dev_pages_raster_info" in results:
+                print("## DEV Pages Embedded Raster Resolutions\n")
+                print(format_dev_pages_raster_table(results["dev_pages_raster_info"]))
+                print()
+            print("## Candidate Profile Measurements\n")
             print(format_benchmark_table(results))
             if results.get("extraction_results"):
-                print("\n# Direct Embedded-Image Extraction Audit\n")
+                print("\n## Direct Embedded-Image Extraction Audit\n")
                 print(format_extraction_table(results))
             if results.get("panel_crop_assessment"):
                 pca = results["panel_crop_assessment"]
-                print("\n# Cropped Panel Derivatives vs Full Page Baseline\n")
+                print("\n## Cropped Panel Derivatives vs Full Page Baseline\n")
                 print(
                     f"- Full page (WebP q85): {pca['full_page_bytes']} bytes ({pca['full_page_bytes'] / 1024:.1f} KB)"
                 )

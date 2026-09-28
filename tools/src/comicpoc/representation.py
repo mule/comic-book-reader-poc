@@ -21,6 +21,7 @@ class CandidateProfile:
     quality: int | None = None
     lossless: bool = False
     is_thumbnail: bool = False
+    is_native_raster: bool = False
 
 
 @dataclass
@@ -39,6 +40,8 @@ class CandidateMeasurement:
     total_time_s: float
     psnr_db: float
     mse: float
+    is_native_raster: bool = False
+    embedded_raster_long_edge: int | None = None
 
 
 PAGE_RESOLUTIONS = [1600, 2400, 3056, 3840]
@@ -47,9 +50,20 @@ THUMBNAIL_RESOLUTIONS = [240, 360]
 
 def build_page_candidates(
     resolutions: list[int] | None = None,
+    include_native_raster: bool = True,
 ) -> list[CandidateProfile]:
     res_list = resolutions if resolutions is not None else PAGE_RESOLUTIONS
     candidates = []
+    if include_native_raster:
+        candidates.append(
+            CandidateProfile(
+                name="webp-q85-native-raster",
+                long_edge=0,
+                format="WEBP",
+                quality=85,
+                is_native_raster=True,
+            )
+        )
     for r in res_list:
         candidates.extend(
             [
@@ -187,15 +201,26 @@ def measure_page(
     page: pdfium.PdfPage,
     candidates: list[CandidateProfile],
     native_long_edge: int = 3056,
+    native_raster_edge: int | None = None,
 ) -> list[CandidateMeasurement]:
     """Render complete page at native baseline and candidate resolutions, recording metrics."""
+    if native_raster_edge is None:
+        images = [
+            (img.get_metadata().width, img.get_metadata().height)
+            for img in page.get_objects()
+            if img.type == pdfium.raw.FPDF_PAGEOBJ_IMAGE
+        ]
+        largest = max(images, key=lambda s: s[0] * s[1], default=None)
+        native_raster_edge = max(largest) if largest else native_long_edge
+
     # Render native lossless reference
     ref_image = render_page_at_long_edge(page, native_long_edge)
 
-    # Group candidates by long_edge
+    # Group candidates by actual render long_edge
     by_edge: dict[int, list[CandidateProfile]] = {}
     for cand in candidates:
-        by_edge.setdefault(cand.long_edge, []).append(cand)
+        actual_edge = native_raster_edge if cand.is_native_raster else cand.long_edge
+        by_edge.setdefault(actual_edge, []).append(cand)
 
     measurements = []
     for edge, profiles in by_edge.items():
@@ -225,11 +250,13 @@ def measure_page(
             measurements.append(
                 CandidateMeasurement(
                     candidate_name=profile.name,
-                    long_edge=profile.long_edge,
+                    long_edge=edge,
                     format=profile.format,
                     quality=profile.quality,
                     lossless=profile.lossless,
                     is_thumbnail=profile.is_thumbnail,
+                    is_native_raster=profile.is_native_raster,
+                    embedded_raster_long_edge=native_raster_edge,
                     width=width,
                     height=height,
                     byte_size=byte_size,
@@ -579,7 +606,216 @@ def generate_visual_inspection_samples(
                 vp_canvas.save(vp_path, format="WEBP", quality=85)
                 generated_files.append(vp_path)
 
+    # 3. Native-Raster vs Upscaled Lettering & Artwork Comparisons:
+    native_upscale_dir = output_dir / "native_vs_upscale_crops"
+    native_upscale_dir.mkdir(parents=True, exist_ok=True)
+
+    native_upscale_configs = [
+        {
+            "book_name": "Archer  Armstrong Vol 1 The Michelangelo Code.pdf",
+            "pdf_page": 7,
+            "native_res": 1532,
+            "items": [
+                {
+                    "name": "aa_p7_lettering",
+                    "crop_frac": (0.28, 0.08, 0.72, 0.22),
+                    "title": "Archer p7 Lettering (Speech Balloon)",
+                },
+                {
+                    "name": "aa_p7_artwork",
+                    "crop_frac": (0.04, 0.82, 0.35, 0.98),
+                    "title": "Archer p7 Artwork (Monk & Gun)",
+                },
+            ],
+        },
+        {
+            "book_name": "Harbinger Vol 1 Omega Rising.pdf",
+            "pdf_page": 11,
+            "native_res": 1533,
+            "items": [
+                {
+                    "name": "harb_p11_lettering",
+                    "crop_frac": (0.40, 0.03, 0.85, 0.16),
+                    "title": "Harbinger p11 Lettering (Speech Balloon)",
+                },
+                {
+                    "name": "harb_p11_artwork",
+                    "crop_frac": (0.05, 0.25, 0.45, 0.48),
+                    "title": "Harbinger p11 Artwork (Peter Portrait)",
+                },
+            ],
+        },
+        {
+            "book_name": "Quantum and Woody Vol 1 The Worlds Worst Superhero Team.pdf",
+            "pdf_page": 10,
+            "native_res": 1533,
+            "items": [
+                {
+                    "name": "qw_p10_lettering",
+                    "crop_frac": (0.08, 0.16, 0.50, 0.30),
+                    "title": "Quantum & Woody p10 Lettering (Dense Dialogue)",
+                },
+                {
+                    "name": "qw_p10_artwork",
+                    "crop_frac": (0.55, 0.40, 0.92, 0.65),
+                    "title": "Quantum & Woody p10 Artwork (Woody at Desk)",
+                },
+            ],
+        },
+    ]
+
+    for cfg in native_upscale_configs:
+        pdf_path = sources_dir / cfg["book_name"]
+        if not pdf_path.is_file():
+            continue
+        with pdfium.PdfDocument(pdf_path) as doc:
+            page = doc[cfg["pdf_page"] - 1]
+            n_res = cfg["native_res"]
+            renders = {
+                f"native ({n_res}px)": render_page_at_long_edge(page, n_res),
+                "2400px (rec)": render_page_at_long_edge(page, 2400),
+                "3056px (upscaled)": render_page_at_long_edge(page, 3056),
+            }
+            for item in cfg["items"]:
+                x0f, y0f, x1f, y1f = item["crop_frac"]
+                target_h = 350
+                resized_crops = []
+                labels = []
+                for label, full_img in renders.items():
+                    w, h = full_img.size
+                    box = (
+                        round(x0f * w),
+                        round(y0f * h),
+                        round(x1f * w),
+                        round(y1f * h),
+                    )
+                    crop_img = full_img.crop(box)
+                    rw = round(crop_img.width * (target_h / crop_img.height))
+                    resized_crops.append(
+                        crop_img.resize((rw, target_h), Image.Resampling.LANCZOS)
+                    )
+                    labels.append(f"{label} - {crop_img.width}x{crop_img.height}")
+
+                strip_w = sum(img.width + 10 for img in resized_crops) + 10
+                strip = Image.new("RGB", (strip_w, target_h + 35), "#222222")
+                draw = ImageDraw.Draw(strip)
+                cur_x = 10
+                for r_img, lbl in zip(resized_crops, labels, strict=False):
+                    strip.paste(r_img, (cur_x, 25))
+                    draw.text((cur_x + 4, 6), lbl, fill="#eeeeee")
+                    cur_x += r_img.width + 10
+
+                strip_path = native_upscale_dir / f"{item['name']}_comparison.png"
+                strip.save(strip_path)
+                generated_files.append(strip_path)
+
     return generated_files
+
+
+def analyze_corpus_raster_distribution(inventory_path: Path) -> dict:
+    """Analyze embedded raster resolutions across the corpus from inventory.json."""
+    with inventory_path.open() as f:
+        inv = json.load(f)
+
+    books_summary = []
+    total_pages = 0
+    corpus_counts = {
+        "covers_3056": 0,
+        "story_1533": 0,
+        "spread_1993": 0,
+        "low_res": 0,
+    }
+    all_edge_counts: dict[int, int] = {}
+
+    for b in inv["books"]:
+        p_count = len(b["pages"])
+        total_pages += p_count
+        b_counts = {
+            "covers_3056": 0,
+            "story_1533": 0,
+            "spread_1993": 0,
+            "low_res": 0,
+        }
+        for p in b["pages"]:
+            lip = p.get("largest_image_pixels")
+            le = max(lip) if lip else None
+            if le is not None:
+                all_edge_counts[le] = all_edge_counts.get(le, 0) + 1
+            if le is None:
+                b_counts["low_res"] += 1
+            elif le >= 3000:
+                b_counts["covers_3056"] += 1
+            elif le == 1993:
+                b_counts["spread_1993"] += 1
+            elif 1200 <= le <= 1700:
+                b_counts["story_1533"] += 1
+            else:
+                b_counts["low_res"] += 1
+        for k, v in b_counts.items():
+            corpus_counts[k] += v
+        books_summary.append(
+            {
+                "book_id": b["book_id"],
+                "page_count": p_count,
+                **b_counts,
+            }
+        )
+
+    return {
+        "total_books": len(inv["books"]),
+        "total_pages": total_pages,
+        "books": books_summary,
+        "corpus_counts": corpus_counts,
+        "all_edge_counts": dict(sorted(all_edge_counts.items())),
+    }
+
+
+def format_corpus_raster_distribution_table(dist: dict) -> str:
+    """Format corpus raster resolution distribution as a Markdown table."""
+    lines = [
+        "| Book ID | ~1500–1633 px (Story) | ~3056 px (Covers/Splash) | 1993 px (Spread) | <1000 px (Spot/Ad) | Total Pages |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for b in dist["books"]:
+        s_pct = (b["story_1533"] / b["page_count"]) * 100
+        c_pct = (b["covers_3056"] / b["page_count"]) * 100
+        lines.append(
+            f"| `{b['book_id']}` | {b['story_1533']} ({s_pct:.1f}%) | {b['covers_3056']} ({c_pct:.1f}%) | {b['spread_1993']} | {b['low_res']} | {b['page_count']} |"
+        )
+    cc = dist["corpus_counts"]
+    tp = dist["total_pages"]
+    lines.append(
+        f"| **Corpus Total** | **{cc['story_1533']} ({(cc['story_1533'] / tp) * 100:.1f}%)** | **{cc['covers_3056']} ({(cc['covers_3056'] / tp) * 100:.1f}%)** | **{cc['spread_1993']} ({(cc['spread_1993'] / tp) * 100:.1f}%)** | **{cc['low_res']} ({(cc['low_res'] / tp) * 100:.1f}%)** | **{tp} (100.0%)** |"
+    )
+    return "\n".join(lines)
+
+
+def format_dev_pages_raster_table(dev_raster_info: list[dict]) -> str:
+    """Format DEV pages raster resolution audit as a Markdown table."""
+    lines = [
+        "| Book ID | PDF Page | Embedded Raster | Long Edge (px) | Has PDF Text | Category |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for p in dev_raster_info:
+        r_str = (
+            f"{p['embedded_raster_size'][0]}x{p['embedded_raster_size'][1]}"
+            if p["embedded_raster_size"]
+            else "None"
+        )
+        le = p["embedded_raster_long_edge"]
+        cat = (
+            "Story (~1533)"
+            if le and 1200 <= le <= 1700
+            else (
+                "Cover/Splash (3056)"
+                if le and le >= 3000
+                else ("Spread (1993)" if le == 1993 else "Spot/Ad")
+            )
+        )
+        lines.append(
+            f"| `{p['book_id']}` | {p['pdf_page_number']} | {r_str} | {le} | {'Yes' if p['has_text_objects'] else 'No'} | {cat} |"
+        )
+    return "\n".join(lines)
 
 
 def run_benchmark(
@@ -606,6 +842,12 @@ def run_benchmark(
     with inventory_path.open() as f:
         inv_data = json.load(f)
 
+    corpus_distribution = analyze_corpus_raster_distribution(inventory_path)
+    inv_books = {
+        b["book_id"]: {p["pdf_page_number"]: p for p in b["pages"]}
+        for b in inv_data["books"]
+    }
+
     book_sources = {b["book_id"]: b["source"] for b in inv_data["books"]}
     dev_pages = [p for p in eval_data["pages"] if p["split"] == "dev"]
 
@@ -623,6 +865,7 @@ def run_benchmark(
 
     per_page_measurements = []
     extraction_results = []
+    dev_pages_raster_info = []
 
     # Cache open documents
     open_docs: dict[str, pdfium.PdfDocument] = {}
@@ -633,6 +876,19 @@ def run_benchmark(
             source_file = book_sources[bid]
             pdf_path = sources_dir / source_file
 
+            p_inv = inv_books.get(bid, {}).get(pnum, {})
+            lip = p_inv.get("largest_image_pixels")
+            raster_edge = max(lip) if lip else None
+            dev_pages_raster_info.append(
+                {
+                    "book_id": bid,
+                    "pdf_page_number": pnum,
+                    "embedded_raster_size": lip,
+                    "embedded_raster_long_edge": raster_edge,
+                    "has_text_objects": p_inv.get("has_text_objects", False),
+                }
+            )
+
             if bid not in open_docs:
                 open_docs[bid] = pdfium.PdfDocument(pdf_path)
             doc = open_docs[bid]
@@ -640,7 +896,10 @@ def run_benchmark(
 
             # Measure representation candidates
             page_measurements = measure_page(
-                page, all_candidates, native_long_edge=3056
+                page,
+                all_candidates,
+                native_long_edge=3056,
+                native_raster_edge=raster_edge,
             )
             for m in page_measurements:
                 per_page_measurements.append(
@@ -689,11 +948,14 @@ def run_benchmark(
             candidates_summary.append(
                 {
                     "candidate_name": c_name,
-                    "long_edge": first["long_edge"],
+                    "long_edge": first["long_edge"]
+                    if not first.get("is_native_raster")
+                    else "native-raster",
                     "format": first["format"],
                     "quality": first["quality"],
                     "lossless": first["lossless"],
                     "is_thumbnail": first["is_thumbnail"],
+                    "is_native_raster": first.get("is_native_raster", False),
                     "avg_bytes_per_page": avg_bytes,
                     "total_bytes_dev_pages": total_bytes_dev,
                     "avg_render_time_s": avg_render_time,
@@ -728,6 +990,8 @@ def run_benchmark(
 
         results = {
             "dev_page_count": len(dev_pages),
+            "corpus_distribution": corpus_distribution,
+            "dev_pages_raster_info": dev_pages_raster_info,
             "candidates_summary": candidates_summary,
             "extraction_results": extraction_results,
             "panel_crop_assessment": panel_crop_assessment,
@@ -759,8 +1023,9 @@ def format_benchmark_table(results: dict) -> str:
         psnr_str = (
             "inf" if not np.isfinite(c["avg_psnr_db"]) else f"{c['avg_psnr_db']:.2f}"
         )
+        res_str = "native-raster" if c.get("is_native_raster") else str(c["long_edge"])
         lines.append(
-            f"| `{c['candidate_name']}` | {c['long_edge']} | {c['format']} | {q_str} | {avg_kb:.1f} KB | {dev_mb:.2f} MB | {corp_mb:.1f} MB | {c['avg_render_time_s']:.3f} | {c['avg_encode_time_s']:.3f} | {c['avg_total_time_s']:.3f} | {psnr_str} |"
+            f"| `{c['candidate_name']}` | {res_str} | {c['format']} | {q_str} | {avg_kb:.1f} KB | {dev_mb:.2f} MB | {corp_mb:.1f} MB | {c['avg_render_time_s']:.3f} | {c['avg_encode_time_s']:.3f} | {c['avg_total_time_s']:.3f} | {psnr_str} |"
         )
     return "\n".join(lines)
 
