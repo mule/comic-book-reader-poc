@@ -16,3 +16,5 @@
 /local-annotations/
 *.annotations.json
 *.[pP][dD][fF]
+p-*.webp
+.playwright-mcp/

@@ -21,5 +21,10 @@ Direct dependencies and build tools checked against upstream license files on 20
 | uv | Python dependency management | Apache-2.0 OR MIT; [MIT license](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT) |
 | pnpm | Reader dependency management | MIT; [LICENSE](https://github.com/pnpm/pnpm/blob/main/LICENSE) |
 | jsonschema | Offline manifest and annotation validation | MIT; [upstream COPYING](https://github.com/python-jsonschema/jsonschema/blob/main/COPYING), checked 2026-09-28; resolved version and transitive packages locked in tools/uv.lock |
+| ajv | Manifest validation against the canonical JSON schema in the browser | MIT; [LICENSE](https://github.com/ajv-validator/ajv/blob/master/LICENSE), checked 2026-09-28 |
+| @testing-library/react, @testing-library/dom | Reader component tests | MIT; [LICENSE](https://github.com/testing-library/dom-testing-library/blob/main/LICENSE) |
+| @testing-library/user-event, @testing-library/jest-dom | Reader test interaction and matchers | MIT; same project licenses |
+| jsdom | Vitest browser environment for unit tests | MIT; [LICENSE](https://github.com/jsdom/jsdom/blob/main/README.md#license) |
+| @types/node | Types for the Vite plugin and test tooling | MIT; [DefinitelyTyped LICENSE](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/main/LICENSE) |
 
 Pillow and PDFium wheels bundle native libraries with their own license notices. Preserve the installed distribution notices if packaging these tools for redistribution. Purchased comics and generated previews remain subject to their original rights and are excluded from Git and CI.

@@ -1,6 +1,6 @@
 # Comic reader POC
 
-Independent local PDF-to-web-reader experiment. Purchased source files and all derived artwork stay outside Git. The reader is intentionally a minimal React scaffold; conversion, reading and editing arrive in subsequent issues of epic #1.
+Independent local PDF-to-web-reader experiment. Purchased source files and all derived artwork stay outside Git. The `tools/` side inventories and imports purchased PDFs into local packages; the `reader/` app (React + TypeScript) reads them with bounded loading, zoom/pan and local progress. Guided reading and panel editing arrive in subsequent issues of epic #1.
 
 ## Setup and checks
 
@@ -73,3 +73,30 @@ Use the exact source filenames from `corpus/inventory.json`. `--pages` takes one
 ```
 
 The complete format and annotation contract is in [docs/format.md](docs/format.md). `comicpoc validate PACKAGE --annotations FILE` also checks an exported annotation document against its book/source/page identity. All artwork remains untracked under `work/`; the source PDFs remain untouched.
+
+## Read the books
+
+Import at least one package (above), then from `reader/`:
+
+```sh
+pnpm dev            # http://localhost:5173
+```
+
+The dev/preview server exposes imported packages read-only at `/packages/` from `COMIC_PACKAGES_DIR` (default `../work/packages`, relative to `reader/`). `/packages/index.json` lists only complete packages (`COMPLETE.json` present). The middleware refuses to serve `.pdf` files and refuses any root that resolves into `test-data`; it never writes to packages. Point it elsewhere with `COMIC_PACKAGES_DIR=path pnpm dev`.
+
+The reader validates each manifest with ajv against the canonical `format/manifest.schema.json` plus the semantic checks from `docs/format.md`, verifies the manifest hash recorded in `COMPLETE.json`, loads only a bounded window (current page + 1 back / 2 ahead) and releases images outside it, and persists reading position in localStorage keyed by `book.id` + `source.sha256`. Keyboard: arrows/PageUp/PageDown/Home/End, `+`/`-`/`0` zoom, `Esc` reset; mouse wheel/drag/double-click and touch swipe/pinch/double-tap gestures; lazy thumbnail strip under "Pages".
+
+Evidence from reading all three books end to end (network counts, bounded prefetch, memory, restore and failure behavior) is in [docs/reader-report.md](docs/reader-report.md).
+
+### LAN tablet (no hosted infrastructure)
+
+Everything is served from your machine; there is no backend beyond the Vite dev/preview server:
+
+```sh
+cd reader
+pnpm dev:lan        # opt-in: binds 0.0.0.0; Vite prints a http://<lan-ip>:5173 URL
+# or a production build:
+pnpm build && pnpm preview   # preview also binds 0.0.0.0 (port 4173)
+```
+
+`pnpm dev` binds to localhost only, so purchased artwork is never exposed to the network by default. Use `dev:lan` only on a trusted network. Open the printed LAN URL on a tablet connected to the same network. The reader is a static client; packages are streamed from the local packages directory only. Real tablet/touch hardware testing is **PENDING** — see the reader report; only desktop Chrome and a touch-enabled viewport emulation have been verified so far.
