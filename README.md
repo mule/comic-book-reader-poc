@@ -31,11 +31,15 @@ Place the three purchased PDFs in root `test-data/` (a symlink is supported). Ne
 uv run comicpoc inventory
 uv run comicpoc inventory --check
 uv run comicpoc contact-sheet '../test-data/Harbinger Vol 1 Omega Rising.pdf' --pages 11 23 34 44 58 141
+uv run comicpoc compare-representations
 ```
 
 `inventory` writes deterministic, artwork-free `corpus/inventory.json`. `--check` compares relative source paths, SHA-256 and byte sizes, names missing/changed/added books, returns 1 on any difference, and never rewrites the baseline. Use `--sources PATH` and `--output PATH` for a separate experiment. Defaults resolve relative to this source checkout, regardless of current directory; the Python package is intended for editable installation with uv, not distribution as a standalone wheel.
 
 `contact-sheet` renders complete pages to JPEG thumbnails with a 1000-pixel longest edge and labeled 20-page sheets under `work/contact-sheets/`. Omit `--pages` to render all pages. `--output` must resolve inside this checkout's `work/`. Separate output directories avoid overwriting sheets from different selections. Page numbers are **one-based PDF order**, including covers and front matter.
+
+`compare-representations` renders and benchmarks the 18 DEV pages from `corpus/evaluation-split.json` across candidate resolutions (1600, 2400, 3056, 3840 px) and encodings (PNG, WebP lossless/q75/q85/q92, JPEG q90) plus thumbnail candidates (240, 360 px). It measures render/encode time, output bytes, and PSNR vs native 3056 baseline, audits direct embedded-image extraction feasibility, evaluates panel crop derivative overhead vs full-page baseline, and generates side-by-side lettering crops and simulated viewport fits under `work/representation/`. See [representation report](docs/representation-report.md).
+
 
 Inventory geometry is PDFium's effective page size in points (1/72 inch for this corpus), including page rotation; `rotation_degrees` records that rotation separately. Image counts include nested Form XObjects and count placements, not unique image streams. Largest image dimensions are chosen by pixel area. `has_text_objects` refers to PDF text objects, not lettering rasterized into images; this is not OCR. Form nesting beyond 64 levels fails explicitly. Password-protected PDFs that cannot open without a password fail rather than disappearing from the inventory; no password input is provided in this foundation.
 
