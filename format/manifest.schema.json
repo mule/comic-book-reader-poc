@@ -71,7 +71,10 @@
           "minimum": 1
         },
         "resolution_policy": {
-          "const": "native-embedded-capped"
+          "enum": [
+            "fixed-long-edge",
+            "native-embedded-capped"
+          ]
         },
         "thumbnail": {
           "type": "object",
