@@ -9,6 +9,11 @@ from comicpoc.corpus import ROOT, check_inventory, inventory
 from comicpoc.importer import RenderProfile, ThumbnailSettings, import_pdf
 from comicpoc.manifest import validate_annotations, validate_package
 from comicpoc.preview import contact_sheets
+from comicpoc.representation import (
+    format_benchmark_table,
+    format_extraction_table,
+    run_benchmark,
+)
 
 
 def main() -> int:
@@ -37,6 +42,28 @@ def main() -> int:
     val = commands.add_parser("validate", help="Verify package schema and every asset")
     val.add_argument("package", type=Path)
     val.add_argument("--annotations", type=Path)
+    comp = commands.add_parser(
+        "compare-representations",
+        help="Compare resolutions and encodings on DEV pages",
+    )
+    comp.add_argument("--sources", type=Path, default=ROOT / "test-data")
+    comp.add_argument(
+        "--eval-split", type=Path, default=ROOT / "corpus/evaluation-split.json"
+    )
+    comp.add_argument("--inventory", type=Path, default=ROOT / "corpus/inventory.json")
+    comp.add_argument("--output", type=Path, default=ROOT / "work/representation")
+    comp.add_argument(
+        "--pages", type=int, nargs="+", help="Specific PDF page numbers to evaluate"
+    )
+    comp.add_argument("--book", type=str, help="Specific book_id to evaluate")
+    comp.add_argument(
+        "--no-visuals", action="store_true", help="Skip generating visual crops/fits"
+    )
+    comp.add_argument(
+        "--no-extraction",
+        action="store_true",
+        help="Skip direct image extraction audit",
+    )
     args = parser.parse_args()
     try:
         if args.command == "import":
@@ -62,6 +89,40 @@ def main() -> int:
         elif args.command == "contact-sheet":
             for path in contact_sheets(args.source, args.output, args.pages):
                 print(path)
+        elif args.command == "compare-representations":
+            results = run_benchmark(
+                sources_dir=args.sources,
+                eval_split_path=args.eval_split,
+                inventory_path=args.inventory,
+                output_dir=args.output,
+                generate_visuals=not args.no_visuals,
+                evaluate_extraction_audit=not args.no_extraction,
+                selected_pages=args.pages,
+                selected_book=args.book,
+            )
+            print("# Representation Benchmark Results\n")
+            print(f"Evaluated {results['dev_page_count']} DEV pages.\n")
+            print(format_benchmark_table(results))
+            if results.get("extraction_results"):
+                print("\n# Direct Embedded-Image Extraction Audit\n")
+                print(format_extraction_table(results))
+            if results.get("panel_crop_assessment"):
+                pca = results["panel_crop_assessment"]
+                print("\n# Cropped Panel Derivatives vs Full Page Baseline\n")
+                print(
+                    f"- Full page (WebP q85): {pca['full_page_bytes']} bytes ({pca['full_page_bytes'] / 1024:.1f} KB)"
+                )
+                print(
+                    f"- Sum of {pca['panel_count']} panel crops: {pca['crops_total_bytes']} bytes ({pca['crops_total_bytes'] / 1024:.1f} KB)"
+                )
+                print(f"- Ratio (crops / full): {pca['ratio_crops_to_full']:.2%}")
+            if results.get("visual_files"):
+                print(
+                    f"\nGenerated {len(results['visual_files'])} visual inspection files under {args.output}"
+                )
+            print(
+                f"\nWrote full machine-readable JSON to {args.output / 'benchmark-results.json'}"
+            )
         elif args.check:
             problems = check_inventory(
                 args.sources, json.loads(args.output.read_text())

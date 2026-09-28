@@ -7,6 +7,7 @@ Direct dependencies and build tools checked against upstream license files on 20
 | pypdfium2 | PDF inspection/rendering | Apache-2.0 OR BSD-3-Clause; [upstream licensing](https://github.com/pypdfium2-team/pypdfium2#licensing) |
 | PDFium (bundled by pypdfium2) | Native PDF engine | BSD-style, plus third-party notices; [bundled license notices](https://github.com/pypdfium2-team/pypdfium2/blob/main/BUILD_LICENSES/pdfium.txt) |
 | Pillow | Synthetic PDFs and thumbnails | MIT-CMU (historical PIL license); [LICENSE](https://github.com/python-pillow/Pillow/blob/main/LICENSE) |
+| numpy | Representation difference metrics (PSNR, MSE) | BSD-3-Clause; [LICENSE](https://github.com/numpy/numpy/blob/main/LICENSE.txt) |
 | pytest | Python tests | MIT; [LICENSE](https://github.com/pytest-dev/pytest/blob/main/LICENSE) |
 | ruff | Python lint/format | MIT; [LICENSE](https://github.com/astral-sh/ruff/blob/main/LICENSE) |
 | hatchling | Editable Python build | MIT; [LICENSE](https://github.com/pypa/hatch/blob/master/LICENSE.txt) |
