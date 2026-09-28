@@ -94,9 +94,9 @@ Everything is served from your machine; there is no backend beyond the Vite dev/
 
 ```sh
 cd reader
-pnpm dev            # already binds 0.0.0.0; Vite prints a http://<lan-ip>:5173 URL
+pnpm dev:lan        # opt-in: binds 0.0.0.0; Vite prints a http://<lan-ip>:5173 URL
 # or a production build:
 pnpm build && pnpm preview   # preview also binds 0.0.0.0 (port 4173)
 ```
 
-Open the printed LAN URL on a tablet connected to the same network. The reader is a static client; packages are streamed from the local packages directory only. Real tablet/touch hardware testing is **PENDING** — see the reader report; only desktop Chrome and a touch-enabled viewport emulation have been verified so far.
+`pnpm dev` binds to localhost only, so purchased artwork is never exposed to the network by default. Use `dev:lan` only on a trusted network. Open the printed LAN URL on a tablet connected to the same network. The reader is a static client; packages are streamed from the local packages directory only. Real tablet/touch hardware testing is **PENDING** — see the reader report; only desktop Chrome and a touch-enabled viewport emulation have been verified so far.

@@ -85,3 +85,13 @@ cd ../reader && pnpm dev                                        # http://localho
 ```
 
 Unit checks: `cd reader && pnpm typecheck && pnpm lint && pnpm test && pnpm build` (75 tests). Failure injection: copy a package under `work/broken-packages/`, mutate as above, run `COMIC_PACKAGES_DIR=../work/broken-packages pnpm dev -- --port 5200`.
+
+## Orchestrator re-verification (2026-09-28)
+
+Re-run after the corpus was re-imported with the #3 default profile (WebP q85, fixed 2400 px long edge), Playwright-driven Chromium at 1280x832 against `pnpm dev`:
+
+- Library lists the three complete packages with lazily loaded covers; `/packages/<id>/pages/x.pdf` returns 403 and an encoded traversal attempt returns 404.
+- Harbinger PDF p141 (2400x1846 spread) is shown intact and fits the viewport.
+- From Home, 20 consecutive forward turns produced exactly one new `/pages/` request per turn (1…20), zero `.pdf`/`test-data` requests, one `<img>` in the DOM, JS heap ~9 MB.
+- Reload restored PDF page 21; positions survived the profile re-import because page IDs depend only on source bytes.
+- `pnpm dev` now binds to localhost only; LAN access is opt-in via `pnpm dev:lan`.
