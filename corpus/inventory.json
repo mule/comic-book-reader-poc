@@ -1,0 +1,4703 @@
+{
+  "schema_version": 1,
+  "books": [
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "source": "Archer  Armstrong Vol 1 The Michelangelo Code.pdf",
+      "sha256": "53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a",
+      "byte_size": 68357268,
+      "page_count": 111,
+      "encrypted": false,
+      "pages": [
+        {
+          "pdf_page_number": 1,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 2,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 3,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 4,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 5,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 6,
+          "width_points": 479.02313232421875,
+          "height_points": 734.697509765625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            1088,
+            1633
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 7,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 8,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 9,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 10,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 11,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 12,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 13,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 14,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 15,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 16,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 17,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 18,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 19,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 20,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 21,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 22,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 23,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 24,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 25,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 26,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 27,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 28,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 29,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 30,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 31,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 32,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 33,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 34,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 35,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 36,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 37,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 38,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 39,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 40,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            981,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 41,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 42,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 43,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 44,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 45,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 46,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 47,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 48,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 49,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 50,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 51,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 52,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 53,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 54,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 55,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 56,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            983,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 57,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 58,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 59,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 60,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 61,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 62,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 63,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 64,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 65,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 66,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 67,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 68,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 69,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 70,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 71,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 72,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 73,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 74,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 75,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 76,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 3,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 77,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 78,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 79,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 80,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 81,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 82,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 83,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 84,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 85,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 86,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 87,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 88,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 89,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 90,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 91,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 92,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 93,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 94,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 95,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 96,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 97,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 98,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            975,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 99,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 100,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 101,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 102,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 103,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 104,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 105,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 106,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 107,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 108,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 109,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 110,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 111,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1982,
+            3050
+          ],
+          "has_text_objects": false
+        }
+      ]
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "source": "Harbinger Vol 1 Omega Rising.pdf",
+      "sha256": "69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979",
+      "byte_size": 94015425,
+      "page_count": 149,
+      "encrypted": false,
+      "pages": [
+        {
+          "pdf_page_number": 1,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 2,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 3,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 4,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 5,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 6,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 7,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2399,
+          "largest_image_pixels": [
+            1039,
+            1570
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 8,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 9,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 10,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 11,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 12,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 13,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 14,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 15,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 16,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 17,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 18,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 19,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 20,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 21,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 22,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 23,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 24,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 25,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 26,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 27,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 28,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 29,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 30,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 31,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 32,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 33,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 34,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 35,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 36,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 37,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            1053,
+            1590
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 38,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 5,
+          "largest_image_pixels": [
+            320,
+            216
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 39,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 40,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 41,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 42,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 43,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 44,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 45,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 46,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 47,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 48,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 49,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 50,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 51,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 52,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 53,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 54,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 55,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 56,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 57,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 58,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 59,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 60,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 61,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 62,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 63,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 64,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 65,
+          "width_points": 478.9009094238281,
+          "height_points": 733.7463989257812,
+          "rotation_degrees": 0,
+          "embedded_image_count": 6,
+          "largest_image_pixels": [
+            1037,
+            1560
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 66,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            790,
+            560
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 67,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 68,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 69,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 70,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 71,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 72,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 73,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 74,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 75,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 76,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 77,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 78,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 79,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 80,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1020,
+            1548
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 81,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1497
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 82,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 83,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 84,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 85,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 86,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 87,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 88,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 89,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 90,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 91,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1983,
+            3054
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 92,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 93,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 4,
+          "largest_image_pixels": [
+            1031,
+            1250
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 94,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            797,
+            585
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 95,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1551
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 96,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1529
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 97,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1526
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 98,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1524
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 99,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1526
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 100,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1571
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 101,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1523
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 102,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1523
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 103,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1521
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 104,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1037,
+            1525
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 105,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1571
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 106,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1523
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 107,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 108,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1523
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 109,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1528
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 110,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1530
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 111,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1037,
+            1529
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 112,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1527
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 113,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1523
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 114,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 5,
+          "largest_image_pixels": [
+            1032,
+            1517
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 115,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 11,
+          "largest_image_pixels": [
+            1032,
+            1522
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 116,
+          "width_points": 476.8777770996094,
+          "height_points": 733.316650390625,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1036,
+            1524
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 117,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 118,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 119,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 120,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 121,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 122,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            951,
+            1460
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 123,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            791,
+            471
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 124,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 125,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 126,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 127,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 128,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 129,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 130,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 131,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 132,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            952,
+            1444
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 133,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            991,
+            1504
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 134,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 135,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 136,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1000,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 137,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1000,
+            1535
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 138,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 139,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1000,
+            1535
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 140,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 141,
+          "width_points": 954.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1993,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 142,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            962,
+            1460
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 143,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 144,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            992,
+            1498
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 145,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 146,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 147,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 148,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 149,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1988,
+            3056
+          ],
+          "has_text_objects": false
+        }
+      ]
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "source": "Quantum and Woody Vol 1 The Worlds Worst Superhero Team.pdf",
+      "sha256": "2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71",
+      "byte_size": 124784980,
+      "page_count": 129,
+      "encrypted": false,
+      "pages": [
+        {
+          "pdf_page_number": 1,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 2,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 3,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 4,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 5,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 6,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 7,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 8,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 9,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 10,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 11,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 12,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 13,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 14,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 15,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 16,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 17,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 18,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 19,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 20,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 21,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 22,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 23,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 24,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 25,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 26,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 27,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 28,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 29,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 27,
+          "largest_image_pixels": [
+            996,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 30,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 31,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 32,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 33,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 34,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 35,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 36,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 37,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 38,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 39,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 40,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1529
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 41,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 42,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 43,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 44,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1525
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 45,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 46,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 47,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1524
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 48,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1528
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 49,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1525
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 50,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 51,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1528
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 52,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1530
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 53,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1529
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 54,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 55,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 56,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 57,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1529
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 58,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 59,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 60,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 61,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 62,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 63,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 64,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 65,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 66,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 67,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 68,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 69,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 70,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 71,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 72,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 73,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1000,
+            1535
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 74,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1000,
+            1535
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 75,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1000,
+            1535
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 76,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 77,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 78,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 79,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 80,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 81,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            998,
+            1532
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 82,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 2,
+          "largest_image_pixels": [
+            999,
+            1534
+          ],
+          "has_text_objects": true
+        },
+        {
+          "pdf_page_number": 83,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 84,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 85,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 86,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 87,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 88,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 89,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 90,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 91,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 92,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 93,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 94,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 95,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 15,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 96,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 97,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 98,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 99,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 100,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 101,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 102,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 103,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 104,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 105,
+          "width_points": 477.0,
+          "height_points": 733.5,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            999,
+            1533
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 106,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 107,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 108,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 109,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 110,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 111,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 112,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 113,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 114,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 115,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 116,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 117,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 118,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 119,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 120,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 121,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 122,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 123,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 124,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 125,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 126,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 127,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 128,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        },
+        {
+          "pdf_page_number": 129,
+          "width_points": 481.8898010253906,
+          "height_points": 737.0078735351562,
+          "rotation_degrees": 0,
+          "embedded_image_count": 1,
+          "largest_image_pixels": [
+            1987,
+            3056
+          ],
+          "has_text_objects": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[project]
+name = "comicpoc"
+version = "0.1.0"
+description = "Local comic PDF corpus tooling"
+requires-python = ">=3.12"
+dependencies = ["pypdfium2>=5.13", "Pillow>=11"]
+
+[project.scripts]
+comicpoc = "comicpoc.cli:main"
+
+[build-system]
+requires = ["hatchling==1.32.4"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["corpus: requires purchased local PDFs"]
+
+[tool.ruff]
+target-version = "py312"
