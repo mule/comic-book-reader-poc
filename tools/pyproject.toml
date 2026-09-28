@@ -3,7 +3,11 @@ name = "comicpoc"
 version = "0.1.0"
 description = "Local comic PDF corpus tooling"
 requires-python = ">=3.12"
-dependencies = ["pypdfium2>=5.13", "Pillow>=11"]
+dependencies = [
+    "pypdfium2>=5.13",
+    "Pillow>=11",
+    "jsonschema>=4.23",
+]
 
 [project.scripts]
 comicpoc = "comicpoc.cli:main"

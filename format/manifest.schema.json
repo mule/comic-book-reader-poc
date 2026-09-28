@@ -1,0 +1,343 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Comic POC manifest v1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "book": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "byte_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "sha256",
+        "byte_size",
+        "page_count"
+      ],
+      "additionalProperties": false
+    },
+    "render_profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+        },
+        "format": {
+          "enum": [
+            "webp",
+            "jpeg",
+            "png"
+          ]
+        },
+        "quality": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "long_edge_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "resolution_policy": {
+          "const": "native-embedded-capped"
+        },
+        "thumbnail": {
+          "type": "object",
+          "properties": {
+            "format": {
+              "enum": [
+                "webp",
+                "jpeg",
+                "png"
+              ]
+            },
+            "quality": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "long_edge_px": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "format",
+            "quality",
+            "long_edge_px"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "format",
+        "quality",
+        "long_edge_px",
+        "resolution_policy",
+        "thumbnail"
+      ],
+      "additionalProperties": false
+    },
+    "selection": {
+      "enum": [
+        "all",
+        "sample"
+      ]
+    },
+    "page_order": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+          },
+          "pdf_page_number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "orientation": {
+            "enum": [
+              "portrait",
+              "landscape",
+              "square"
+            ]
+          },
+          "rotation_degrees": {
+            "enum": [
+              0,
+              90,
+              180,
+              270
+            ]
+          },
+          "page": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^(pages|thumbs)/[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "byte_size": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "byte_size",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "thumbnail": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^(pages|thumbs)/[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "byte_size": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "byte_size",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "suggestions": {
+            "type": "object",
+            "properties": {
+              "detector": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "configuration": {
+                    "type": "object"
+                  },
+                  "run_id": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "name",
+                  "version",
+                  "configuration",
+                  "run_id"
+                ],
+                "additionalProperties": false
+              },
+              "regions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+                    },
+                    "x": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "y": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "width": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "height": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "x",
+                    "y",
+                    "width",
+                    "height"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "order": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "detector",
+              "regions",
+              "order"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "pdf_page_number",
+          "width",
+          "height",
+          "orientation",
+          "rotation_degrees",
+          "page",
+          "thumbnail"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "book",
+    "source",
+    "render_profile",
+    "selection",
+    "page_order",
+    "pages"
+  ],
+  "additionalProperties": false
+}

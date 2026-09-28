@@ -19,5 +19,6 @@ Direct dependencies and build tools checked against upstream license files on 20
 | typescript-eslint | TypeScript lint integration | MIT; [LICENSE](https://github.com/typescript-eslint/typescript-eslint/blob/main/LICENSE) |
 | uv | Python dependency management | Apache-2.0 OR MIT; [MIT license](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT) |
 | pnpm | Reader dependency management | MIT; [LICENSE](https://github.com/pnpm/pnpm/blob/main/LICENSE) |
+| jsonschema | Offline manifest and annotation validation | MIT; [upstream COPYING](https://github.com/python-jsonschema/jsonschema/blob/main/COPYING), checked 2026-09-28; resolved version and transitive packages locked in tools/uv.lock |
 
 Pillow and PDFium wheels bundle native libraries with their own license notices. Preserve the installed distribution notices if packaging these tools for redistribution. Purchased comics and generated previews remain subject to their original rights and are excluded from Git and CI.
