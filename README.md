@@ -100,3 +100,15 @@ pnpm build && pnpm preview   # preview also binds 0.0.0.0 (port 4173)
 ```
 
 `pnpm dev` binds to localhost only, so purchased artwork is never exposed to the network by default. Use `dev:lan` only on a trusted network. Open the printed LAN URL on a tablet connected to the same network. The reader is a static client; packages are streamed from the local packages directory only. Real tablet/touch hardware testing is **PENDING** — see the reader report; only desktop Chrome and a touch-enabled viewport emulation have been verified so far.
+
+## Detect panels on dev packages (Phase A)
+
+```sh
+cd tools
+uv run comicpoc detect ../work/samples/archer-armstrong-vol-1-the-michelangelo-code \
+  --output ../work/detection/frozen/archer-armstrong-vol-1-the-michelangelo-code \
+  --report ../work/detection/archer-frozen.json \
+  --overlays ../work/detection/overlays-frozen/archer
+```
+
+Use a new output package directory/report for each run. To preserve suggestion IDs on rerun, use the previous detected package as input. Only rendered page assets are read; split membership is checked before assets are opened. Defaults use the committed frozen configuration and permit **dev pages only**. See [detection approach and Phase B handoff](docs/detection.md) for republish semantics, metrics and limitations. The evaluator is available now; real manual references and held-out results are pending Phase B.

@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "phase": "A",
+  "date": "2026-09-28",
+  "reference_metrics": "PENDING Phase B",
+  "heldout": {
+    "status": "not-evaluated"
+  },
+  "frozen_config": {
+    "sha256": "135955b530f8983b06ba02325096eed6120c5d427cc64d3d83a0d804bb1bcaaa",
+    "byte_size": 407
+  },
+  "trials": [
+    {
+      "trial": "trial-235",
+      "config": {
+        "schema_version": 1,
+        "detector": "comicpoc-opencv-contours",
+        "version": "1",
+        "opencv_version": "4.13.0",
+        "frozen": false,
+        "frozen_date": null,
+        "parameters": {
+          "long_edge_px": 1200,
+          "white_threshold": 235,
+          "close_kernel": 3,
+          "min_area": 0.025,
+          "max_area": 0.95,
+          "min_side": 0.08,
+          "min_fill": 0.45,
+          "row_tolerance": 0.035,
+          "identity_iou": 0.65
+        }
+      },
+      "books": [
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "run_id": "3337f2ecd59947ea921611f6b752e181",
+          "pages": [
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+              "pdf_page_number": 7,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+              "pdf_page_number": 10,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+              "pdf_page_number": 17,
+              "count": 3,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+              "pdf_page_number": 33,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+              "pdf_page_number": 49,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+              "pdf_page_number": 67,
+              "count": 8,
+              "status": "ok",
+              "reason": null
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "run_id": "55a437c72a87487ab3a7d9ea496e241a",
+          "pages": [
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+              "pdf_page_number": 11,
+              "count": 3,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+              "pdf_page_number": 23,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+              "pdf_page_number": 34,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+              "pdf_page_number": 44,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+              "pdf_page_number": 58,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+              "pdf_page_number": 141,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "run_id": "dff7fed500ba4757a385a849c6e9e2af",
+          "pages": [
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+              "pdf_page_number": 10,
+              "count": 7,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+              "pdf_page_number": 12,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+              "pdf_page_number": 20,
+              "count": 9,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+              "pdf_page_number": 29,
+              "count": 4,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+              "pdf_page_number": 31,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+              "pdf_page_number": 37,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial-210",
+      "config": {
+        "schema_version": 1,
+        "detector": "comicpoc-opencv-contours",
+        "version": "1",
+        "opencv_version": "4.13.0",
+        "frozen": false,
+        "frozen_date": null,
+        "parameters": {
+          "long_edge_px": 1200,
+          "white_threshold": 210,
+          "close_kernel": 1,
+          "min_area": 0.025,
+          "max_area": 0.95,
+          "min_side": 0.08,
+          "min_fill": 0.45,
+          "row_tolerance": 0.035,
+          "identity_iou": 0.65
+        }
+      },
+      "books": [
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "run_id": "d0cbd94611f74bb9bd8e477cdfcf2fbb",
+          "pages": [
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+              "pdf_page_number": 7,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+              "pdf_page_number": 10,
+              "count": 2,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+              "pdf_page_number": 17,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+              "pdf_page_number": 33,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+              "pdf_page_number": 49,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+              "pdf_page_number": 67,
+              "count": 9,
+              "status": "ok",
+              "reason": null
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "run_id": "09359a90bf554cce858f4c6fa7ef70a9",
+          "pages": [
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+              "pdf_page_number": 11,
+              "count": 3,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+              "pdf_page_number": 23,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+              "pdf_page_number": 34,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+              "pdf_page_number": 44,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+              "pdf_page_number": 58,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+              "pdf_page_number": 141,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "run_id": "b6d653dac45a4d61ae4fd41e25c5f625",
+          "pages": [
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+              "pdf_page_number": 10,
+              "count": 7,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+              "pdf_page_number": 12,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+              "pdf_page_number": 20,
+              "count": 9,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+              "pdf_page_number": 29,
+              "count": 4,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+              "pdf_page_number": 31,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+              "pdf_page_number": 37,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "frozen",
+      "config": {
+        "schema_version": 1,
+        "detector": "comicpoc-opencv-contours",
+        "version": "1",
+        "opencv_version": "4.13.0",
+        "frozen": true,
+        "frozen_date": "2026-09-28",
+        "parameters": {
+          "long_edge_px": 1200,
+          "white_threshold": 210,
+          "close_kernel": 1,
+          "min_area": 0.025,
+          "max_area": 0.95,
+          "min_side": 0.08,
+          "min_fill": 0.45,
+          "row_tolerance": 0.035,
+          "identity_iou": 0.65
+        }
+      },
+      "books": [
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "run_id": "8c0e240383924bec81b0020c4adf0443",
+          "pages": [
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+              "pdf_page_number": 7,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+              "pdf_page_number": 10,
+              "count": 2,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+              "pdf_page_number": 17,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+              "pdf_page_number": 33,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+              "pdf_page_number": 49,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+              "pdf_page_number": 67,
+              "count": 9,
+              "status": "ok",
+              "reason": null
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "run_id": "d74f8183606c465db63ad27a744c8584",
+          "pages": [
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+              "pdf_page_number": 11,
+              "count": 3,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+              "pdf_page_number": 23,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+              "pdf_page_number": 34,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+              "pdf_page_number": 44,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+              "pdf_page_number": 58,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+              "pdf_page_number": 141,
+              "count": 0,
+              "status": "fallback",
+              "reason": "No contours passed geometry/area filters"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "run_id": "7a5acf6826804e9889db51302d3e7245",
+          "pages": [
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+              "pdf_page_number": 10,
+              "count": 7,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+              "pdf_page_number": 12,
+              "count": 6,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+              "pdf_page_number": 20,
+              "count": 9,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+              "pdf_page_number": 29,
+              "count": 4,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+              "pdf_page_number": 31,
+              "count": 1,
+              "status": "ok",
+              "reason": null
+            },
+            {
+              "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+              "pdf_page_number": 37,
+              "count": 5,
+              "status": "ok",
+              "reason": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
