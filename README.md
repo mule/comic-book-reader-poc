@@ -112,3 +112,51 @@ uv run comicpoc detect ../work/samples/archer-armstrong-vol-1-the-michelangelo-c
 ```
 
 Use a new output package directory/report for each run. To preserve suggestion IDs on rerun, use the previous detected package as input. Only rendered page assets are read; split membership is checked before assets are opened. Defaults use the committed frozen configuration and permit **dev pages only**. See [detection approach and Phase B handoff](docs/detection.md) for republish semantics, metrics and limitations. The evaluator is available now; real manual references and held-out results are pending Phase B.
+
+## Evaluation & Benchmarks (Phase A)
+
+Automated corpus verification and end-to-end browser performance benchmarks live under `tools/` and `bench/`. All measurements derive from script runs with raw JSON saved under `work/bench/`.
+
+### 1. Verify complete corpus against inventory
+
+Verify that all 389 pages across all three packages in `work/packages/` match source SHA-256, page counts, sequential order, orientation, decodability and hashes:
+
+```sh
+cd tools
+uv run comicpoc verify-corpus \
+  --packages ../work/packages \
+  --inventory ../corpus/inventory.json \
+  --json ../work/bench/corpus-verification.json \
+  --markdown ../work/bench/corpus-verification.md
+```
+
+### 2. Measure import timing & size on fresh output
+
+```sh
+cd tools
+uv run python scripts/bench_import.py
+```
+
+### 3. Run browser performance benchmarks (Playwright)
+
+Run cold first-page loads, warm page navigation latency (p50/p95), extended reading across all 389 pages with memory and bounded-prefetch sampling, and offline degradation tests:
+
+```sh
+cd bench
+pnpm install --frozen-lockfile
+pnpm exec playwright install chromium
+pnpm typecheck
+pnpm bench
+```
+
+### 4. Synthetic smoke test (CI runnable)
+
+Runs cold load, warm turns, zero forbidden request checks, and offline restoration against an ephemeral synthetic package:
+
+```sh
+cd bench
+pnpm bench:smoke
+```
+
+See [docs/evaluation-report.md](docs/evaluation-report.md) for full benchmark findings, environment details, and PENDING validation items.
+
