@@ -49,3 +49,23 @@ git status --short
 ```
 
 For a symlinked `test-data`, Git may reject traversal through the symlink; `git check-ignore test-data` verifies that the entire source link is ignored, and `git check-ignore --no-index example.pdf` verifies the PDF rule independently.
+
+## Import standalone comic packages
+
+```sh
+cd tools
+uv run comicpoc import '../test-data/Harbinger Vol 1 Omega Rising.pdf' --pages 11 23 34 44 58 141 --output ../work/samples
+uv run comicpoc import '../test-data/Harbinger Vol 1 Omega Rising.pdf'
+uv run comicpoc validate ../work/packages/harbinger-vol-1-omega-rising
+uv run python scripts/import_corpus.py
+```
+
+Use the exact source filenames from `corpus/inventory.json`. `--pages` takes one-based PDF numbers in the desired reading order; omit it for the entire book. Interrupted imports resume automatically using verified per-page checkpoints. Completed packages are immutable: changing source, selected pages or profile requires a different `--output` directory under `work/`. Identical reimports preserve page IDs and never touch annotation files.
+
+`--profile profile.json` accepts rendering parameters (without the computed `id`):
+
+```json
+{"format":"webp","quality":90,"long_edge_px":3056,"resolution_policy":"native-embedded-capped","thumbnail":{"format":"webp","quality":80,"long_edge_px":360}}
+```
+
+The complete format and annotation contract is in [docs/format.md](docs/format.md). `comicpoc validate PACKAGE --annotations FILE` also checks an exported annotation document against its book/source/page identity. All artwork remains untracked under `work/`; the source PDFs remain untouched.
