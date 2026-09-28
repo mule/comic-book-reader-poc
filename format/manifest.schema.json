@@ -246,7 +246,8 @@
                     "minLength": 1
                   },
                   "configuration": {
-                    "type": "object"
+                    "type": "object",
+                    "description": "Detector parameters and reproducibility inputs. comicpoc contour v1 stores the frozen config and identity_history (last geometry per suggestion ID) here; history is not active reading regions."
                   },
                   "run_id": {
                     "type": "string",
@@ -315,7 +316,8 @@
               "regions",
               "order"
             ],
-            "additionalProperties": false
+            "additionalProperties": false,
+            "description": "Detector proposals only; publish a new immutable package revision to change these. Manual annotations remain separate."
           }
         },
         "required": [

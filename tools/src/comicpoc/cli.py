@@ -78,9 +78,98 @@ def main() -> int:
         action="store_true",
         help="Skip direct image extraction audit",
     )
+    detect = commands.add_parser(
+        "detect", help="Republish dev page assets with panel suggestions"
+    )
+    detect.add_argument("package", type=Path)
+    detect.add_argument(
+        "--output", type=Path, required=True, help="New package path under work/"
+    )
+    detect.add_argument(
+        "--config", type=Path, default=ROOT / "corpus/detector-config.json"
+    )
+    detect.add_argument("--report", type=Path, required=True)
+    detect.add_argument("--overlays", type=Path)
+    evaluation = commands.add_parser(
+        "evaluate-detection", help="Score suggestions against final manual references"
+    )
+    evaluation.add_argument("package", type=Path)
+    evaluation.add_argument("--annotations", type=Path, required=True)
+    evaluation.add_argument("--reference-manifest", type=Path, required=True)
+    evaluation.add_argument("--output", type=Path, required=True)
+    evaluation.add_argument("--iou-threshold", type=float, default=0.5)
+    evaluation.add_argument("--resize-tolerance", type=float, default=0.01)
+    for command in [detect, evaluation]:
+        command.add_argument(
+            "--eval-split", type=Path, default=ROOT / "corpus/evaluation-split.json"
+        )
+        command.add_argument("--split", choices=["dev", "heldout"], default="dev")
+        command.add_argument(
+            "--phase-b",
+            action="store_true",
+            help="Explicitly authorize held-out access",
+        )
     args = parser.parse_args()
     try:
-        if args.command == "import":
+        if args.command in {"detect", "evaluate-detection"}:
+            from comicpoc.detection import detect_package, load_config, overlays
+            from comicpoc.detection_evaluation import evaluate
+            from comicpoc.importer import write_json
+
+            report_path = args.report if args.command == "detect" else args.output
+            if not report_path.resolve().is_relative_to((ROOT / "work").resolve()):
+                raise ValueError("Detection reports must stay under work/")
+            if report_path.exists():
+                raise ValueError("Report exists; choose a new report path")
+            if report_path.resolve().is_relative_to(args.package.resolve()):
+                raise ValueError("Report must be outside the input package")
+            split = json.loads(args.eval_split.read_text())
+            if args.command == "detect":
+                if report_path.resolve().is_relative_to(args.output.resolve()):
+                    raise ValueError("Report must be outside the output package")
+                if args.overlays:
+                    overlay_path = args.overlays.resolve()
+                    for package_path in [args.package.resolve(), args.output.resolve()]:
+                        if overlay_path.is_relative_to(
+                            package_path
+                        ) or package_path.is_relative_to(overlay_path):
+                            raise ValueError("Overlays must be separate from packages")
+                    if overlay_path.exists():
+                        raise ValueError(
+                            "Overlay output exists; choose a new directory"
+                        )
+                    if report_path.resolve().is_relative_to(overlay_path):
+                        raise ValueError("Report must be outside overlays")
+                if args.overlays and not args.overlays.resolve().is_relative_to(
+                    (ROOT / "work").resolve()
+                ):
+                    raise ValueError("Overlays must stay under work/")
+                target, report = detect_package(
+                    args.package,
+                    args.output,
+                    load_config(args.config),
+                    split,
+                    args.split,
+                    args.phase_b,
+                )
+                print(target)
+            else:
+                report = evaluate(
+                    json.loads((args.package / "manifest.json").read_text()),
+                    json.loads(args.annotations.read_text()),
+                    json.loads(args.reference_manifest.read_text()),
+                    split,
+                    args.split,
+                    args.phase_b,
+                    args.iou_threshold,
+                    args.resize_tolerance,
+                )
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            write_json(report_path, report)
+            print(report_path)
+            if args.command == "detect" and args.overlays:
+                overlays(target, args.overlays, split, args.split, args.phase_b)
+        elif args.command == "import":
             params = json.loads(args.profile.read_text()) if args.profile else {}
             if "thumbnail" in params:
                 params["thumbnail"] = ThumbnailSettings(**params["thumbnail"])

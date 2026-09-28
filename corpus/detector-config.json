@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "detector": "comicpoc-opencv-contours",
+  "version": "1",
+  "opencv_version": "4.13.0",
+  "frozen": true,
+  "frozen_date": "2026-09-28",
+  "parameters": {
+    "long_edge_px": 1200,
+    "white_threshold": 210,
+    "close_kernel": 1,
+    "min_area": 0.025,
+    "max_area": 0.95,
+    "min_side": 0.08,
+    "min_fill": 0.45,
+    "row_tolerance": 0.035,
+    "identity_iou": 0.65
+  }
+}

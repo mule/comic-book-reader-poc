@@ -38,7 +38,12 @@ def regions_valid(regions: list) -> None:
     unique([r["id"] for r in regions], "region IDs")
     for r in regions:
         if (
-            any(not math.isfinite(r[k]) for k in ["x", "y", "width", "height"])
+            any(
+                isinstance(r[k], bool) or not math.isfinite(r[k])
+                for k in ["x", "y", "width", "height"]
+            )
+            or r["x"] < 0
+            or r["y"] < 0
             or r["width"] <= 0
             or r["height"] <= 0
             or r["x"] + r["width"] > 1

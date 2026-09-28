@@ -8,6 +8,7 @@ dependencies = [
     "Pillow>=11",
     "jsonschema>=4.23",
     "numpy>=2.5.3",
+    "opencv-python-headless==4.13.0.92",
 ]
 
 [project.scripts]
