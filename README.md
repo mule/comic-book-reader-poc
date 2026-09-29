@@ -176,3 +176,5 @@ pnpm bench:smoke
 
 See [docs/evaluation-report.md](docs/evaluation-report.md) for full benchmark findings, environment details, and PENDING validation items.
 
+
+Phase B now includes AI-visually-authored references for all 30 evaluation pages, separate dev/held-out metrics, and estimated edit operations in [docs/detection.md](docs/detection.md). [Reference rules and snapshots](corpus/reference-annotations/README.md) and [raw results](corpus/detection-results-phase-b.json) contain no artwork. The frozen config is unchanged. On the tested main revision detected packages load in the full-page reader; guided suggestion display awaits #6.

@@ -1,0 +1,4454 @@
+{
+  "schema_version": 1,
+  "phase": "B",
+  "date": "2026-09-29",
+  "base_commit": "5c08029613e859eed183e902c144918bb88b693c",
+  "reference_commit": "0ebc79c28c68addac3619a031181e6025563aa49",
+  "annotator": "AI agent (visual); not a human annotator",
+  "detector_config": {
+    "schema_version": 1,
+    "detector": "comicpoc-opencv-contours",
+    "version": "1",
+    "opencv_version": "4.13.0",
+    "frozen": true,
+    "frozen_date": "2026-09-28",
+    "parameters": {
+      "long_edge_px": 1200,
+      "white_threshold": 210,
+      "close_kernel": 1,
+      "min_area": 0.025,
+      "max_area": 0.95,
+      "min_side": 0.08,
+      "min_fill": 0.45,
+      "row_tolerance": 0.035,
+      "identity_iou": 0.65
+    }
+  },
+  "detector_config_fingerprint": {
+    "sha256": "135955b530f8983b06ba02325096eed6120c5d427cc64d3d83a0d804bb1bcaaa",
+    "byte_size": 407
+  },
+  "implementation_fingerprints": {
+    "detection.py": {
+      "sha256": "7a6a10c7d1115d7e664989ca4eb70c93700483e0d69240f7ad77b8dbe96f351c",
+      "byte_size": 10917
+    },
+    "detection_evaluation.py": {
+      "sha256": "189a4425a3c6fb77dd5701f588cffba4afe249907d06caf50ea2f045c83e0598",
+      "byte_size": 4401
+    },
+    "manifest.py": {
+      "sha256": "509d319e1766779fe003be78e273bc7a18c77e70698d06f9624c225be9eca622",
+      "byte_size": 6952
+    },
+    "publication.py": {
+      "sha256": "ac9499e7011aa5005a652dedeb2bd78202fa9ab2b541a85a09a43353319e254d",
+      "byte_size": 2834
+    }
+  },
+  "reference_provenance": {
+    "sha256": "ed5cc218393a3598832b5efce6afb514ef90f90c832f47a94f9c21f3f11784f7",
+    "byte_size": 14648
+  },
+  "runs": [
+    {
+      "split": "dev",
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "input_manifest": {
+        "sha256": "53d947426f5180bcd7787978a8c58b57bbb48d5985f06d7ce76687ea1c3066db",
+        "byte_size": 5992
+      },
+      "output_manifest": {
+        "sha256": "3f48e170b17c818850fcd0fb37d35fc6bc62b06d7c8e9ae08bb4f71fcd1b2079",
+        "byte_size": 27342
+      },
+      "detector_report": {
+        "run_id": "a4913b20a4624347810ee5322ea78219",
+        "split": "dev",
+        "config": {
+          "schema_version": 1,
+          "detector": "comicpoc-opencv-contours",
+          "version": "1",
+          "opencv_version": "4.13.0",
+          "frozen": true,
+          "frozen_date": "2026-09-28",
+          "parameters": {
+            "long_edge_px": 1200,
+            "white_threshold": 210,
+            "close_kernel": 1,
+            "min_area": 0.025,
+            "max_area": 0.95,
+            "min_side": 0.08,
+            "min_fill": 0.45,
+            "row_tolerance": 0.035,
+            "identity_iou": 0.65
+          }
+        },
+        "pages": [
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+            "pdf_page_number": 7,
+            "count": 5,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+            "pdf_page_number": 10,
+            "count": 2,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "pdf_page_number": 17,
+            "count": 6,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+            "pdf_page_number": 33,
+            "count": 5,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+            "pdf_page_number": 49,
+            "count": 1,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "pdf_page_number": 67,
+            "count": 9,
+            "status": "ok",
+            "reason": null
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+          "regions": [
+            {
+              "x": 0.05897435897435897,
+              "y": 0.049166666666666664,
+              "width": 0.8897435897435897,
+              "height": 0.16166666666666668,
+              "id": "auto-9425d0958ca7484c88a515320cd26592"
+            },
+            {
+              "x": 0.05512820512820513,
+              "y": 0.21333333333333335,
+              "width": 0.8935897435897435,
+              "height": 0.21333333333333335,
+              "id": "auto-dc2e8f8e472b44cf9a28474d222c706e"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.43,
+              "width": 0.8897435897435897,
+              "height": 0.14833333333333337,
+              "id": "auto-1719cac77bb24ad497ea2ecd868615fc"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.58,
+              "width": 0.8897435897435897,
+              "height": 0.1708333333333334,
+              "id": "auto-0b8ff4a30a854d469c4ccef3a093c231"
+            },
+            {
+              "x": 0.057692307692307696,
+              "y": 0.7533333333333333,
+              "width": 0.8897435897435897,
+              "height": 0.1975,
+              "id": "auto-b019e27728234bbe8a85d799643e23cb"
+            }
+          ],
+          "order": [
+            "auto-9425d0958ca7484c88a515320cd26592",
+            "auto-dc2e8f8e472b44cf9a28474d222c706e",
+            "auto-1719cac77bb24ad497ea2ecd868615fc",
+            "auto-0b8ff4a30a854d469c4ccef3a093c231",
+            "auto-b019e27728234bbe8a85d799643e23cb"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+          "regions": [
+            {
+              "x": 0.06282051282051282,
+              "y": 0.060833333333333336,
+              "width": 0.8628205128205129,
+              "height": 0.20416666666666666,
+              "id": "auto-a5ec24e046f441beb2315bdb2d3e81ca"
+            },
+            {
+              "x": 0.0,
+              "y": 0.2675,
+              "width": 1.0,
+              "height": 0.7324999999999999,
+              "id": "auto-4cbd4b49c41d4b99bce55ae433309383"
+            }
+          ],
+          "order": [
+            "auto-a5ec24e046f441beb2315bdb2d3e81ca",
+            "auto-4cbd4b49c41d4b99bce55ae433309383"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+          "regions": [
+            {
+              "x": 0.052564102564102565,
+              "y": 0.04833333333333333,
+              "width": 0.30000000000000004,
+              "height": 0.2825,
+              "id": "auto-024c7dfbb959499db9fbb4cc8e590f62"
+            },
+            {
+              "x": 0.3564102564102564,
+              "y": 0.04833333333333333,
+              "width": 0.2987179487179487,
+              "height": 0.2833333333333333,
+              "id": "auto-30cfbf2b160c416099342f3ab95862ce"
+            },
+            {
+              "x": 0.6564102564102564,
+              "y": 0.04083333333333333,
+              "width": 0.30641025641025643,
+              "height": 0.29083333333333333,
+              "id": "auto-5645273c29ad4ad192e2fec24e7f7c9b"
+            },
+            {
+              "x": 0.015384615384615385,
+              "y": 0.4266666666666667,
+              "width": 0.2794871794871795,
+              "height": 0.20083333333333325,
+              "id": "auto-2d74d72cbd394588ac5d21f184de3d78"
+            },
+            {
+              "x": 0.3294871794871795,
+              "y": 0.4,
+              "width": 0.13846153846153847,
+              "height": 0.23333333333333328,
+              "id": "auto-7c089476d5fb49c7927059fe56aa4339"
+            },
+            {
+              "x": 0.04871794871794872,
+              "y": 0.7233333333333334,
+              "width": 0.7435897435897435,
+              "height": 0.23249999999999993,
+              "id": "auto-ff5ecdfff3cf445e912bb9afe70348db"
+            }
+          ],
+          "order": [
+            "auto-024c7dfbb959499db9fbb4cc8e590f62",
+            "auto-30cfbf2b160c416099342f3ab95862ce",
+            "auto-5645273c29ad4ad192e2fec24e7f7c9b",
+            "auto-2d74d72cbd394588ac5d21f184de3d78",
+            "auto-7c089476d5fb49c7927059fe56aa4339",
+            "auto-ff5ecdfff3cf445e912bb9afe70348db"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+          "regions": [
+            {
+              "x": 0.04358974358974359,
+              "y": 0.04,
+              "width": 0.908974358974359,
+              "height": 0.17333333333333334,
+              "id": "auto-9109b617742c4ca994a0aa3c97485e73"
+            },
+            {
+              "x": 0.04358974358974359,
+              "y": 0.21666666666666667,
+              "width": 0.28076923076923077,
+              "height": 0.5408333333333333,
+              "id": "auto-1668e076fc6d4246a4beffe4576a6125"
+            },
+            {
+              "x": 0.3282051282051282,
+              "y": 0.21416666666666667,
+              "width": 0.3641025641025641,
+              "height": 0.5441666666666667,
+              "id": "auto-0d2c08417a50493f9af561fd32f8cd4f"
+            },
+            {
+              "x": 0.6923076923076923,
+              "y": 0.21583333333333332,
+              "width": 0.2692307692307693,
+              "height": 0.5416666666666666,
+              "id": "auto-c06681e470544b3583c39b430a571063"
+            },
+            {
+              "x": 0.046153846153846156,
+              "y": 0.7583333333333333,
+              "width": 0.9089743589743591,
+              "height": 0.20666666666666667,
+              "id": "auto-876d982d8b1643edbf3d161585e66961"
+            }
+          ],
+          "order": [
+            "auto-9109b617742c4ca994a0aa3c97485e73",
+            "auto-1668e076fc6d4246a4beffe4576a6125",
+            "auto-0d2c08417a50493f9af561fd32f8cd4f",
+            "auto-c06681e470544b3583c39b430a571063",
+            "auto-876d982d8b1643edbf3d161585e66961"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+          "regions": [
+            {
+              "x": 0.03717948717948718,
+              "y": 0.04083333333333333,
+              "width": 0.9205128205128206,
+              "height": 0.9216666666666666,
+              "id": "auto-fc562f1f30694bc69adf41cc62730b96"
+            }
+          ],
+          "order": [
+            "auto-fc562f1f30694bc69adf41cc62730b96"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+          "regions": [
+            {
+              "x": 0.038461538461538464,
+              "y": 0.04083333333333333,
+              "width": 0.29358974358974355,
+              "height": 0.30333333333333334,
+              "id": "auto-bfae72b356344c65950fd55a94c2dc4a"
+            },
+            {
+              "x": 0.3384615384615385,
+              "y": 0.03916666666666667,
+              "width": 0.30512820512820515,
+              "height": 0.30416666666666664,
+              "id": "auto-cfd75f866e9b48579a1b33f86e7941a2"
+            },
+            {
+              "x": 0.6487179487179487,
+              "y": 0.0375,
+              "width": 0.2974358974358974,
+              "height": 0.30500000000000005,
+              "id": "auto-3fca4c13ce5d492b801bc9701f0ac75c"
+            },
+            {
+              "x": 0.04230769230769231,
+              "y": 0.3491666666666667,
+              "width": 0.29358974358974355,
+              "height": 0.3016666666666667,
+              "id": "auto-68b478653a43402e983b9d448cccd1b4"
+            },
+            {
+              "x": 0.34102564102564104,
+              "y": 0.34833333333333333,
+              "width": 0.3076923076923077,
+              "height": 0.29916666666666664,
+              "id": "auto-6cdb12e5a6b541b1b6334ee51ea2bf73"
+            },
+            {
+              "x": 0.6512820512820513,
+              "y": 0.3475,
+              "width": 0.2974358974358974,
+              "height": 0.2983333333333334,
+              "id": "auto-cbbf1fa872894a19967c4e9b5a933bc9"
+            },
+            {
+              "x": 0.04487179487179487,
+              "y": 0.6533333333333333,
+              "width": 0.29615384615384616,
+              "height": 0.3075,
+              "id": "auto-43699373ae5c4ebeb2c4391df56d8851"
+            },
+            {
+              "x": 0.34487179487179487,
+              "y": 0.6525,
+              "width": 0.30641025641025643,
+              "height": 0.30666666666666664,
+              "id": "auto-03262438f56242dd8b74665f50806e56"
+            },
+            {
+              "x": 0.6551282051282051,
+              "y": 0.6508333333333334,
+              "width": 0.2974358974358974,
+              "height": 0.30666666666666664,
+              "id": "auto-b15d278d8b9246568c5ae3fb5771888c"
+            }
+          ],
+          "order": [
+            "auto-bfae72b356344c65950fd55a94c2dc4a",
+            "auto-cfd75f866e9b48579a1b33f86e7941a2",
+            "auto-3fca4c13ce5d492b801bc9701f0ac75c",
+            "auto-68b478653a43402e983b9d448cccd1b4",
+            "auto-6cdb12e5a6b541b1b6334ee51ea2bf73",
+            "auto-cbbf1fa872894a19967c4e9b5a933bc9",
+            "auto-43699373ae5c4ebeb2c4391df56d8851",
+            "auto-03262438f56242dd8b74665f50806e56",
+            "auto-b15d278d8b9246568c5ae3fb5771888c"
+          ]
+        }
+      ],
+      "evaluation": {
+        "schema_version": 1,
+        "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+        "iou_threshold": 0.5,
+        "resize_tolerance": 0.01,
+        "matching": "greedy-highest-iou-one-to-one",
+        "boundary_units": "normalized-page-edges",
+        "splits": {
+          "dev": {
+            "status": "complete",
+            "pages": [
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+                "pdf_page_number": 7,
+                "matched": 5,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0006121794871794921,
+                "boundary_errors": [
+                  0.0005288461538461575,
+                  0.001378205128205131,
+                  0.00020833333333333814,
+                  0.00020833333333333814,
+                  0.0007371794871794957
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-9425d0958ca7484c88a515320cd26592",
+                    "reference_id": "ref-a-007-01"
+                  },
+                  {
+                    "suggestion_id": "auto-dc2e8f8e472b44cf9a28474d222c706e",
+                    "reference_id": "ref-a-007-02"
+                  },
+                  {
+                    "suggestion_id": "auto-1719cac77bb24ad497ea2ecd868615fc",
+                    "reference_id": "ref-a-007-03"
+                  },
+                  {
+                    "suggestion_id": "auto-0b8ff4a30a854d469c4ccef3a093c231",
+                    "reference_id": "ref-a-007-04"
+                  },
+                  {
+                    "suggestion_id": "auto-b019e27728234bbe8a85d799643e23cb",
+                    "reference_id": "ref-a-007-05"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+                "pdf_page_number": 10,
+                "matched": 1,
+                "missed": 4,
+                "spurious": 1,
+                "boundary_error_mean": 0.0003205128205128194,
+                "boundary_errors": [
+                  0.0003205128205128194
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 4,
+                  "deletes": 1,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 5
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-a5ec24e046f441beb2315bdb2d3e81ca",
+                    "reference_id": "ref-a-010-01"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+                "pdf_page_number": 17,
+                "matched": 4,
+                "missed": 2,
+                "spurious": 2,
+                "boundary_error_mean": 0.0007932692307692324,
+                "boundary_errors": [
+                  0.0008493589743589925,
+                  0.0008493589743589769,
+                  0.0004166666666666711,
+                  0.001057692307692289
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 2,
+                  "deletes": 2,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 4
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-024c7dfbb959499db9fbb4cc8e590f62",
+                    "reference_id": "ref-a-017-01"
+                  },
+                  {
+                    "suggestion_id": "auto-30cfbf2b160c416099342f3ab95862ce",
+                    "reference_id": "ref-a-017-02"
+                  },
+                  {
+                    "suggestion_id": "auto-5645273c29ad4ad192e2fec24e7f7c9b",
+                    "reference_id": "ref-a-017-03"
+                  },
+                  {
+                    "suggestion_id": "auto-ff5ecdfff3cf445e912bb9afe70348db",
+                    "reference_id": "ref-a-017-05"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+                "pdf_page_number": 33,
+                "matched": 5,
+                "missed": 1,
+                "spurious": 0,
+                "boundary_error_mean": 0.012076923076923086,
+                "boundary_errors": [
+                  0.0007371794871795182,
+                  0.00041666666666666935,
+                  0.0006250000000000006,
+                  0.057660256410256405,
+                  0.0009455128205128338
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 1,
+                  "deletes": 0,
+                  "resizes": 1,
+                  "reorders": 0,
+                  "total": 2
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-9109b617742c4ca994a0aa3c97485e73",
+                    "reference_id": "ref-a-033-01"
+                  },
+                  {
+                    "suggestion_id": "auto-1668e076fc6d4246a4beffe4576a6125",
+                    "reference_id": "ref-a-033-02"
+                  },
+                  {
+                    "suggestion_id": "auto-0d2c08417a50493f9af561fd32f8cd4f",
+                    "reference_id": "ref-a-033-03"
+                  },
+                  {
+                    "suggestion_id": "auto-c06681e470544b3583c39b430a571063",
+                    "reference_id": "ref-a-033-05"
+                  },
+                  {
+                    "suggestion_id": "auto-876d982d8b1643edbf3d161585e66961",
+                    "reference_id": "ref-a-033-06"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+                "pdf_page_number": 49,
+                "matched": 0,
+                "missed": 4,
+                "spurious": 1,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 4,
+                  "deletes": 1,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 5
+                },
+                "matches": []
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+                "pdf_page_number": 67,
+                "matched": 9,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0006214387464387503,
+                "boundary_errors": [
+                  0.0005288461538461436,
+                  0.0004166666666666711,
+                  0.0003205128205128194,
+                  0.0008493589743589925,
+                  0.0004166666666666763,
+                  0.000737179487179454,
+                  0.0004166666666666763,
+                  0.001057692307692315,
+                  0.0008493589743590046
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-bfae72b356344c65950fd55a94c2dc4a",
+                    "reference_id": "ref-a-067-01"
+                  },
+                  {
+                    "suggestion_id": "auto-cfd75f866e9b48579a1b33f86e7941a2",
+                    "reference_id": "ref-a-067-02"
+                  },
+                  {
+                    "suggestion_id": "auto-3fca4c13ce5d492b801bc9701f0ac75c",
+                    "reference_id": "ref-a-067-03"
+                  },
+                  {
+                    "suggestion_id": "auto-68b478653a43402e983b9d448cccd1b4",
+                    "reference_id": "ref-a-067-04"
+                  },
+                  {
+                    "suggestion_id": "auto-6cdb12e5a6b541b1b6334ee51ea2bf73",
+                    "reference_id": "ref-a-067-05"
+                  },
+                  {
+                    "suggestion_id": "auto-cbbf1fa872894a19967c4e9b5a933bc9",
+                    "reference_id": "ref-a-067-06"
+                  },
+                  {
+                    "suggestion_id": "auto-43699373ae5c4ebeb2c4391df56d8851",
+                    "reference_id": "ref-a-067-07"
+                  },
+                  {
+                    "suggestion_id": "auto-03262438f56242dd8b74665f50806e56",
+                    "reference_id": "ref-a-067-08"
+                  },
+                  {
+                    "suggestion_id": "auto-b15d278d8b9246568c5ae3fb5771888c",
+                    "reference_id": "ref-a-067-09"
+                  }
+                ]
+              }
+            ],
+            "missing_reference_page_ids": [],
+            "failure_page_ids": [
+              "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+              "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+              "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+              "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049"
+            ],
+            "totals": {
+              "matched": 24,
+              "missed": 11,
+              "spurious": 4,
+              "ordering_inversions": 0
+            }
+          },
+          "heldout": {
+            "status": "not-evaluated",
+            "pages": []
+          }
+        }
+      }
+    },
+    {
+      "split": "dev",
+      "book_id": "harbinger-vol-1-omega-rising",
+      "input_manifest": {
+        "sha256": "59fe4fd5b1972e2147a6ccdb7d5ac265d5f6fbda3217b30b39521c7dac0133a7",
+        "byte_size": 5962
+      },
+      "output_manifest": {
+        "sha256": "0821c48e87486f2ce30d7031e8bdded00056de33c30781b1e6caa1a0ce38930d",
+        "byte_size": 16751
+      },
+      "detector_report": {
+        "run_id": "d977b12ffc064fa982a950ffa138769b",
+        "split": "dev",
+        "config": {
+          "schema_version": 1,
+          "detector": "comicpoc-opencv-contours",
+          "version": "1",
+          "opencv_version": "4.13.0",
+          "frozen": true,
+          "frozen_date": "2026-09-28",
+          "parameters": {
+            "long_edge_px": 1200,
+            "white_threshold": 210,
+            "close_kernel": 1,
+            "min_area": 0.025,
+            "max_area": 0.95,
+            "min_side": 0.08,
+            "min_fill": 0.45,
+            "row_tolerance": 0.035,
+            "identity_iou": 0.65
+          }
+        },
+        "pages": [
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+            "pdf_page_number": 11,
+            "count": 3,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+            "pdf_page_number": 23,
+            "count": 0,
+            "status": "fallback",
+            "reason": "No contours passed geometry/area filters"
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+            "pdf_page_number": 34,
+            "count": 0,
+            "status": "fallback",
+            "reason": "No contours passed geometry/area filters"
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+            "pdf_page_number": 44,
+            "count": 0,
+            "status": "fallback",
+            "reason": "No contours passed geometry/area filters"
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "pdf_page_number": 58,
+            "count": 6,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+            "pdf_page_number": 141,
+            "count": 0,
+            "status": "fallback",
+            "reason": "No contours passed geometry/area filters"
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+          "regions": [
+            {
+              "x": 0.05897435897435897,
+              "y": 0.0375,
+              "width": 0.8807692307692307,
+              "height": 0.3166666666666667,
+              "id": "auto-edb6de7f966e46a4b455cb2d69ee8136"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.37,
+              "width": 0.8807692307692307,
+              "height": 0.1891666666666667,
+              "id": "auto-1477a4089a1d47d5a8520c253f785aab"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.5733333333333334,
+              "width": 0.8807692307692307,
+              "height": 0.38916666666666666,
+              "id": "auto-900afb428b184442bbe1d36c9fbbf0e3"
+            }
+          ],
+          "order": [
+            "auto-edb6de7f966e46a4b455cb2d69ee8136",
+            "auto-1477a4089a1d47d5a8520c253f785aab",
+            "auto-900afb428b184442bbe1d36c9fbbf0e3"
+          ]
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+          "regions": [],
+          "order": []
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+          "regions": [],
+          "order": []
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+          "regions": [],
+          "order": []
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+          "regions": [
+            {
+              "x": 0.05641025641025641,
+              "y": 0.035833333333333335,
+              "width": 0.26794871794871794,
+              "height": 0.3041666666666667,
+              "id": "auto-ef391409f0824037a63c6b5ba9ea7041"
+            },
+            {
+              "x": 0.3371794871794872,
+              "y": 0.035833333333333335,
+              "width": 0.6038461538461538,
+              "height": 0.3041666666666667,
+              "id": "auto-39e43f85e41b4636aa70a436b17893cc"
+            },
+            {
+              "x": 0.05641025641025641,
+              "y": 0.3491666666666667,
+              "width": 0.2692307692307692,
+              "height": 0.35333333333333333,
+              "id": "auto-c9d9be8b775d44be8ca8fec618353cca"
+            },
+            {
+              "x": 0.3371794871794872,
+              "y": 0.3491666666666667,
+              "width": 0.2717948717948717,
+              "height": 0.35333333333333333,
+              "id": "auto-cec0f7394059446ba1b6cf9f3e7b5a4b"
+            },
+            {
+              "x": 0.6205128205128205,
+              "y": 0.3491666666666667,
+              "width": 0.32179487179487176,
+              "height": 0.35333333333333333,
+              "id": "auto-63f3f8cb81864e4cac174e87daa1e688"
+            },
+            {
+              "x": 0.05641025641025641,
+              "y": 0.71,
+              "width": 0.8846153846153846,
+              "height": 0.25416666666666665,
+              "id": "auto-40cd65b242ca4c5990f64b60c6490ac9"
+            }
+          ],
+          "order": [
+            "auto-ef391409f0824037a63c6b5ba9ea7041",
+            "auto-39e43f85e41b4636aa70a436b17893cc",
+            "auto-c9d9be8b775d44be8ca8fec618353cca",
+            "auto-cec0f7394059446ba1b6cf9f3e7b5a4b",
+            "auto-63f3f8cb81864e4cac174e87daa1e688",
+            "auto-40cd65b242ca4c5990f64b60c6490ac9"
+          ]
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+          "regions": [],
+          "order": []
+        }
+      ],
+      "evaluation": {
+        "schema_version": 1,
+        "book_id": "harbinger-vol-1-omega-rising",
+        "iou_threshold": 0.5,
+        "resize_tolerance": 0.01,
+        "matching": "greedy-highest-iou-one-to-one",
+        "boundary_units": "normalized-page-edges",
+        "splits": {
+          "dev": {
+            "status": "complete",
+            "pages": [
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+                "pdf_page_number": 11,
+                "matched": 3,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.001447649572649563,
+                "boundary_errors": [
+                  0.0015865384615384483,
+                  0.0013782051282051344,
+                  0.0013782051282051067
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-edb6de7f966e46a4b455cb2d69ee8136",
+                    "reference_id": "ref-h-011-01"
+                  },
+                  {
+                    "suggestion_id": "auto-1477a4089a1d47d5a8520c253f785aab",
+                    "reference_id": "ref-h-011-02"
+                  },
+                  {
+                    "suggestion_id": "auto-900afb428b184442bbe1d36c9fbbf0e3",
+                    "reference_id": "ref-h-011-03"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+                "pdf_page_number": 23,
+                "matched": 0,
+                "missed": 8,
+                "spurious": 0,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 8,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 8
+                },
+                "matches": []
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+                "pdf_page_number": 34,
+                "matched": 0,
+                "missed": 6,
+                "spurious": 0,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 6,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 6
+                },
+                "matches": []
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+                "pdf_page_number": 44,
+                "matched": 0,
+                "missed": 5,
+                "spurious": 0,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 5,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 5
+                },
+                "matches": []
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+                "pdf_page_number": 58,
+                "matched": 6,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.001183226495726511,
+                "boundary_errors": [
+                  0.0013782051282051361,
+                  0.0015865384615384674,
+                  0.0008493589743589925,
+                  0.0010576923076923567,
+                  0.001057692307692315,
+                  0.001169871794871798
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-ef391409f0824037a63c6b5ba9ea7041",
+                    "reference_id": "ref-h-058-01"
+                  },
+                  {
+                    "suggestion_id": "auto-39e43f85e41b4636aa70a436b17893cc",
+                    "reference_id": "ref-h-058-02"
+                  },
+                  {
+                    "suggestion_id": "auto-c9d9be8b775d44be8ca8fec618353cca",
+                    "reference_id": "ref-h-058-03"
+                  },
+                  {
+                    "suggestion_id": "auto-cec0f7394059446ba1b6cf9f3e7b5a4b",
+                    "reference_id": "ref-h-058-04"
+                  },
+                  {
+                    "suggestion_id": "auto-63f3f8cb81864e4cac174e87daa1e688",
+                    "reference_id": "ref-h-058-05"
+                  },
+                  {
+                    "suggestion_id": "auto-40cd65b242ca4c5990f64b60c6490ac9",
+                    "reference_id": "ref-h-058-06"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+                "pdf_page_number": 141,
+                "matched": 0,
+                "missed": 5,
+                "spurious": 0,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 5,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 5
+                },
+                "matches": []
+              }
+            ],
+            "missing_reference_page_ids": [],
+            "failure_page_ids": [
+              "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+              "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+              "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+              "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141"
+            ],
+            "totals": {
+              "matched": 9,
+              "missed": 24,
+              "spurious": 0,
+              "ordering_inversions": 0
+            }
+          },
+          "heldout": {
+            "status": "not-evaluated",
+            "pages": []
+          }
+        }
+      }
+    },
+    {
+      "split": "dev",
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "input_manifest": {
+        "sha256": "43bf57cac0d3ca6ca9bbe8f23a3f0491b709cf374d03c45564edc6ea078c6e89",
+        "byte_size": 6015
+      },
+      "output_manifest": {
+        "sha256": "84a1df68ce8acc637ee16b51d50d6b4ab4ba2f7aad6c13c792b73f60703e4e5a",
+        "byte_size": 29591
+      },
+      "detector_report": {
+        "run_id": "4db9950cb8e2413a9f79bded8b95405a",
+        "split": "dev",
+        "config": {
+          "schema_version": 1,
+          "detector": "comicpoc-opencv-contours",
+          "version": "1",
+          "opencv_version": "4.13.0",
+          "frozen": true,
+          "frozen_date": "2026-09-28",
+          "parameters": {
+            "long_edge_px": 1200,
+            "white_threshold": 210,
+            "close_kernel": 1,
+            "min_area": 0.025,
+            "max_area": 0.95,
+            "min_side": 0.08,
+            "min_fill": 0.45,
+            "row_tolerance": 0.035,
+            "identity_iou": 0.65
+          }
+        },
+        "pages": [
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "pdf_page_number": 10,
+            "count": 7,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "pdf_page_number": 12,
+            "count": 6,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "pdf_page_number": 20,
+            "count": 9,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+            "pdf_page_number": 29,
+            "count": 4,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+            "pdf_page_number": 31,
+            "count": 1,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+            "pdf_page_number": 37,
+            "count": 5,
+            "status": "ok",
+            "reason": null
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+          "regions": [
+            {
+              "x": 0.021794871794871794,
+              "y": 0.014166666666666666,
+              "width": 0.9538461538461538,
+              "height": 0.15083333333333335,
+              "id": "auto-6370305b890c4179950df2683d142cf9"
+            },
+            {
+              "x": 0.020512820512820513,
+              "y": 0.23833333333333334,
+              "width": 0.28461538461538466,
+              "height": 0.24833333333333335,
+              "id": "auto-149f743b99b044c1a2f18fd8397be1ac"
+            },
+            {
+              "x": 0.3192307692307692,
+              "y": 0.23833333333333334,
+              "width": 0.2730769230769231,
+              "height": 0.24916666666666665,
+              "id": "auto-9204e88f9544490797d15d84c46be3de"
+            },
+            {
+              "x": 0.6064102564102564,
+              "y": 0.23666666666666666,
+              "width": 0.36923076923076925,
+              "height": 0.2516666666666667,
+              "id": "auto-76133dca16454ccaa503d5c773a5ad49"
+            },
+            {
+              "x": 0.017948717948717947,
+              "y": 0.49166666666666664,
+              "width": 0.4641025641025641,
+              "height": 0.28416666666666673,
+              "id": "auto-d9563d09f4044ffba6d7938bb01607cf"
+            },
+            {
+              "x": 0.4935897435897436,
+              "y": 0.495,
+              "width": 0.4807692307692307,
+              "height": 0.2816666666666666,
+              "id": "auto-d78cbed7d4b3487b82483ce7271c395a"
+            },
+            {
+              "x": 0.020512820512820513,
+              "y": 0.7816666666666666,
+              "width": 0.9551282051282051,
+              "height": 0.1975,
+              "id": "auto-39d308df55144c1cb8e910ec32adb457"
+            }
+          ],
+          "order": [
+            "auto-6370305b890c4179950df2683d142cf9",
+            "auto-149f743b99b044c1a2f18fd8397be1ac",
+            "auto-9204e88f9544490797d15d84c46be3de",
+            "auto-76133dca16454ccaa503d5c773a5ad49",
+            "auto-d9563d09f4044ffba6d7938bb01607cf",
+            "auto-d78cbed7d4b3487b82483ce7271c395a",
+            "auto-39d308df55144c1cb8e910ec32adb457"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+          "regions": [
+            {
+              "x": 0.015384615384615385,
+              "y": 0.0125,
+              "width": 0.9628205128205127,
+              "height": 0.21,
+              "id": "auto-bc857df0265f4e178d79d6e1875de4c7"
+            },
+            {
+              "x": 0.014102564102564103,
+              "y": 0.23083333333333333,
+              "width": 0.6410256410256411,
+              "height": 0.43500000000000005,
+              "id": "auto-ec0bb2d92f5f43099d0834f41a83cad3"
+            },
+            {
+              "x": 0.6717948717948717,
+              "y": 0.23083333333333333,
+              "width": 0.30512820512820515,
+              "height": 0.22499999999999998,
+              "id": "auto-c62265f2266a444e8617c84ebb4d5470"
+            },
+            {
+              "x": 0.6705128205128205,
+              "y": 0.465,
+              "width": 0.30512820512820515,
+              "height": 0.20083333333333336,
+              "id": "auto-e7bee1a768c940c0b4b8ee9bdf1e3196"
+            },
+            {
+              "x": 0.01282051282051282,
+              "y": 0.6733333333333333,
+              "width": 0.9641025641025641,
+              "height": 0.15583333333333338,
+              "id": "auto-641baef6c0ef4db09436395ed8923b90"
+            },
+            {
+              "x": 0.01282051282051282,
+              "y": 0.8383333333333334,
+              "width": 0.9615384615384616,
+              "height": 0.14416666666666667,
+              "id": "auto-7488a623c1cf4d5d949794a8ae8ab7d8"
+            }
+          ],
+          "order": [
+            "auto-bc857df0265f4e178d79d6e1875de4c7",
+            "auto-ec0bb2d92f5f43099d0834f41a83cad3",
+            "auto-c62265f2266a444e8617c84ebb4d5470",
+            "auto-e7bee1a768c940c0b4b8ee9bdf1e3196",
+            "auto-641baef6c0ef4db09436395ed8923b90",
+            "auto-7488a623c1cf4d5d949794a8ae8ab7d8"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+          "regions": [
+            {
+              "x": 0.029487179487179487,
+              "y": 0.03333333333333333,
+              "width": 0.46282051282051284,
+              "height": 0.21000000000000002,
+              "id": "auto-05c3b02b320045368454f5719d7b68b0"
+            },
+            {
+              "x": 0.5051282051282051,
+              "y": 0.035,
+              "width": 0.45641025641025645,
+              "height": 0.20833333333333334,
+              "id": "auto-194a42df280144bfacfbbb60f20346cf"
+            },
+            {
+              "x": 0.02564102564102564,
+              "y": 0.24833333333333332,
+              "width": 0.9397435897435897,
+              "height": 0.26250000000000007,
+              "id": "auto-341d233e54d6473fa3fcf02e014ef248"
+            },
+            {
+              "x": 0.026923076923076925,
+              "y": 0.5175,
+              "width": 0.2987179487179487,
+              "height": 0.22333333333333338,
+              "id": "auto-3296d6296c974583b62172c13270ce4f"
+            },
+            {
+              "x": 0.3371794871794872,
+              "y": 0.5183333333333333,
+              "width": 0.28076923076923077,
+              "height": 0.22333333333333338,
+              "id": "auto-4ca18a035fc54c84ae58b05d8e454744"
+            },
+            {
+              "x": 0.632051282051282,
+              "y": 0.5175,
+              "width": 0.32948717948717954,
+              "height": 0.2250000000000001,
+              "id": "auto-c813f3f5620c4275a1d6505f0485eb87"
+            },
+            {
+              "x": 0.023076923076923078,
+              "y": 0.7483333333333333,
+              "width": 0.3012820512820513,
+              "height": 0.22083333333333333,
+              "id": "auto-55627205fdc44716acce91dbd2fb08cf"
+            },
+            {
+              "x": 0.3371794871794872,
+              "y": 0.7491666666666666,
+              "width": 0.28076923076923077,
+              "height": 0.21916666666666673,
+              "id": "auto-228e8ff708e84f9abe220e9bd1a2d5d1"
+            },
+            {
+              "x": 0.6307692307692307,
+              "y": 0.7491666666666666,
+              "width": 0.3307692307692308,
+              "height": 0.22083333333333333,
+              "id": "auto-3908dbe767574913bd7d79a1a5a2dd97"
+            }
+          ],
+          "order": [
+            "auto-05c3b02b320045368454f5719d7b68b0",
+            "auto-194a42df280144bfacfbbb60f20346cf",
+            "auto-341d233e54d6473fa3fcf02e014ef248",
+            "auto-3296d6296c974583b62172c13270ce4f",
+            "auto-4ca18a035fc54c84ae58b05d8e454744",
+            "auto-c813f3f5620c4275a1d6505f0485eb87",
+            "auto-55627205fdc44716acce91dbd2fb08cf",
+            "auto-228e8ff708e84f9abe220e9bd1a2d5d1",
+            "auto-3908dbe767574913bd7d79a1a5a2dd97"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+          "regions": [
+            {
+              "x": 0.04230769230769231,
+              "y": 0.025,
+              "width": 0.46538461538461534,
+              "height": 0.35416666666666663,
+              "id": "auto-3e1d9aa1f5ab4f52bb5d551b3ed9c2e4"
+            },
+            {
+              "x": 0.517948717948718,
+              "y": 0.025,
+              "width": 0.46153846153846145,
+              "height": 0.355,
+              "id": "auto-6209a46b7c764e7791f003342fd64c65"
+            },
+            {
+              "x": 0.041025641025641026,
+              "y": 0.38416666666666666,
+              "width": 0.9371794871794872,
+              "height": 0.5891666666666667,
+              "id": "auto-388589938ce7420ab148d02a67eb44b9"
+            },
+            {
+              "x": 0.4423076923076923,
+              "y": 0.5758333333333333,
+              "width": 0.5333333333333333,
+              "height": 0.19333333333333336,
+              "id": "auto-7d39ae5bf92d4dff8ebe81489819a612"
+            }
+          ],
+          "order": [
+            "auto-3e1d9aa1f5ab4f52bb5d551b3ed9c2e4",
+            "auto-6209a46b7c764e7791f003342fd64c65",
+            "auto-388589938ce7420ab148d02a67eb44b9",
+            "auto-7d39ae5bf92d4dff8ebe81489819a612"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+          "regions": [
+            {
+              "x": 0.04487179487179487,
+              "y": 0.04083333333333333,
+              "width": 0.9089743589743591,
+              "height": 0.925,
+              "id": "auto-415eb825040048e9acab50ad4390168f"
+            }
+          ],
+          "order": [
+            "auto-415eb825040048e9acab50ad4390168f"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+          "regions": [
+            {
+              "x": 0.02435897435897436,
+              "y": 0.019166666666666665,
+              "width": 0.4564102564102564,
+              "height": 0.2941666666666667,
+              "id": "auto-00ece2416fe44dfdb0f352a0eadeb52c"
+            },
+            {
+              "x": 0.4935897435897436,
+              "y": 0.019166666666666665,
+              "width": 0.4884615384615384,
+              "height": 0.295,
+              "id": "auto-1087a122f54e4104abfe0565a9197f1c"
+            },
+            {
+              "x": 0.020512820512820513,
+              "y": 0.31916666666666665,
+              "width": 0.9576923076923076,
+              "height": 0.325,
+              "id": "auto-01f44ad226e841db8dbee40462a99cc5"
+            },
+            {
+              "x": 0.023076923076923078,
+              "y": 0.6491666666666667,
+              "width": 0.4705128205128205,
+              "height": 0.33166666666666667,
+              "id": "auto-5a2fb823f7d042c3a12e1ce42538ff27"
+            },
+            {
+              "x": 0.5064102564102564,
+              "y": 0.6491666666666667,
+              "width": 0.46794871794871795,
+              "height": 0.3325,
+              "id": "auto-a0d3cab4620e4b378ae33f6eb2339793"
+            }
+          ],
+          "order": [
+            "auto-00ece2416fe44dfdb0f352a0eadeb52c",
+            "auto-1087a122f54e4104abfe0565a9197f1c",
+            "auto-01f44ad226e841db8dbee40462a99cc5",
+            "auto-5a2fb823f7d042c3a12e1ce42538ff27",
+            "auto-a0d3cab4620e4b378ae33f6eb2339793"
+          ]
+        }
+      ],
+      "evaluation": {
+        "schema_version": 1,
+        "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "iou_threshold": 0.5,
+        "resize_tolerance": 0.01,
+        "matching": "greedy-highest-iou-one-to-one",
+        "boundary_units": "normalized-page-edges",
+        "splits": {
+          "dev": {
+            "status": "complete",
+            "pages": [
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+                "pdf_page_number": 10,
+                "matched": 7,
+                "missed": 1,
+                "spurious": 0,
+                "boundary_error_mean": 0.0009065934065934087,
+                "boundary_errors": [
+                  0.0005288461538461597,
+                  0.000849358974358963,
+                  0.0006410256410256526,
+                  0.0012660256410256601,
+                  0.0014743589743589514,
+                  0.0006410256410256387,
+                  0.0009455128205128347
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 1,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 1
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-6370305b890c4179950df2683d142cf9",
+                    "reference_id": "ref-q-010-01"
+                  },
+                  {
+                    "suggestion_id": "auto-149f743b99b044c1a2f18fd8397be1ac",
+                    "reference_id": "ref-q-010-03"
+                  },
+                  {
+                    "suggestion_id": "auto-9204e88f9544490797d15d84c46be3de",
+                    "reference_id": "ref-q-010-04"
+                  },
+                  {
+                    "suggestion_id": "auto-76133dca16454ccaa503d5c773a5ad49",
+                    "reference_id": "ref-q-010-05"
+                  },
+                  {
+                    "suggestion_id": "auto-d9563d09f4044ffba6d7938bb01607cf",
+                    "reference_id": "ref-q-010-06"
+                  },
+                  {
+                    "suggestion_id": "auto-d78cbed7d4b3487b82483ce7271c395a",
+                    "reference_id": "ref-q-010-07"
+                  },
+                  {
+                    "suggestion_id": "auto-39d308df55144c1cb8e910ec32adb457",
+                    "reference_id": "ref-q-010-08"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+                "pdf_page_number": 12,
+                "matched": 6,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0007051282051281979,
+                "boundary_errors": [
+                  0.0009455128205128152,
+                  0.0005288461538461575,
+                  0.0005288461538461575,
+                  0.0008493589743589769,
+                  0.0005288461538461298,
+                  0.00084935897435895
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-bc857df0265f4e178d79d6e1875de4c7",
+                    "reference_id": "ref-q-012-01"
+                  },
+                  {
+                    "suggestion_id": "auto-ec0bb2d92f5f43099d0834f41a83cad3",
+                    "reference_id": "ref-q-012-02"
+                  },
+                  {
+                    "suggestion_id": "auto-c62265f2266a444e8617c84ebb4d5470",
+                    "reference_id": "ref-q-012-03"
+                  },
+                  {
+                    "suggestion_id": "auto-e7bee1a768c940c0b4b8ee9bdf1e3196",
+                    "reference_id": "ref-q-012-04"
+                  },
+                  {
+                    "suggestion_id": "auto-641baef6c0ef4db09436395ed8923b90",
+                    "reference_id": "ref-q-012-05"
+                  },
+                  {
+                    "suggestion_id": "auto-7488a623c1cf4d5d949794a8ae8ab7d8",
+                    "reference_id": "ref-q-012-06"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+                "pdf_page_number": 20,
+                "matched": 9,
+                "missed": 1,
+                "spurious": 0,
+                "boundary_error_mean": 0.011043447293447292,
+                "boundary_errors": [
+                  0.0010576923076923107,
+                  0.0010576923076923116,
+                  0.09187500000000003,
+                  0.0004166666666666763,
+                  0.000945512820512806,
+                  0.0014903846153845879,
+                  0.0003205128205128194,
+                  0.0010576923076923012,
+                  0.0011698717948717963
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 1,
+                  "deletes": 0,
+                  "resizes": 1,
+                  "reorders": 0,
+                  "total": 2
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-05c3b02b320045368454f5719d7b68b0",
+                    "reference_id": "ref-q-020-01"
+                  },
+                  {
+                    "suggestion_id": "auto-194a42df280144bfacfbbb60f20346cf",
+                    "reference_id": "ref-q-020-02"
+                  },
+                  {
+                    "suggestion_id": "auto-341d233e54d6473fa3fcf02e014ef248",
+                    "reference_id": "ref-q-020-04"
+                  },
+                  {
+                    "suggestion_id": "auto-3296d6296c974583b62172c13270ce4f",
+                    "reference_id": "ref-q-020-05"
+                  },
+                  {
+                    "suggestion_id": "auto-4ca18a035fc54c84ae58b05d8e454744",
+                    "reference_id": "ref-q-020-06"
+                  },
+                  {
+                    "suggestion_id": "auto-c813f3f5620c4275a1d6505f0485eb87",
+                    "reference_id": "ref-q-020-07"
+                  },
+                  {
+                    "suggestion_id": "auto-55627205fdc44716acce91dbd2fb08cf",
+                    "reference_id": "ref-q-020-08"
+                  },
+                  {
+                    "suggestion_id": "auto-228e8ff708e84f9abe220e9bd1a2d5d1",
+                    "reference_id": "ref-q-020-09"
+                  },
+                  {
+                    "suggestion_id": "auto-3908dbe767574913bd7d79a1a5a2dd97",
+                    "reference_id": "ref-q-020-10"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+                "pdf_page_number": 29,
+                "matched": 4,
+                "missed": 2,
+                "spurious": 0,
+                "boundary_error_mean": 0.028842147435897435,
+                "boundary_errors": [
+                  0.0008493589743589717,
+                  0.00020833333333333294,
+                  0.11334935897435894,
+                  0.0009615384615384998
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 2,
+                  "deletes": 0,
+                  "resizes": 1,
+                  "reorders": 0,
+                  "total": 3
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-3e1d9aa1f5ab4f52bb5d551b3ed9c2e4",
+                    "reference_id": "ref-q-029-01"
+                  },
+                  {
+                    "suggestion_id": "auto-6209a46b7c764e7791f003342fd64c65",
+                    "reference_id": "ref-q-029-02"
+                  },
+                  {
+                    "suggestion_id": "auto-388589938ce7420ab148d02a67eb44b9",
+                    "reference_id": "ref-q-029-03"
+                  },
+                  {
+                    "suggestion_id": "auto-7d39ae5bf92d4dff8ebe81489819a612",
+                    "reference_id": "ref-q-029-05"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+                "pdf_page_number": 31,
+                "matched": 1,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0009455128205128581,
+                "boundary_errors": [
+                  0.0009455128205128581
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-415eb825040048e9acab50ad4390168f",
+                    "reference_id": "ref-q-031-01"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+                "pdf_page_number": 37,
+                "matched": 5,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0008717948717948739,
+                "boundary_errors": [
+                  0.0006410256410256396,
+                  0.0006410256410256387,
+                  0.0011698717948717989,
+                  0.0008493589743589769,
+                  0.001057692307692315
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-00ece2416fe44dfdb0f352a0eadeb52c",
+                    "reference_id": "ref-q-037-01"
+                  },
+                  {
+                    "suggestion_id": "auto-1087a122f54e4104abfe0565a9197f1c",
+                    "reference_id": "ref-q-037-02"
+                  },
+                  {
+                    "suggestion_id": "auto-01f44ad226e841db8dbee40462a99cc5",
+                    "reference_id": "ref-q-037-03"
+                  },
+                  {
+                    "suggestion_id": "auto-5a2fb823f7d042c3a12e1ce42538ff27",
+                    "reference_id": "ref-q-037-04"
+                  },
+                  {
+                    "suggestion_id": "auto-a0d3cab4620e4b378ae33f6eb2339793",
+                    "reference_id": "ref-q-037-05"
+                  }
+                ]
+              }
+            ],
+            "missing_reference_page_ids": [],
+            "failure_page_ids": [
+              "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+              "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+              "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029"
+            ],
+            "totals": {
+              "matched": 32,
+              "missed": 4,
+              "spurious": 0,
+              "ordering_inversions": 0
+            }
+          },
+          "heldout": {
+            "status": "not-evaluated",
+            "pages": []
+          }
+        }
+      }
+    },
+    {
+      "split": "heldout",
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "input_manifest": {
+        "sha256": "5363789ec789bb3b7beb16969089bf2a2fcdd5e13377d0eff6ddd04f7171d73d",
+        "byte_size": 4211
+      },
+      "output_manifest": {
+        "sha256": "c3e246574148914832076ef239d2d3b8bbaa7b1cc62e0c96c181d01d0efbb9d3",
+        "byte_size": 13950
+      },
+      "detector_report": {
+        "run_id": "c007065b8ea14ee4b14e41c133050949",
+        "split": "heldout",
+        "config": {
+          "schema_version": 1,
+          "detector": "comicpoc-opencv-contours",
+          "version": "1",
+          "opencv_version": "4.13.0",
+          "frozen": true,
+          "frozen_date": "2026-09-28",
+          "parameters": {
+            "long_edge_px": 1200,
+            "white_threshold": 210,
+            "close_kernel": 1,
+            "min_area": 0.025,
+            "max_area": 0.95,
+            "min_side": 0.08,
+            "min_fill": 0.45,
+            "row_tolerance": 0.035,
+            "identity_iou": 0.65
+          }
+        },
+        "pages": [
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0054",
+            "pdf_page_number": 54,
+            "count": 4,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+            "pdf_page_number": 80,
+            "count": 0,
+            "status": "fallback",
+            "reason": "No contours passed geometry/area filters"
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091",
+            "pdf_page_number": 91,
+            "count": 3,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0095",
+            "pdf_page_number": 95,
+            "count": 4,
+            "status": "ok",
+            "reason": null
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0054",
+          "regions": [
+            {
+              "x": 0.046153846153846156,
+              "y": 0.05583333333333333,
+              "width": 0.23076923076923078,
+              "height": 0.43166666666666664,
+              "id": "auto-7eed938814bb4283a93f75938d6142f9"
+            },
+            {
+              "x": 0.28717948717948716,
+              "y": 0.041666666666666664,
+              "width": 0.2782051282051282,
+              "height": 0.45249999999999996,
+              "id": "auto-c8e75a13906a4ffab80a220459c70f8c"
+            },
+            {
+              "x": 0.5743589743589743,
+              "y": 0.030833333333333334,
+              "width": 0.37435897435897436,
+              "height": 0.4741666666666667,
+              "id": "auto-6ab53cf18e79416d85467019885a9ee1"
+            },
+            {
+              "x": 0.1064102564102564,
+              "y": 0.5166666666666667,
+              "width": 0.867948717948718,
+              "height": 0.45333333333333325,
+              "id": "auto-5edf46fe12484f8e972880a17c262372"
+            }
+          ],
+          "order": [
+            "auto-7eed938814bb4283a93f75938d6142f9",
+            "auto-c8e75a13906a4ffab80a220459c70f8c",
+            "auto-6ab53cf18e79416d85467019885a9ee1",
+            "auto-5edf46fe12484f8e972880a17c262372"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+          "regions": [],
+          "order": []
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091",
+          "regions": [
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.7266666666666667,
+              "id": "auto-b1a642d2eeaa4d7597394582de92b975"
+            },
+            {
+              "x": 0.026923076923076925,
+              "y": 0.7375,
+              "width": 0.5615384615384615,
+              "height": 0.23416666666666663,
+              "id": "auto-f8349688d78e4c29a3dc2e9278b09db1"
+            },
+            {
+              "x": 0.5935897435897436,
+              "y": 0.7566666666666667,
+              "width": 0.3615384615384616,
+              "height": 0.2124999999999999,
+              "id": "auto-a16f3ba64efa4dc08077422873e89dcb"
+            }
+          ],
+          "order": [
+            "auto-b1a642d2eeaa4d7597394582de92b975",
+            "auto-f8349688d78e4c29a3dc2e9278b09db1",
+            "auto-a16f3ba64efa4dc08077422873e89dcb"
+          ]
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0095",
+          "regions": [
+            {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.30666666666666664,
+              "id": "auto-fa8b79239eec4774b387f19f8b7d9318"
+            },
+            {
+              "x": 0.0,
+              "y": 0.31,
+              "width": 1.0,
+              "height": 0.22500000000000003,
+              "id": "auto-4fb69b5677b64e3699bbe3421fb61f8e"
+            },
+            {
+              "x": 0.04871794871794872,
+              "y": 0.54,
+              "width": 0.35384615384615387,
+              "height": 0.41833333333333333,
+              "id": "auto-0cbeb205ac9c42e8b173635e34b458d3"
+            },
+            {
+              "x": 0.40512820512820513,
+              "y": 0.5475,
+              "width": 0.5487179487179488,
+              "height": 0.4525,
+              "id": "auto-dccad11df9624918a1999f6fa9b38507"
+            }
+          ],
+          "order": [
+            "auto-fa8b79239eec4774b387f19f8b7d9318",
+            "auto-4fb69b5677b64e3699bbe3421fb61f8e",
+            "auto-0cbeb205ac9c42e8b173635e34b458d3",
+            "auto-dccad11df9624918a1999f6fa9b38507"
+          ]
+        }
+      ],
+      "evaluation": {
+        "schema_version": 1,
+        "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+        "iou_threshold": 0.5,
+        "resize_tolerance": 0.01,
+        "matching": "greedy-highest-iou-one-to-one",
+        "boundary_units": "normalized-page-edges",
+        "splits": {
+          "dev": {
+            "status": "not-evaluated",
+            "pages": []
+          },
+          "heldout": {
+            "status": "complete",
+            "pages": [
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0054",
+                "pdf_page_number": 54,
+                "matched": 4,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.000765224358974359,
+                "boundary_errors": [
+                  0.00020833333333333814,
+                  0.0008493589743589769,
+                  0.0008493589743589769,
+                  0.0011538461538461442
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-7eed938814bb4283a93f75938d6142f9",
+                    "reference_id": "ref-a-054-01"
+                  },
+                  {
+                    "suggestion_id": "auto-c8e75a13906a4ffab80a220459c70f8c",
+                    "reference_id": "ref-a-054-02"
+                  },
+                  {
+                    "suggestion_id": "auto-6ab53cf18e79416d85467019885a9ee1",
+                    "reference_id": "ref-a-054-03"
+                  },
+                  {
+                    "suggestion_id": "auto-5edf46fe12484f8e972880a17c262372",
+                    "reference_id": "ref-a-054-04"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+                "pdf_page_number": 80,
+                "matched": 0,
+                "missed": 1,
+                "spurious": 0,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 1,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 1
+                },
+                "matches": []
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091",
+                "pdf_page_number": 91,
+                "matched": 3,
+                "missed": 2,
+                "spurious": 0,
+                "boundary_error_mean": 0.0028525641025641166,
+                "boundary_errors": [
+                  0.0004166666666666763,
+                  0.0007371794871794957,
+                  0.0074038461538461775
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 2,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 2
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-b1a642d2eeaa4d7597394582de92b975",
+                    "reference_id": "ref-a-091-01"
+                  },
+                  {
+                    "suggestion_id": "auto-f8349688d78e4c29a3dc2e9278b09db1",
+                    "reference_id": "ref-a-091-04"
+                  },
+                  {
+                    "suggestion_id": "auto-a16f3ba64efa4dc08077422873e89dcb",
+                    "reference_id": "ref-a-091-05"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0095",
+                "pdf_page_number": 95,
+                "matched": 4,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.000633012820512827,
+                "boundary_errors": [
+                  0.00020833333333333814,
+                  0.00020833333333333814,
+                  0.001169871794871798,
+                  0.0009455128205128338
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-fa8b79239eec4774b387f19f8b7d9318",
+                    "reference_id": "ref-a-095-01"
+                  },
+                  {
+                    "suggestion_id": "auto-4fb69b5677b64e3699bbe3421fb61f8e",
+                    "reference_id": "ref-a-095-02"
+                  },
+                  {
+                    "suggestion_id": "auto-0cbeb205ac9c42e8b173635e34b458d3",
+                    "reference_id": "ref-a-095-03"
+                  },
+                  {
+                    "suggestion_id": "auto-dccad11df9624918a1999f6fa9b38507",
+                    "reference_id": "ref-a-095-04"
+                  }
+                ]
+              }
+            ],
+            "missing_reference_page_ids": [],
+            "failure_page_ids": [
+              "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+              "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091"
+            ],
+            "totals": {
+              "matched": 11,
+              "missed": 3,
+              "spurious": 0,
+              "ordering_inversions": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "split": "heldout",
+      "book_id": "harbinger-vol-1-omega-rising",
+      "input_manifest": {
+        "sha256": "94c3dd2b7bc0ba4d93690c3105e91b5f3ffc4b8e2157344f581d660be2393bcd",
+        "byte_size": 4178
+      },
+      "output_manifest": {
+        "sha256": "fffb4e56c0fb158e69da5e7398a24357d1c0a09e4189351959df32d91e48eaa9",
+        "byte_size": 16582
+      },
+      "detector_report": {
+        "run_id": "b072cadc64ef48db889e0c05fd36e56b",
+        "split": "heldout",
+        "config": {
+          "schema_version": 1,
+          "detector": "comicpoc-opencv-contours",
+          "version": "1",
+          "opencv_version": "4.13.0",
+          "frozen": true,
+          "frozen_date": "2026-09-28",
+          "parameters": {
+            "long_edge_px": 1200,
+            "white_threshold": 210,
+            "close_kernel": 1,
+            "min_area": 0.025,
+            "max_area": 0.95,
+            "min_side": 0.08,
+            "min_fill": 0.45,
+            "row_tolerance": 0.035,
+            "identity_iou": 0.65
+          }
+        },
+        "pages": [
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0020",
+            "pdf_page_number": 20,
+            "count": 6,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037",
+            "pdf_page_number": 37,
+            "count": 0,
+            "status": "fallback",
+            "reason": "No contours passed geometry/area filters"
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0052",
+            "pdf_page_number": 52,
+            "count": 4,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0059",
+            "pdf_page_number": 59,
+            "count": 6,
+            "status": "ok",
+            "reason": null
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0020",
+          "regions": [
+            {
+              "x": 0.06153846153846154,
+              "y": 0.0375,
+              "width": 0.23333333333333334,
+              "height": 0.4216666666666667,
+              "id": "auto-dfba845e718447c3b85cd143f22772cf"
+            },
+            {
+              "x": 0.3141025641025641,
+              "y": 0.0375,
+              "width": 0.6243589743589744,
+              "height": 0.2625,
+              "id": "auto-604192455a1a4fd694b2771f6aa6dc12"
+            },
+            {
+              "x": 0.3141025641025641,
+              "y": 0.3125,
+              "width": 0.6243589743589744,
+              "height": 0.14666666666666667,
+              "id": "auto-04d207eb24a64928a84789b5ae2c875a"
+            },
+            {
+              "x": 0.06153846153846154,
+              "y": 0.4725,
+              "width": 0.28076923076923077,
+              "height": 0.4875,
+              "id": "auto-3981e3c12e244964945391efa22ac3b6"
+            },
+            {
+              "x": 0.36153846153846153,
+              "y": 0.4725,
+              "width": 0.27307692307692305,
+              "height": 0.4875,
+              "id": "auto-c9e77df8353b4119bf9569d0351c1be0"
+            },
+            {
+              "x": 0.6551282051282051,
+              "y": 0.4725,
+              "width": 0.2833333333333333,
+              "height": 0.4875,
+              "id": "auto-aad5b475b57f47e19d5d66dabc239595"
+            }
+          ],
+          "order": [
+            "auto-dfba845e718447c3b85cd143f22772cf",
+            "auto-604192455a1a4fd694b2771f6aa6dc12",
+            "auto-04d207eb24a64928a84789b5ae2c875a",
+            "auto-3981e3c12e244964945391efa22ac3b6",
+            "auto-c9e77df8353b4119bf9569d0351c1be0",
+            "auto-aad5b475b57f47e19d5d66dabc239595"
+          ]
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037",
+          "regions": [],
+          "order": []
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0052",
+          "regions": [
+            {
+              "x": 0.26282051282051283,
+              "y": 0.02666666666666667,
+              "width": 0.5615384615384615,
+              "height": 0.155,
+              "id": "auto-af24e1358b7c49d5bd0c6bd9c73ea2bd"
+            },
+            {
+              "x": 0.1576923076923077,
+              "y": 0.18916666666666668,
+              "width": 0.5256410256410257,
+              "height": 0.11999999999999997,
+              "id": "auto-c5825a5cad6346ac870775afee07b627"
+            },
+            {
+              "x": 0.0,
+              "y": 0.2891666666666667,
+              "width": 1.0,
+              "height": 0.4375,
+              "id": "auto-6e8e8d56f9bc4dda89cc7e54e1257e56"
+            },
+            {
+              "x": 0.05512820512820513,
+              "y": 0.735,
+              "width": 0.8858974358974359,
+              "height": 0.22916666666666663,
+              "id": "auto-350d1f587e3143ecb6d172db0b8ff295"
+            }
+          ],
+          "order": [
+            "auto-af24e1358b7c49d5bd0c6bd9c73ea2bd",
+            "auto-c5825a5cad6346ac870775afee07b627",
+            "auto-6e8e8d56f9bc4dda89cc7e54e1257e56",
+            "auto-350d1f587e3143ecb6d172db0b8ff295"
+          ]
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0059",
+          "regions": [
+            {
+              "x": 0.05897435897435897,
+              "y": 0.035,
+              "width": 0.23974358974358972,
+              "height": 0.4325,
+              "id": "auto-4fdc90ec164d4db4ba9765fdab478ff8"
+            },
+            {
+              "x": 0.3128205128205128,
+              "y": 0.035,
+              "width": 0.6307692307692307,
+              "height": 0.21833333333333335,
+              "id": "auto-8b1731db6bc44256845f901f17156c7c"
+            },
+            {
+              "x": 0.3128205128205128,
+              "y": 0.2625,
+              "width": 0.6307692307692307,
+              "height": 0.20500000000000002,
+              "id": "auto-7551cd9b8ff246f6ba4b1bc1495af9c6"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.4766666666666667,
+              "width": 0.8846153846153846,
+              "height": 0.15666666666666662,
+              "id": "auto-ac938734a87648b1adee58f22d5ce553"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.6425,
+              "width": 0.8846153846153846,
+              "height": 0.14416666666666667,
+              "id": "auto-ab6787f0cec94b719f9c01c78a17c7c4"
+            },
+            {
+              "x": 0.05897435897435897,
+              "y": 0.7958333333333333,
+              "width": 0.8846153846153846,
+              "height": 0.1675000000000001,
+              "id": "auto-9364cb2bc9c6478da3a428baa7b20665"
+            }
+          ],
+          "order": [
+            "auto-4fdc90ec164d4db4ba9765fdab478ff8",
+            "auto-8b1731db6bc44256845f901f17156c7c",
+            "auto-7551cd9b8ff246f6ba4b1bc1495af9c6",
+            "auto-ac938734a87648b1adee58f22d5ce553",
+            "auto-ab6787f0cec94b719f9c01c78a17c7c4",
+            "auto-9364cb2bc9c6478da3a428baa7b20665"
+          ]
+        }
+      ],
+      "evaluation": {
+        "schema_version": 1,
+        "book_id": "harbinger-vol-1-omega-rising",
+        "iou_threshold": 0.5,
+        "resize_tolerance": 0.01,
+        "matching": "greedy-highest-iou-one-to-one",
+        "boundary_units": "normalized-page-edges",
+        "splits": {
+          "dev": {
+            "status": "not-evaluated",
+            "pages": []
+          },
+          "heldout": {
+            "status": "complete",
+            "pages": [
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0020",
+                "pdf_page_number": 20,
+                "matched": 6,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.002144764957264954,
+                "boundary_errors": [
+                  0.001378205128205131,
+                  0.0013782051282051292,
+                  0.0011698717948717963,
+                  0.0016987179487179416,
+                  0.005865384615384606,
+                  0.0013782051282051205
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-dfba845e718447c3b85cd143f22772cf",
+                    "reference_id": "ref-h-020-01"
+                  },
+                  {
+                    "suggestion_id": "auto-604192455a1a4fd694b2771f6aa6dc12",
+                    "reference_id": "ref-h-020-02"
+                  },
+                  {
+                    "suggestion_id": "auto-04d207eb24a64928a84789b5ae2c875a",
+                    "reference_id": "ref-h-020-03"
+                  },
+                  {
+                    "suggestion_id": "auto-3981e3c12e244964945391efa22ac3b6",
+                    "reference_id": "ref-h-020-04"
+                  },
+                  {
+                    "suggestion_id": "auto-c9e77df8353b4119bf9569d0351c1be0",
+                    "reference_id": "ref-h-020-05"
+                  },
+                  {
+                    "suggestion_id": "auto-aad5b475b57f47e19d5d66dabc239595",
+                    "reference_id": "ref-h-020-06"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037",
+                "pdf_page_number": 37,
+                "matched": 0,
+                "missed": 1,
+                "spurious": 0,
+                "boundary_error_mean": null,
+                "boundary_errors": [],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 1,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 1
+                },
+                "matches": []
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0052",
+                "pdf_page_number": 52,
+                "matched": 4,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0010296474358974395,
+                "boundary_errors": [
+                  0.0005288461538461506,
+                  0.0023237179487179543,
+                  0.0,
+                  0.0012660256410256532
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-af24e1358b7c49d5bd0c6bd9c73ea2bd",
+                    "reference_id": "ref-h-052-01"
+                  },
+                  {
+                    "suggestion_id": "auto-c5825a5cad6346ac870775afee07b627",
+                    "reference_id": "ref-h-052-02"
+                  },
+                  {
+                    "suggestion_id": "auto-6e8e8d56f9bc4dda89cc7e54e1257e56",
+                    "reference_id": "ref-h-052-03"
+                  },
+                  {
+                    "suggestion_id": "auto-350d1f587e3143ecb6d172db0b8ff295",
+                    "reference_id": "ref-h-052-04"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0059",
+                "pdf_page_number": 59,
+                "matched": 6,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0011992521367521307,
+                "boundary_errors": [
+                  0.001057692307692315,
+                  0.0013782051282051205,
+                  0.0013782051282051205,
+                  0.001057692307692315,
+                  0.0012660256410256254,
+                  0.0010576923076922873
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-4fdc90ec164d4db4ba9765fdab478ff8",
+                    "reference_id": "ref-h-059-01"
+                  },
+                  {
+                    "suggestion_id": "auto-8b1731db6bc44256845f901f17156c7c",
+                    "reference_id": "ref-h-059-02"
+                  },
+                  {
+                    "suggestion_id": "auto-7551cd9b8ff246f6ba4b1bc1495af9c6",
+                    "reference_id": "ref-h-059-03"
+                  },
+                  {
+                    "suggestion_id": "auto-ac938734a87648b1adee58f22d5ce553",
+                    "reference_id": "ref-h-059-04"
+                  },
+                  {
+                    "suggestion_id": "auto-ab6787f0cec94b719f9c01c78a17c7c4",
+                    "reference_id": "ref-h-059-05"
+                  },
+                  {
+                    "suggestion_id": "auto-9364cb2bc9c6478da3a428baa7b20665",
+                    "reference_id": "ref-h-059-06"
+                  }
+                ]
+              }
+            ],
+            "missing_reference_page_ids": [],
+            "failure_page_ids": [
+              "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037"
+            ],
+            "totals": {
+              "matched": 16,
+              "missed": 1,
+              "spurious": 0,
+              "ordering_inversions": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "split": "heldout",
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "input_manifest": {
+        "sha256": "3ab00fc746ebc144cbc8f327c0a88f89fd602d28277aec58508c8f7fffb3c4ab",
+        "byte_size": 4233
+      },
+      "output_manifest": {
+        "sha256": "9ea6353194d4c324bb3137bffc115d6b5ebebddd91a782cb561c762b6ee181b6",
+        "byte_size": 17488
+      },
+      "detector_report": {
+        "run_id": "fe4c6bc933864de9b8a17fe5ca39d7fa",
+        "split": "heldout",
+        "config": {
+          "schema_version": 1,
+          "detector": "comicpoc-opencv-contours",
+          "version": "1",
+          "opencv_version": "4.13.0",
+          "frozen": true,
+          "frozen_date": "2026-09-28",
+          "parameters": {
+            "long_edge_px": 1200,
+            "white_threshold": 210,
+            "close_kernel": 1,
+            "min_area": 0.025,
+            "max_area": 0.95,
+            "min_side": 0.08,
+            "min_fill": 0.45,
+            "row_tolerance": 0.035,
+            "identity_iou": 0.65
+          }
+        },
+        "pages": [
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+            "pdf_page_number": 65,
+            "count": 4,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+            "pdf_page_number": 73,
+            "count": 5,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+            "pdf_page_number": 79,
+            "count": 7,
+            "status": "ok",
+            "reason": null
+          },
+          {
+            "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080",
+            "pdf_page_number": 80,
+            "count": 1,
+            "status": "ok",
+            "reason": null
+          }
+        ]
+      },
+      "predictions": [
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+          "regions": [
+            {
+              "x": 0.023076923076923078,
+              "y": 0.01,
+              "width": 0.6769230769230768,
+              "height": 0.7825,
+              "id": "auto-efa6c3044f624f67b05fc32ee3df599b"
+            },
+            {
+              "x": 0.6987179487179487,
+              "y": 0.014166666666666666,
+              "width": 0.28076923076923077,
+              "height": 0.45666666666666667,
+              "id": "auto-d4bb3cbc3a7c4203a4ea551287ba53bb"
+            },
+            {
+              "x": 0.6012820512820513,
+              "y": 0.47833333333333333,
+              "width": 0.3769230769230769,
+              "height": 0.31416666666666665,
+              "id": "auto-bf2537ff31fc4021acb55f6e395b7f6b"
+            },
+            {
+              "x": 0.021794871794871794,
+              "y": 0.7975,
+              "width": 0.9538461538461538,
+              "height": 0.18166666666666664,
+              "id": "auto-40f8ecbe20ed492e99f3993963fd2458"
+            }
+          ],
+          "order": [
+            "auto-efa6c3044f624f67b05fc32ee3df599b",
+            "auto-d4bb3cbc3a7c4203a4ea551287ba53bb",
+            "auto-bf2537ff31fc4021acb55f6e395b7f6b",
+            "auto-40f8ecbe20ed492e99f3993963fd2458"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+          "regions": [
+            {
+              "x": 0.020512820512820513,
+              "y": 0.015,
+              "width": 0.9589743589743589,
+              "height": 0.18,
+              "id": "auto-4e31adc907ef437a81d1233d932ae5bc"
+            },
+            {
+              "x": 0.020512820512820513,
+              "y": 0.20333333333333334,
+              "width": 0.9576923076923076,
+              "height": 0.09416666666666665,
+              "id": "auto-08e06c61f705496583952637f5c74032"
+            },
+            {
+              "x": 0.019230769230769232,
+              "y": 0.3016666666666667,
+              "width": 0.46923076923076923,
+              "height": 0.32083333333333336,
+              "id": "auto-9f3aab99077240fdac25e7a0b3990ea0"
+            },
+            {
+              "x": 0.5,
+              "y": 0.30666666666666664,
+              "width": 0.4871794871794872,
+              "height": 0.3175,
+              "id": "auto-0fafe583b7bc491aa58448f763e85262"
+            },
+            {
+              "x": 0.01282051282051282,
+              "y": 0.63,
+              "width": 0.9730769230769232,
+              "height": 0.35250000000000004,
+              "id": "auto-b5a5f0b43ca94aa3834568222eeda684"
+            }
+          ],
+          "order": [
+            "auto-4e31adc907ef437a81d1233d932ae5bc",
+            "auto-08e06c61f705496583952637f5c74032",
+            "auto-9f3aab99077240fdac25e7a0b3990ea0",
+            "auto-0fafe583b7bc491aa58448f763e85262",
+            "auto-b5a5f0b43ca94aa3834568222eeda684"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+          "regions": [
+            {
+              "x": 0.020512820512820513,
+              "y": 0.0175,
+              "width": 0.9564102564102563,
+              "height": 0.29833333333333334,
+              "id": "auto-c71ee3f2b88e44308ceb78709a5bb356"
+            },
+            {
+              "x": 0.01282051282051282,
+              "y": 0.32083333333333336,
+              "width": 0.32179487179487176,
+              "height": 0.32083333333333336,
+              "id": "auto-070b96079d7042268365816bff6689cf"
+            },
+            {
+              "x": 0.34615384615384615,
+              "y": 0.32083333333333336,
+              "width": 0.28717948717948716,
+              "height": 0.31916666666666665,
+              "id": "auto-3e9121fae8084c8c9740b7cf2ffb42e1"
+            },
+            {
+              "x": 0.6474358974358975,
+              "y": 0.32083333333333336,
+              "width": 0.32820512820512815,
+              "height": 0.31916666666666665,
+              "id": "auto-0b0abd889b3943518a82cfba5be99d1a"
+            },
+            {
+              "x": 0.021794871794871794,
+              "y": 0.6483333333333333,
+              "width": 0.31153846153846154,
+              "height": 0.3391666666666667,
+              "id": "auto-834ed64f0d924f76bc79dcb8228f86c2"
+            },
+            {
+              "x": 0.34487179487179487,
+              "y": 0.6475,
+              "width": 0.2897435897435897,
+              "height": 0.3400000000000001,
+              "id": "auto-9585cf19ff59462b93464b185530d58a"
+            },
+            {
+              "x": 0.6461538461538462,
+              "y": 0.645,
+              "width": 0.32820512820512815,
+              "height": 0.3441666666666666,
+              "id": "auto-e64d1e8199de4c088b2c9742a8934569"
+            }
+          ],
+          "order": [
+            "auto-c71ee3f2b88e44308ceb78709a5bb356",
+            "auto-070b96079d7042268365816bff6689cf",
+            "auto-3e9121fae8084c8c9740b7cf2ffb42e1",
+            "auto-0b0abd889b3943518a82cfba5be99d1a",
+            "auto-834ed64f0d924f76bc79dcb8228f86c2",
+            "auto-9585cf19ff59462b93464b185530d58a",
+            "auto-e64d1e8199de4c088b2c9742a8934569"
+          ]
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080",
+          "regions": [
+            {
+              "x": 0.017948717948717947,
+              "y": 0.020833333333333332,
+              "width": 0.9576923076923076,
+              "height": 0.9641666666666666,
+              "id": "auto-e166942b4c904973b1e33bcecf4d9fd3"
+            }
+          ],
+          "order": [
+            "auto-e166942b4c904973b1e33bcecf4d9fd3"
+          ]
+        }
+      ],
+      "evaluation": {
+        "schema_version": 1,
+        "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "iou_threshold": 0.5,
+        "resize_tolerance": 0.01,
+        "matching": "greedy-highest-iou-one-to-one",
+        "boundary_units": "normalized-page-edges",
+        "splits": {
+          "dev": {
+            "status": "not-evaluated",
+            "pages": []
+          },
+          "heldout": {
+            "status": "complete",
+            "pages": [
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+                "pdf_page_number": 65,
+                "matched": 4,
+                "missed": 1,
+                "spurious": 0,
+                "boundary_error_mean": 0.02174679487179488,
+                "boundary_errors": [
+                  0.08126602564102563,
+                  0.003830128205128227,
+                  0.00020833333333333814,
+                  0.0016826923076923295
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 1,
+                  "deletes": 0,
+                  "resizes": 1,
+                  "reorders": 0,
+                  "total": 2
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-efa6c3044f624f67b05fc32ee3df599b",
+                    "reference_id": "ref-q-065-01"
+                  },
+                  {
+                    "suggestion_id": "auto-d4bb3cbc3a7c4203a4ea551287ba53bb",
+                    "reference_id": "ref-q-065-02"
+                  },
+                  {
+                    "suggestion_id": "auto-bf2537ff31fc4021acb55f6e395b7f6b",
+                    "reference_id": "ref-q-065-04"
+                  },
+                  {
+                    "suggestion_id": "auto-40f8ecbe20ed492e99f3993963fd2458",
+                    "reference_id": "ref-q-065-05"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+                "pdf_page_number": 73,
+                "matched": 4,
+                "missed": 2,
+                "spurious": 1,
+                "boundary_error_mean": 0.0018269230769230734,
+                "boundary_errors": [
+                  0.0009455128205128182,
+                  0.001057692307692316,
+                  0.0014743589743589653,
+                  0.0038301282051281943
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 2,
+                  "deletes": 1,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 3
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-4e31adc907ef437a81d1233d932ae5bc",
+                    "reference_id": "ref-q-073-01"
+                  },
+                  {
+                    "suggestion_id": "auto-08e06c61f705496583952637f5c74032",
+                    "reference_id": "ref-q-073-02"
+                  },
+                  {
+                    "suggestion_id": "auto-9f3aab99077240fdac25e7a0b3990ea0",
+                    "reference_id": "ref-q-073-03"
+                  },
+                  {
+                    "suggestion_id": "auto-0fafe583b7bc491aa58448f763e85262",
+                    "reference_id": "ref-q-073-04"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+                "pdf_page_number": 79,
+                "matched": 7,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.001476648351648346,
+                "boundary_errors": [
+                  0.002195512820512829,
+                  0.0010576923076923012,
+                  0.0014743589743589636,
+                  0.001794871794871783,
+                  0.0016987179487179416,
+                  0.0005288461538461298,
+                  0.0015865384615384726
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-c71ee3f2b88e44308ceb78709a5bb356",
+                    "reference_id": "ref-q-079-01"
+                  },
+                  {
+                    "suggestion_id": "auto-070b96079d7042268365816bff6689cf",
+                    "reference_id": "ref-q-079-02"
+                  },
+                  {
+                    "suggestion_id": "auto-3e9121fae8084c8c9740b7cf2ffb42e1",
+                    "reference_id": "ref-q-079-03"
+                  },
+                  {
+                    "suggestion_id": "auto-0b0abd889b3943518a82cfba5be99d1a",
+                    "reference_id": "ref-q-079-04"
+                  },
+                  {
+                    "suggestion_id": "auto-834ed64f0d924f76bc79dcb8228f86c2",
+                    "reference_id": "ref-q-079-05"
+                  },
+                  {
+                    "suggestion_id": "auto-9585cf19ff59462b93464b185530d58a",
+                    "reference_id": "ref-q-079-06"
+                  },
+                  {
+                    "suggestion_id": "auto-e64d1e8199de4c088b2c9742a8934569",
+                    "reference_id": "ref-q-079-07"
+                  }
+                ]
+              },
+              {
+                "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080",
+                "pdf_page_number": 80,
+                "matched": 1,
+                "missed": 0,
+                "spurious": 0,
+                "boundary_error_mean": 0.0010576923076923107,
+                "boundary_errors": [
+                  0.0010576923076923107
+                ],
+                "ordering_inversions": 0,
+                "correction_effort": {
+                  "adds": 0,
+                  "deletes": 0,
+                  "resizes": 0,
+                  "reorders": 0,
+                  "total": 0
+                },
+                "matches": [
+                  {
+                    "suggestion_id": "auto-e166942b4c904973b1e33bcecf4d9fd3",
+                    "reference_id": "ref-q-080-01"
+                  }
+                ]
+              }
+            ],
+            "missing_reference_page_ids": [],
+            "failure_page_ids": [
+              "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+              "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073"
+            ],
+            "totals": {
+              "matched": 16,
+              "missed": 3,
+              "spurious": 1,
+              "ordering_inversions": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "splits": {
+    "dev": {
+      "page_count": 18,
+      "reference_regions": 104,
+      "suggestions": 69,
+      "matched": 65,
+      "missed": 39,
+      "spurious": 4,
+      "precision": 0.9420289855072463,
+      "recall": 0.625,
+      "boundary_error_matched_pair_mean": 0.004840236686390535,
+      "ordering_inversions": 0,
+      "correction_effort": {
+        "adds": 39,
+        "deletes": 4,
+        "resizes": 3,
+        "reorders": 0,
+        "total": 46
+      },
+      "estimated_operations_per_page": 2.5555555555555554,
+      "zero_estimated_correction_pages": 7,
+      "failure_page_ids": [
+        "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+        "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+        "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+        "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+        "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+        "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+        "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+        "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+        "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+        "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+        "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029"
+      ],
+      "pages": [
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+          "pdf_page_number": 7,
+          "matched": 5,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0006121794871794921,
+          "boundary_errors": [
+            0.0005288461538461575,
+            0.001378205128205131,
+            0.00020833333333333814,
+            0.00020833333333333814,
+            0.0007371794871794957
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-9425d0958ca7484c88a515320cd26592",
+              "reference_id": "ref-a-007-01"
+            },
+            {
+              "suggestion_id": "auto-dc2e8f8e472b44cf9a28474d222c706e",
+              "reference_id": "ref-a-007-02"
+            },
+            {
+              "suggestion_id": "auto-1719cac77bb24ad497ea2ecd868615fc",
+              "reference_id": "ref-a-007-03"
+            },
+            {
+              "suggestion_id": "auto-0b8ff4a30a854d469c4ccef3a093c231",
+              "reference_id": "ref-a-007-04"
+            },
+            {
+              "suggestion_id": "auto-b019e27728234bbe8a85d799643e23cb",
+              "reference_id": "ref-a-007-05"
+            }
+          ]
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+          "pdf_page_number": 10,
+          "matched": 1,
+          "missed": 4,
+          "spurious": 1,
+          "boundary_error_mean": 0.0003205128205128194,
+          "boundary_errors": [
+            0.0003205128205128194
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 4,
+            "deletes": 1,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 5
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-a5ec24e046f441beb2315bdb2d3e81ca",
+              "reference_id": "ref-a-010-01"
+            }
+          ]
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+          "pdf_page_number": 17,
+          "matched": 4,
+          "missed": 2,
+          "spurious": 2,
+          "boundary_error_mean": 0.0007932692307692324,
+          "boundary_errors": [
+            0.0008493589743589925,
+            0.0008493589743589769,
+            0.0004166666666666711,
+            0.001057692307692289
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 2,
+            "deletes": 2,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 4
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-024c7dfbb959499db9fbb4cc8e590f62",
+              "reference_id": "ref-a-017-01"
+            },
+            {
+              "suggestion_id": "auto-30cfbf2b160c416099342f3ab95862ce",
+              "reference_id": "ref-a-017-02"
+            },
+            {
+              "suggestion_id": "auto-5645273c29ad4ad192e2fec24e7f7c9b",
+              "reference_id": "ref-a-017-03"
+            },
+            {
+              "suggestion_id": "auto-ff5ecdfff3cf445e912bb9afe70348db",
+              "reference_id": "ref-a-017-05"
+            }
+          ]
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+          "pdf_page_number": 33,
+          "matched": 5,
+          "missed": 1,
+          "spurious": 0,
+          "boundary_error_mean": 0.012076923076923086,
+          "boundary_errors": [
+            0.0007371794871795182,
+            0.00041666666666666935,
+            0.0006250000000000006,
+            0.057660256410256405,
+            0.0009455128205128338
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 1,
+            "deletes": 0,
+            "resizes": 1,
+            "reorders": 0,
+            "total": 2
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-9109b617742c4ca994a0aa3c97485e73",
+              "reference_id": "ref-a-033-01"
+            },
+            {
+              "suggestion_id": "auto-1668e076fc6d4246a4beffe4576a6125",
+              "reference_id": "ref-a-033-02"
+            },
+            {
+              "suggestion_id": "auto-0d2c08417a50493f9af561fd32f8cd4f",
+              "reference_id": "ref-a-033-03"
+            },
+            {
+              "suggestion_id": "auto-c06681e470544b3583c39b430a571063",
+              "reference_id": "ref-a-033-05"
+            },
+            {
+              "suggestion_id": "auto-876d982d8b1643edbf3d161585e66961",
+              "reference_id": "ref-a-033-06"
+            }
+          ]
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+          "pdf_page_number": 49,
+          "matched": 0,
+          "missed": 4,
+          "spurious": 1,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 4,
+            "deletes": 1,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 5
+          },
+          "matches": []
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+          "pdf_page_number": 67,
+          "matched": 9,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0006214387464387503,
+          "boundary_errors": [
+            0.0005288461538461436,
+            0.0004166666666666711,
+            0.0003205128205128194,
+            0.0008493589743589925,
+            0.0004166666666666763,
+            0.000737179487179454,
+            0.0004166666666666763,
+            0.001057692307692315,
+            0.0008493589743590046
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-bfae72b356344c65950fd55a94c2dc4a",
+              "reference_id": "ref-a-067-01"
+            },
+            {
+              "suggestion_id": "auto-cfd75f866e9b48579a1b33f86e7941a2",
+              "reference_id": "ref-a-067-02"
+            },
+            {
+              "suggestion_id": "auto-3fca4c13ce5d492b801bc9701f0ac75c",
+              "reference_id": "ref-a-067-03"
+            },
+            {
+              "suggestion_id": "auto-68b478653a43402e983b9d448cccd1b4",
+              "reference_id": "ref-a-067-04"
+            },
+            {
+              "suggestion_id": "auto-6cdb12e5a6b541b1b6334ee51ea2bf73",
+              "reference_id": "ref-a-067-05"
+            },
+            {
+              "suggestion_id": "auto-cbbf1fa872894a19967c4e9b5a933bc9",
+              "reference_id": "ref-a-067-06"
+            },
+            {
+              "suggestion_id": "auto-43699373ae5c4ebeb2c4391df56d8851",
+              "reference_id": "ref-a-067-07"
+            },
+            {
+              "suggestion_id": "auto-03262438f56242dd8b74665f50806e56",
+              "reference_id": "ref-a-067-08"
+            },
+            {
+              "suggestion_id": "auto-b15d278d8b9246568c5ae3fb5771888c",
+              "reference_id": "ref-a-067-09"
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+          "pdf_page_number": 11,
+          "matched": 3,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.001447649572649563,
+          "boundary_errors": [
+            0.0015865384615384483,
+            0.0013782051282051344,
+            0.0013782051282051067
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-edb6de7f966e46a4b455cb2d69ee8136",
+              "reference_id": "ref-h-011-01"
+            },
+            {
+              "suggestion_id": "auto-1477a4089a1d47d5a8520c253f785aab",
+              "reference_id": "ref-h-011-02"
+            },
+            {
+              "suggestion_id": "auto-900afb428b184442bbe1d36c9fbbf0e3",
+              "reference_id": "ref-h-011-03"
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+          "pdf_page_number": 23,
+          "matched": 0,
+          "missed": 8,
+          "spurious": 0,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 8,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 8
+          },
+          "matches": []
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+          "pdf_page_number": 34,
+          "matched": 0,
+          "missed": 6,
+          "spurious": 0,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 6,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 6
+          },
+          "matches": []
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+          "pdf_page_number": 44,
+          "matched": 0,
+          "missed": 5,
+          "spurious": 0,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 5,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 5
+          },
+          "matches": []
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+          "pdf_page_number": 58,
+          "matched": 6,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.001183226495726511,
+          "boundary_errors": [
+            0.0013782051282051361,
+            0.0015865384615384674,
+            0.0008493589743589925,
+            0.0010576923076923567,
+            0.001057692307692315,
+            0.001169871794871798
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-ef391409f0824037a63c6b5ba9ea7041",
+              "reference_id": "ref-h-058-01"
+            },
+            {
+              "suggestion_id": "auto-39e43f85e41b4636aa70a436b17893cc",
+              "reference_id": "ref-h-058-02"
+            },
+            {
+              "suggestion_id": "auto-c9d9be8b775d44be8ca8fec618353cca",
+              "reference_id": "ref-h-058-03"
+            },
+            {
+              "suggestion_id": "auto-cec0f7394059446ba1b6cf9f3e7b5a4b",
+              "reference_id": "ref-h-058-04"
+            },
+            {
+              "suggestion_id": "auto-63f3f8cb81864e4cac174e87daa1e688",
+              "reference_id": "ref-h-058-05"
+            },
+            {
+              "suggestion_id": "auto-40cd65b242ca4c5990f64b60c6490ac9",
+              "reference_id": "ref-h-058-06"
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+          "pdf_page_number": 141,
+          "matched": 0,
+          "missed": 5,
+          "spurious": 0,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 5,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 5
+          },
+          "matches": []
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+          "pdf_page_number": 10,
+          "matched": 7,
+          "missed": 1,
+          "spurious": 0,
+          "boundary_error_mean": 0.0009065934065934087,
+          "boundary_errors": [
+            0.0005288461538461597,
+            0.000849358974358963,
+            0.0006410256410256526,
+            0.0012660256410256601,
+            0.0014743589743589514,
+            0.0006410256410256387,
+            0.0009455128205128347
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 1,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 1
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-6370305b890c4179950df2683d142cf9",
+              "reference_id": "ref-q-010-01"
+            },
+            {
+              "suggestion_id": "auto-149f743b99b044c1a2f18fd8397be1ac",
+              "reference_id": "ref-q-010-03"
+            },
+            {
+              "suggestion_id": "auto-9204e88f9544490797d15d84c46be3de",
+              "reference_id": "ref-q-010-04"
+            },
+            {
+              "suggestion_id": "auto-76133dca16454ccaa503d5c773a5ad49",
+              "reference_id": "ref-q-010-05"
+            },
+            {
+              "suggestion_id": "auto-d9563d09f4044ffba6d7938bb01607cf",
+              "reference_id": "ref-q-010-06"
+            },
+            {
+              "suggestion_id": "auto-d78cbed7d4b3487b82483ce7271c395a",
+              "reference_id": "ref-q-010-07"
+            },
+            {
+              "suggestion_id": "auto-39d308df55144c1cb8e910ec32adb457",
+              "reference_id": "ref-q-010-08"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+          "pdf_page_number": 12,
+          "matched": 6,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0007051282051281979,
+          "boundary_errors": [
+            0.0009455128205128152,
+            0.0005288461538461575,
+            0.0005288461538461575,
+            0.0008493589743589769,
+            0.0005288461538461298,
+            0.00084935897435895
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-bc857df0265f4e178d79d6e1875de4c7",
+              "reference_id": "ref-q-012-01"
+            },
+            {
+              "suggestion_id": "auto-ec0bb2d92f5f43099d0834f41a83cad3",
+              "reference_id": "ref-q-012-02"
+            },
+            {
+              "suggestion_id": "auto-c62265f2266a444e8617c84ebb4d5470",
+              "reference_id": "ref-q-012-03"
+            },
+            {
+              "suggestion_id": "auto-e7bee1a768c940c0b4b8ee9bdf1e3196",
+              "reference_id": "ref-q-012-04"
+            },
+            {
+              "suggestion_id": "auto-641baef6c0ef4db09436395ed8923b90",
+              "reference_id": "ref-q-012-05"
+            },
+            {
+              "suggestion_id": "auto-7488a623c1cf4d5d949794a8ae8ab7d8",
+              "reference_id": "ref-q-012-06"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+          "pdf_page_number": 20,
+          "matched": 9,
+          "missed": 1,
+          "spurious": 0,
+          "boundary_error_mean": 0.011043447293447292,
+          "boundary_errors": [
+            0.0010576923076923107,
+            0.0010576923076923116,
+            0.09187500000000003,
+            0.0004166666666666763,
+            0.000945512820512806,
+            0.0014903846153845879,
+            0.0003205128205128194,
+            0.0010576923076923012,
+            0.0011698717948717963
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 1,
+            "deletes": 0,
+            "resizes": 1,
+            "reorders": 0,
+            "total": 2
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-05c3b02b320045368454f5719d7b68b0",
+              "reference_id": "ref-q-020-01"
+            },
+            {
+              "suggestion_id": "auto-194a42df280144bfacfbbb60f20346cf",
+              "reference_id": "ref-q-020-02"
+            },
+            {
+              "suggestion_id": "auto-341d233e54d6473fa3fcf02e014ef248",
+              "reference_id": "ref-q-020-04"
+            },
+            {
+              "suggestion_id": "auto-3296d6296c974583b62172c13270ce4f",
+              "reference_id": "ref-q-020-05"
+            },
+            {
+              "suggestion_id": "auto-4ca18a035fc54c84ae58b05d8e454744",
+              "reference_id": "ref-q-020-06"
+            },
+            {
+              "suggestion_id": "auto-c813f3f5620c4275a1d6505f0485eb87",
+              "reference_id": "ref-q-020-07"
+            },
+            {
+              "suggestion_id": "auto-55627205fdc44716acce91dbd2fb08cf",
+              "reference_id": "ref-q-020-08"
+            },
+            {
+              "suggestion_id": "auto-228e8ff708e84f9abe220e9bd1a2d5d1",
+              "reference_id": "ref-q-020-09"
+            },
+            {
+              "suggestion_id": "auto-3908dbe767574913bd7d79a1a5a2dd97",
+              "reference_id": "ref-q-020-10"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+          "pdf_page_number": 29,
+          "matched": 4,
+          "missed": 2,
+          "spurious": 0,
+          "boundary_error_mean": 0.028842147435897435,
+          "boundary_errors": [
+            0.0008493589743589717,
+            0.00020833333333333294,
+            0.11334935897435894,
+            0.0009615384615384998
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 2,
+            "deletes": 0,
+            "resizes": 1,
+            "reorders": 0,
+            "total": 3
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-3e1d9aa1f5ab4f52bb5d551b3ed9c2e4",
+              "reference_id": "ref-q-029-01"
+            },
+            {
+              "suggestion_id": "auto-6209a46b7c764e7791f003342fd64c65",
+              "reference_id": "ref-q-029-02"
+            },
+            {
+              "suggestion_id": "auto-388589938ce7420ab148d02a67eb44b9",
+              "reference_id": "ref-q-029-03"
+            },
+            {
+              "suggestion_id": "auto-7d39ae5bf92d4dff8ebe81489819a612",
+              "reference_id": "ref-q-029-05"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+          "pdf_page_number": 31,
+          "matched": 1,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0009455128205128581,
+          "boundary_errors": [
+            0.0009455128205128581
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-415eb825040048e9acab50ad4390168f",
+              "reference_id": "ref-q-031-01"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+          "pdf_page_number": 37,
+          "matched": 5,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0008717948717948739,
+          "boundary_errors": [
+            0.0006410256410256396,
+            0.0006410256410256387,
+            0.0011698717948717989,
+            0.0008493589743589769,
+            0.001057692307692315
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-00ece2416fe44dfdb0f352a0eadeb52c",
+              "reference_id": "ref-q-037-01"
+            },
+            {
+              "suggestion_id": "auto-1087a122f54e4104abfe0565a9197f1c",
+              "reference_id": "ref-q-037-02"
+            },
+            {
+              "suggestion_id": "auto-01f44ad226e841db8dbee40462a99cc5",
+              "reference_id": "ref-q-037-03"
+            },
+            {
+              "suggestion_id": "auto-5a2fb823f7d042c3a12e1ce42538ff27",
+              "reference_id": "ref-q-037-04"
+            },
+            {
+              "suggestion_id": "auto-a0d3cab4620e4b378ae33f6eb2339793",
+              "reference_id": "ref-q-037-05"
+            }
+          ]
+        }
+      ]
+    },
+    "heldout": {
+      "page_count": 12,
+      "reference_regions": 50,
+      "suggestions": 44,
+      "matched": 43,
+      "missed": 7,
+      "spurious": 1,
+      "precision": 0.9772727272727273,
+      "recall": 0.86,
+      "boundary_error_matched_pair_mean": 0.0033493589743589748,
+      "ordering_inversions": 0,
+      "correction_effort": {
+        "adds": 7,
+        "deletes": 1,
+        "resizes": 1,
+        "reorders": 0,
+        "total": 9
+      },
+      "estimated_operations_per_page": 0.75,
+      "zero_estimated_correction_pages": 7,
+      "failure_page_ids": [
+        "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+        "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091",
+        "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037",
+        "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+        "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073"
+      ],
+      "pages": [
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0054",
+          "pdf_page_number": 54,
+          "matched": 4,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.000765224358974359,
+          "boundary_errors": [
+            0.00020833333333333814,
+            0.0008493589743589769,
+            0.0008493589743589769,
+            0.0011538461538461442
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-7eed938814bb4283a93f75938d6142f9",
+              "reference_id": "ref-a-054-01"
+            },
+            {
+              "suggestion_id": "auto-c8e75a13906a4ffab80a220459c70f8c",
+              "reference_id": "ref-a-054-02"
+            },
+            {
+              "suggestion_id": "auto-6ab53cf18e79416d85467019885a9ee1",
+              "reference_id": "ref-a-054-03"
+            },
+            {
+              "suggestion_id": "auto-5edf46fe12484f8e972880a17c262372",
+              "reference_id": "ref-a-054-04"
+            }
+          ]
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+          "pdf_page_number": 80,
+          "matched": 0,
+          "missed": 1,
+          "spurious": 0,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 1,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 1
+          },
+          "matches": []
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091",
+          "pdf_page_number": 91,
+          "matched": 3,
+          "missed": 2,
+          "spurious": 0,
+          "boundary_error_mean": 0.0028525641025641166,
+          "boundary_errors": [
+            0.0004166666666666763,
+            0.0007371794871794957,
+            0.0074038461538461775
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 2,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 2
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-b1a642d2eeaa4d7597394582de92b975",
+              "reference_id": "ref-a-091-01"
+            },
+            {
+              "suggestion_id": "auto-f8349688d78e4c29a3dc2e9278b09db1",
+              "reference_id": "ref-a-091-04"
+            },
+            {
+              "suggestion_id": "auto-a16f3ba64efa4dc08077422873e89dcb",
+              "reference_id": "ref-a-091-05"
+            }
+          ]
+        },
+        {
+          "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0095",
+          "pdf_page_number": 95,
+          "matched": 4,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.000633012820512827,
+          "boundary_errors": [
+            0.00020833333333333814,
+            0.00020833333333333814,
+            0.001169871794871798,
+            0.0009455128205128338
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-fa8b79239eec4774b387f19f8b7d9318",
+              "reference_id": "ref-a-095-01"
+            },
+            {
+              "suggestion_id": "auto-4fb69b5677b64e3699bbe3421fb61f8e",
+              "reference_id": "ref-a-095-02"
+            },
+            {
+              "suggestion_id": "auto-0cbeb205ac9c42e8b173635e34b458d3",
+              "reference_id": "ref-a-095-03"
+            },
+            {
+              "suggestion_id": "auto-dccad11df9624918a1999f6fa9b38507",
+              "reference_id": "ref-a-095-04"
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0020",
+          "pdf_page_number": 20,
+          "matched": 6,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.002144764957264954,
+          "boundary_errors": [
+            0.001378205128205131,
+            0.0013782051282051292,
+            0.0011698717948717963,
+            0.0016987179487179416,
+            0.005865384615384606,
+            0.0013782051282051205
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-dfba845e718447c3b85cd143f22772cf",
+              "reference_id": "ref-h-020-01"
+            },
+            {
+              "suggestion_id": "auto-604192455a1a4fd694b2771f6aa6dc12",
+              "reference_id": "ref-h-020-02"
+            },
+            {
+              "suggestion_id": "auto-04d207eb24a64928a84789b5ae2c875a",
+              "reference_id": "ref-h-020-03"
+            },
+            {
+              "suggestion_id": "auto-3981e3c12e244964945391efa22ac3b6",
+              "reference_id": "ref-h-020-04"
+            },
+            {
+              "suggestion_id": "auto-c9e77df8353b4119bf9569d0351c1be0",
+              "reference_id": "ref-h-020-05"
+            },
+            {
+              "suggestion_id": "auto-aad5b475b57f47e19d5d66dabc239595",
+              "reference_id": "ref-h-020-06"
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037",
+          "pdf_page_number": 37,
+          "matched": 0,
+          "missed": 1,
+          "spurious": 0,
+          "boundary_error_mean": null,
+          "boundary_errors": [],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 1,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 1
+          },
+          "matches": []
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0052",
+          "pdf_page_number": 52,
+          "matched": 4,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0010296474358974395,
+          "boundary_errors": [
+            0.0005288461538461506,
+            0.0023237179487179543,
+            0.0,
+            0.0012660256410256532
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-af24e1358b7c49d5bd0c6bd9c73ea2bd",
+              "reference_id": "ref-h-052-01"
+            },
+            {
+              "suggestion_id": "auto-c5825a5cad6346ac870775afee07b627",
+              "reference_id": "ref-h-052-02"
+            },
+            {
+              "suggestion_id": "auto-6e8e8d56f9bc4dda89cc7e54e1257e56",
+              "reference_id": "ref-h-052-03"
+            },
+            {
+              "suggestion_id": "auto-350d1f587e3143ecb6d172db0b8ff295",
+              "reference_id": "ref-h-052-04"
+            }
+          ]
+        },
+        {
+          "book_id": "harbinger-vol-1-omega-rising",
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0059",
+          "pdf_page_number": 59,
+          "matched": 6,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0011992521367521307,
+          "boundary_errors": [
+            0.001057692307692315,
+            0.0013782051282051205,
+            0.0013782051282051205,
+            0.001057692307692315,
+            0.0012660256410256254,
+            0.0010576923076922873
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-4fdc90ec164d4db4ba9765fdab478ff8",
+              "reference_id": "ref-h-059-01"
+            },
+            {
+              "suggestion_id": "auto-8b1731db6bc44256845f901f17156c7c",
+              "reference_id": "ref-h-059-02"
+            },
+            {
+              "suggestion_id": "auto-7551cd9b8ff246f6ba4b1bc1495af9c6",
+              "reference_id": "ref-h-059-03"
+            },
+            {
+              "suggestion_id": "auto-ac938734a87648b1adee58f22d5ce553",
+              "reference_id": "ref-h-059-04"
+            },
+            {
+              "suggestion_id": "auto-ab6787f0cec94b719f9c01c78a17c7c4",
+              "reference_id": "ref-h-059-05"
+            },
+            {
+              "suggestion_id": "auto-9364cb2bc9c6478da3a428baa7b20665",
+              "reference_id": "ref-h-059-06"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+          "pdf_page_number": 65,
+          "matched": 4,
+          "missed": 1,
+          "spurious": 0,
+          "boundary_error_mean": 0.02174679487179488,
+          "boundary_errors": [
+            0.08126602564102563,
+            0.003830128205128227,
+            0.00020833333333333814,
+            0.0016826923076923295
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 1,
+            "deletes": 0,
+            "resizes": 1,
+            "reorders": 0,
+            "total": 2
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-efa6c3044f624f67b05fc32ee3df599b",
+              "reference_id": "ref-q-065-01"
+            },
+            {
+              "suggestion_id": "auto-d4bb3cbc3a7c4203a4ea551287ba53bb",
+              "reference_id": "ref-q-065-02"
+            },
+            {
+              "suggestion_id": "auto-bf2537ff31fc4021acb55f6e395b7f6b",
+              "reference_id": "ref-q-065-04"
+            },
+            {
+              "suggestion_id": "auto-40f8ecbe20ed492e99f3993963fd2458",
+              "reference_id": "ref-q-065-05"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+          "pdf_page_number": 73,
+          "matched": 4,
+          "missed": 2,
+          "spurious": 1,
+          "boundary_error_mean": 0.0018269230769230734,
+          "boundary_errors": [
+            0.0009455128205128182,
+            0.001057692307692316,
+            0.0014743589743589653,
+            0.0038301282051281943
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 2,
+            "deletes": 1,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 3
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-4e31adc907ef437a81d1233d932ae5bc",
+              "reference_id": "ref-q-073-01"
+            },
+            {
+              "suggestion_id": "auto-08e06c61f705496583952637f5c74032",
+              "reference_id": "ref-q-073-02"
+            },
+            {
+              "suggestion_id": "auto-9f3aab99077240fdac25e7a0b3990ea0",
+              "reference_id": "ref-q-073-03"
+            },
+            {
+              "suggestion_id": "auto-0fafe583b7bc491aa58448f763e85262",
+              "reference_id": "ref-q-073-04"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+          "pdf_page_number": 79,
+          "matched": 7,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.001476648351648346,
+          "boundary_errors": [
+            0.002195512820512829,
+            0.0010576923076923012,
+            0.0014743589743589636,
+            0.001794871794871783,
+            0.0016987179487179416,
+            0.0005288461538461298,
+            0.0015865384615384726
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-c71ee3f2b88e44308ceb78709a5bb356",
+              "reference_id": "ref-q-079-01"
+            },
+            {
+              "suggestion_id": "auto-070b96079d7042268365816bff6689cf",
+              "reference_id": "ref-q-079-02"
+            },
+            {
+              "suggestion_id": "auto-3e9121fae8084c8c9740b7cf2ffb42e1",
+              "reference_id": "ref-q-079-03"
+            },
+            {
+              "suggestion_id": "auto-0b0abd889b3943518a82cfba5be99d1a",
+              "reference_id": "ref-q-079-04"
+            },
+            {
+              "suggestion_id": "auto-834ed64f0d924f76bc79dcb8228f86c2",
+              "reference_id": "ref-q-079-05"
+            },
+            {
+              "suggestion_id": "auto-9585cf19ff59462b93464b185530d58a",
+              "reference_id": "ref-q-079-06"
+            },
+            {
+              "suggestion_id": "auto-e64d1e8199de4c088b2c9742a8934569",
+              "reference_id": "ref-q-079-07"
+            }
+          ]
+        },
+        {
+          "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080",
+          "pdf_page_number": 80,
+          "matched": 1,
+          "missed": 0,
+          "spurious": 0,
+          "boundary_error_mean": 0.0010576923076923107,
+          "boundary_errors": [
+            0.0010576923076923107
+          ],
+          "ordering_inversions": 0,
+          "correction_effort": {
+            "adds": 0,
+            "deletes": 0,
+            "resizes": 0,
+            "reorders": 0,
+            "total": 0
+          },
+          "matches": [
+            {
+              "suggestion_id": "auto-e166942b4c904973b1e33bcecf4d9fd3",
+              "reference_id": "ref-q-080-01"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "execution": [
+    {
+      "argv": [
+        "comicpoc",
+        "detect",
+        "work/samples/archer-armstrong-vol-1-the-michelangelo-code",
+        "--output",
+        "work/phase-b/detected/dev/archer-armstrong-vol-1-the-michelangelo-code",
+        "--report",
+        "work/phase-b/detect-dev-archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--split",
+        "dev"
+      ],
+      "started_at": "2026-09-29T08:01:11.560599+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "evaluate-detection",
+        "work/phase-b/detected/dev/archer-armstrong-vol-1-the-michelangelo-code",
+        "--annotations",
+        "corpus/reference-annotations/dev/archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--reference-manifest",
+        "corpus/reference-annotations/manifests/archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--output",
+        "work/phase-b/evaluate-dev-archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--split",
+        "dev"
+      ],
+      "started_at": "2026-09-29T08:01:13.697204+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "detect",
+        "work/samples/harbinger-vol-1-omega-rising",
+        "--output",
+        "work/phase-b/detected/dev/harbinger-vol-1-omega-rising",
+        "--report",
+        "work/phase-b/detect-dev-harbinger-vol-1-omega-rising.json",
+        "--split",
+        "dev"
+      ],
+      "started_at": "2026-09-29T08:01:13.972072+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "evaluate-detection",
+        "work/phase-b/detected/dev/harbinger-vol-1-omega-rising",
+        "--annotations",
+        "corpus/reference-annotations/dev/harbinger-vol-1-omega-rising.json",
+        "--reference-manifest",
+        "corpus/reference-annotations/manifests/harbinger-vol-1-omega-rising.json",
+        "--output",
+        "work/phase-b/evaluate-dev-harbinger-vol-1-omega-rising.json",
+        "--split",
+        "dev"
+      ],
+      "started_at": "2026-09-29T08:01:16.355696+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "detect",
+        "work/samples/quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--output",
+        "work/phase-b/detected/dev/quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--report",
+        "work/phase-b/detect-dev-quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--split",
+        "dev"
+      ],
+      "started_at": "2026-09-29T08:01:16.656963+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "evaluate-detection",
+        "work/phase-b/detected/dev/quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--annotations",
+        "corpus/reference-annotations/dev/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--reference-manifest",
+        "corpus/reference-annotations/manifests/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--output",
+        "work/phase-b/evaluate-dev-quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--split",
+        "dev"
+      ],
+      "started_at": "2026-09-29T08:01:18.745757+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "import",
+        "test-data/Archer  Armstrong Vol 1 The Michelangelo Code.pdf",
+        "--output",
+        "work/phase-b/heldout-samples",
+        "--book-id",
+        "archer-armstrong-vol-1-the-michelangelo-code",
+        "--pages",
+        "54",
+        "80",
+        "91",
+        "95"
+      ],
+      "started_at": "2026-09-29T08:01:19.019934+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "detect",
+        "work/phase-b/heldout-samples/archer-armstrong-vol-1-the-michelangelo-code",
+        "--output",
+        "work/phase-b/detected/heldout/archer-armstrong-vol-1-the-michelangelo-code",
+        "--report",
+        "work/phase-b/detect-heldout-archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--split",
+        "heldout",
+        "--phase-b"
+      ],
+      "started_at": "2026-09-29T08:01:22.766642+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "evaluate-detection",
+        "work/phase-b/detected/heldout/archer-armstrong-vol-1-the-michelangelo-code",
+        "--annotations",
+        "corpus/reference-annotations/heldout/archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--reference-manifest",
+        "corpus/reference-annotations/manifests/archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--output",
+        "work/phase-b/evaluate-heldout-archer-armstrong-vol-1-the-michelangelo-code.json",
+        "--split",
+        "heldout",
+        "--phase-b"
+      ],
+      "started_at": "2026-09-29T08:01:24.422220+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "import",
+        "test-data/Harbinger Vol 1 Omega Rising.pdf",
+        "--output",
+        "work/phase-b/heldout-samples",
+        "--book-id",
+        "harbinger-vol-1-omega-rising",
+        "--pages",
+        "20",
+        "37",
+        "52",
+        "59"
+      ],
+      "started_at": "2026-09-29T08:01:24.688620+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "detect",
+        "work/phase-b/heldout-samples/harbinger-vol-1-omega-rising",
+        "--output",
+        "work/phase-b/detected/heldout/harbinger-vol-1-omega-rising",
+        "--report",
+        "work/phase-b/detect-heldout-harbinger-vol-1-omega-rising.json",
+        "--split",
+        "heldout",
+        "--phase-b"
+      ],
+      "started_at": "2026-09-29T08:01:28.622659+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "evaluate-detection",
+        "work/phase-b/detected/heldout/harbinger-vol-1-omega-rising",
+        "--annotations",
+        "corpus/reference-annotations/heldout/harbinger-vol-1-omega-rising.json",
+        "--reference-manifest",
+        "corpus/reference-annotations/manifests/harbinger-vol-1-omega-rising.json",
+        "--output",
+        "work/phase-b/evaluate-heldout-harbinger-vol-1-omega-rising.json",
+        "--split",
+        "heldout",
+        "--phase-b"
+      ],
+      "started_at": "2026-09-29T08:01:30.184421+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "import",
+        "test-data/Quantum and Woody Vol 1 The Worlds Worst Superhero Team.pdf",
+        "--output",
+        "work/phase-b/heldout-samples",
+        "--book-id",
+        "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--pages",
+        "65",
+        "73",
+        "79",
+        "80"
+      ],
+      "started_at": "2026-09-29T08:01:30.438581+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "detect",
+        "work/phase-b/heldout-samples/quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--output",
+        "work/phase-b/detected/heldout/quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--report",
+        "work/phase-b/detect-heldout-quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--split",
+        "heldout",
+        "--phase-b"
+      ],
+      "started_at": "2026-09-29T08:01:33.404917+00:00",
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "comicpoc",
+        "evaluate-detection",
+        "work/phase-b/detected/heldout/quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "--annotations",
+        "corpus/reference-annotations/heldout/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--reference-manifest",
+        "corpus/reference-annotations/manifests/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--output",
+        "work/phase-b/evaluate-heldout-quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "--split",
+        "heldout",
+        "--phase-b"
+      ],
+      "started_at": "2026-09-29T08:01:34.795668+00:00",
+      "returncode": 0
+    }
+  ],
+  "reader_check": {
+    "browser": "153.0.8010.12",
+    "checks": [
+      {
+        "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+        "suggestion_count": 28,
+        "manifest_equal": true,
+        "image": {
+          "complete": true,
+          "width": 1561,
+          "height": 2400
+        },
+        "buttons": [
+          "\u2190 Library",
+          "\u2212",
+          "+",
+          "Fit",
+          "Pages"
+        ],
+        "guided_mode": "not implemented on tested main revision",
+        "page_errors": [],
+        "forbidden_requests": []
+      },
+      {
+        "book_id": "harbinger-vol-1-omega-rising",
+        "suggestion_count": 9,
+        "manifest_equal": true,
+        "image": {
+          "complete": true,
+          "width": 1561,
+          "height": 2400
+        },
+        "buttons": [
+          "\u2190 Library",
+          "\u2212",
+          "+",
+          "Fit",
+          "Pages"
+        ],
+        "guided_mode": "not implemented on tested main revision",
+        "page_errors": [],
+        "forbidden_requests": []
+      },
+      {
+        "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "suggestion_count": 32,
+        "manifest_equal": true,
+        "image": {
+          "complete": true,
+          "width": 1561,
+          "height": 2400
+        },
+        "buttons": [
+          "\u2190 Library",
+          "\u2212",
+          "+",
+          "Fit",
+          "Pages"
+        ],
+        "guided_mode": "not implemented on tested main revision",
+        "page_errors": [],
+        "forbidden_requests": []
+      }
+    ]
+  }
+}
