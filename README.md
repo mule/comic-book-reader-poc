@@ -127,7 +127,7 @@ uv run comicpoc detect ../work/samples/archer-armstrong-vol-1-the-michelangelo-c
   --overlays ../work/detection/overlays-frozen/archer
 ```
 
-Use a new output package directory/report for each run. To preserve suggestion IDs on rerun, use the previous detected package as input. Only rendered page assets are read; split membership is checked before assets are opened. Defaults use the committed frozen configuration and permit **dev pages only**. See [detection approach and Phase B handoff](docs/detection.md) for republish semantics, metrics and limitations. The evaluator is available now; real manual references and held-out results are pending Phase B.
+Use a new output package directory/report for each run. To preserve suggestion IDs on rerun, use the previous detected package as input. Only rendered page assets are read; split membership is checked before assets are opened. Defaults use the committed frozen configuration and permit **dev pages only**. See [detection approach and Phase B results](docs/detection.md) for republish semantics, metrics and limitations. Phase B now includes visually verified AI reference annotations for all 30 pages, separate dev/held-out results and a guided-reader integration check; the detector configuration remains frozen.
 
 ## Evaluation & Benchmarks (Phase A)
 
@@ -176,3 +176,5 @@ pnpm bench:smoke
 
 See [docs/evaluation-report.md](docs/evaluation-report.md) for full benchmark findings, environment details, and PENDING validation items.
 
+
+Phase B now includes AI-visually-authored references for all 30 evaluation pages, separate dev/held-out metrics, and estimated edit operations in [docs/detection.md](docs/detection.md). [Reference rules and snapshots](corpus/reference-annotations/README.md) and [raw results](corpus/detection-results-phase-b.json) contain no artwork. The frozen config is unchanged. On the tested main revision detected packages load in the full-page reader; guided suggestion display awaits #6.
