@@ -1,0 +1,20 @@
+{
+  "name": "comicpoc-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.3.0",
+  "scripts": {
+    "bench": "tsx src/runBenchmarks.ts",
+    "bench:smoke": "tsx src/smoke.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "playwright": "^1.50.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.9.0"
+  }
+}

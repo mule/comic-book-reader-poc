@@ -26,6 +26,8 @@ Direct dependencies and build tools checked against upstream license files on 20
 | @testing-library/user-event, @testing-library/jest-dom | Reader test interaction and matchers | MIT; same project licenses |
 | jsdom | Vitest browser environment for unit tests | MIT; [LICENSE](https://github.com/jsdom/jsdom/blob/main/README.md#license) |
 | @types/node | Types for the Vite plugin and test tooling | MIT; [DefinitelyTyped LICENSE](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/main/LICENSE) |
+| playwright | Automated browser execution and metrics collection for bench/ | Apache-2.0; [LICENSE](https://github.com/microsoft/playwright/blob/main/LICENSE), checked 2026-09-28 |
+| tsx | TypeScript execution for bench/ scripts | MIT; [LICENSE](https://github.com/privatenumber/tsx/blob/develop/LICENSE), checked 2026-09-28 |
 
 Pillow and PDFium wheels bundle native libraries with their own license notices. Preserve the installed distribution notices if packaging these tools for redistribution. Purchased comics and generated previews remain subject to their original rights and are excluded from Git and CI.
 

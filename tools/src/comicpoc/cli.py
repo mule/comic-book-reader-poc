@@ -109,6 +109,33 @@ def main() -> int:
             action="store_true",
             help="Explicitly authorize held-out access",
         )
+    vc = commands.add_parser(
+        "verify-corpus", help="Verify all packages against inventory.json"
+    )
+    vc.add_argument(
+        "--packages",
+        type=Path,
+        default=ROOT / "work/packages",
+        help="Path to packages directory",
+    )
+    vc.add_argument(
+        "--inventory",
+        type=Path,
+        default=ROOT / "corpus/inventory.json",
+        help="Path to corpus inventory.json",
+    )
+    vc.add_argument(
+        "--json",
+        dest="json_output",
+        type=Path,
+        help="Path to write verification results JSON",
+    )
+    vc.add_argument(
+        "--markdown",
+        dest="markdown_output",
+        type=Path,
+        help="Path to write verification results Markdown",
+    )
     args = parser.parse_args()
     try:
         if args.command in {"detect", "evaluate-detection"}:
@@ -241,6 +268,23 @@ def main() -> int:
             print(
                 f"\nWrote full machine-readable JSON to {args.output / 'benchmark-results.json'}"
             )
+        elif args.command == "verify-corpus":
+            from comicpoc.verify_corpus import (
+                format_verification_markdown,
+                verify_corpus,
+            )
+
+            report = verify_corpus(args.packages, args.inventory)
+            md = format_verification_markdown(report)
+            if args.json_output:
+                args.json_output.parent.mkdir(parents=True, exist_ok=True)
+                args.json_output.write_text(json.dumps(report, indent=2) + "\n")
+            if args.markdown_output:
+                args.markdown_output.parent.mkdir(parents=True, exist_ok=True)
+                args.markdown_output.write_text(md + "\n")
+            print(md)
+            if not report["passed"]:
+                return 1
         elif args.check:
             problems = check_inventory(
                 args.sources, json.loads(args.output.read_text())
