@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "book_id": "synthetic-book",
+  "source_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "pages": [
+    {
+      "page_id": "p-0000000000000000000000000000000000000000000000000000000000000000-0001",
+      "pdf_page_number": 1,
+      "added_regions": [
+        {
+          "id": "m-top",
+          "x": 0.05,
+          "y": 0.05,
+          "width": 0.9,
+          "height": 0.4
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-top"
+      ]
+    }
+  ]
+}

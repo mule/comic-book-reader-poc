@@ -78,13 +78,16 @@ def main() -> int:
                 "page_bytes_mean": sum(page_sizes) // len(page_sizes),
                 "page_bytes_max": max(page_sizes),
                 "thumb_bytes_total": sum(thumb_sizes),
-                "package_bytes_total": sum(page_sizes) + sum(thumb_sizes),
+                "asset_bytes_total": sum(page_sizes) + sum(thumb_sizes),
+                "package_bytes_total": sum(
+                    p.stat().st_size for p in package_path.rglob("*") if p.is_file()
+                ),
             }
             bench_results["books"].append(book_stat)
             bench_results["total_pages"] += len(pages)
             bench_results["total_page_bytes"] += sum(page_sizes)
             bench_results["total_thumb_bytes"] += sum(thumb_sizes)
-            bench_results["total_package_bytes"] += sum(page_sizes) + sum(thumb_sizes)
+            bench_results["total_package_bytes"] += book_stat["package_bytes_total"]
             print(
                 f"  Done in {elapsed:.2f}s ({book_stat['import_pages_per_second']} pages/s), total {book_stat['package_bytes_total']} bytes",
                 flush=True,

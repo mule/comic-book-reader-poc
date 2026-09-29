@@ -100,7 +100,7 @@ Everything is served from your machine; there is no backend beyond the Vite dev/
 cd reader
 pnpm dev:lan        # opt-in: binds 0.0.0.0; Vite prints a http://<lan-ip>:5173 URL
 # or a production build:
-pnpm build && pnpm preview   # preview also binds 0.0.0.0 (port 4173)
+pnpm build && pnpm exec vite preview --host 0.0.0.0   # opt-in LAN preview (port 4173)
 ```
 
 `pnpm dev` binds to localhost only, so purchased artwork is never exposed to the network by default. Use `dev:lan` only on a trusted network. Open the printed LAN URL on a tablet connected to the same network. The reader is a static client; packages are streamed from the local packages directory only. Real tablet/touch hardware testing is **PENDING** — see the reader report; only desktop Chrome and a touch-enabled viewport emulation have been verified so far.
@@ -129,7 +129,7 @@ uv run comicpoc detect ../work/samples/archer-armstrong-vol-1-the-michelangelo-c
 
 Use a new output package directory/report for each run. To preserve suggestion IDs on rerun, use the previous detected package as input. Only rendered page assets are read; split membership is checked before assets are opened. Defaults use the committed frozen configuration and permit **dev pages only**. See [detection approach and Phase B results](docs/detection.md) for republish semantics, metrics and limitations. Phase B now includes visually verified AI reference annotations for all 30 pages, separate dev/held-out results and a guided-reader integration check; the detector configuration remains frozen.
 
-## Evaluation & Benchmarks (Phase A)
+## Final evaluation & benchmarks
 
 Automated corpus verification and end-to-end browser performance benchmarks live under `tools/` and `bench/`. All measurements derive from script runs with raw JSON saved under `work/bench/`.
 
@@ -177,4 +177,16 @@ pnpm bench:smoke
 See [docs/evaluation-report.md](docs/evaluation-report.md) for full benchmark findings, environment details, and PENDING validation items.
 
 
-Phase B now includes AI-visually-authored references for all 30 evaluation pages, separate dev/held-out metrics, and estimated edit operations in [docs/detection.md](docs/detection.md). [Reference rules and snapshots](corpus/reference-annotations/README.md) and [raw results](corpus/detection-results-phase-b.json) contain no artwork. The frozen config is unchanged. On the tested main revision detected packages load in the full-page reader; guided suggestion display awaits #6.
+Phase B now includes AI-visually-authored references for all 30 evaluation pages, separate dev/held-out metrics, and estimated edit operations in [docs/detection.md](docs/detection.md). [Reference rules and snapshots](corpus/reference-annotations/README.md) and [raw results](corpus/detection-results-phase-b.json) contain no artwork. The frozen config is unchanged. On the tested main revision detected packages load in the full-page reader; guided suggestion integration is verified in the detection report.
+
+DEV-only visual comparisons (all purchased images remain under ignored `work/`):
+
+```sh
+cd bench && pnpm exec tsx src/visual.ts
+cd ../tools && uv run python scripts/compare_visual.py
+uv run python scripts/evaluation_evidence.py
+uv run python scripts/evaluation_tables.py
+```
+
+See the [final epic report](docs/evaluation-report.md) for reproduction, measured
+results, inspected visual comparisons and explicit remaining validation gaps.

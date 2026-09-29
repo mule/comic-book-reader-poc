@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book": {
+    "id": "synthetic-book",
+    "title": "Synthetic example"
+  },
+  "source": {
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "byte_size": 100,
+    "page_count": 1
+  },
+  "render_profile": {
+    "id": "render-e9c4c14ea687a39d",
+    "format": "webp",
+    "quality": 85,
+    "long_edge_px": 2400,
+    "resolution_policy": "fixed-long-edge",
+    "thumbnail": {
+      "format": "webp",
+      "quality": 80,
+      "long_edge_px": 360
+    }
+  },
+  "selection": "all",
+  "page_order": [
+    "p-0000000000000000000000000000000000000000000000000000000000000000-0001"
+  ],
+  "pages": [
+    {
+      "id": "p-0000000000000000000000000000000000000000000000000000000000000000-0001",
+      "pdf_page_number": 1,
+      "width": 1600,
+      "height": 2400,
+      "orientation": "portrait",
+      "rotation_degrees": 0,
+      "page": {
+        "path": "pages/synthetic.webp",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "byte_size": 100,
+        "width": 1600,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/synthetic.webp",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "byte_size": 100,
+        "width": 240,
+        "height": 360
+      }
+    }
+  ]
+}
