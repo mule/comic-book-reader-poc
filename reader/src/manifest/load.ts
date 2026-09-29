@@ -22,6 +22,8 @@ export interface ReaderBook {
   selection: 'all' | 'sample'
   pages: ReaderPage[]
   byId: Map<string, ReaderPage>
+  /** The validated manifest, kept for annotation import validation. */
+  manifest: Manifest
 }
 
 export type BookLoadError =
@@ -63,6 +65,7 @@ export function buildReaderBook(packageId: string, manifest: Manifest): ReaderBo
     selection: manifest.selection,
     pages,
     byId: new Map(pages.map((page) => [page.id, page])),
+    manifest,
   }
 }
 

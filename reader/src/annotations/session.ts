@@ -273,3 +273,24 @@ export function toDocument(
 export function sessionHasEdits(session: EditSession): boolean {
   return session.pages.size > 0
 }
+
+export type RegionOrigin = 'suggestion' | 'edited' | 'manual'
+
+export interface AnnotatedRegion {
+  region: Region
+  origin: RegionOrigin
+}
+
+export function effectiveRegionsWithOrigins(
+  page: { id: string; suggestions?: Suggestions },
+  pageSession: PageEditSession | null,
+): AnnotatedRegion[] {
+  const override = pageSession ? buildOverride(page, pageSession) : null
+  const merged = effectiveRegions(page, override)
+  const added = new Set(override?.added_regions.map((region) => region.id) ?? [])
+  const edited = new Set(override?.edited_regions.map((region) => region.id) ?? [])
+  return merged.map((region) => ({
+    region,
+    origin: added.has(region.id) ? 'manual' : edited.has(region.id) ? 'edited' : 'suggestion',
+  }))
+}

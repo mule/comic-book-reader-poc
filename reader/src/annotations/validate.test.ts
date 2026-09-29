@@ -37,6 +37,16 @@ function override(overrides = {}) {
   }
 }
 
+function failureOf(result: ReturnType<typeof validateAnnotationDocument>) {
+  if (result.ok) throw new Error('expected the document to be rejected')
+  return result.error
+}
+
+function issuesOf(result: ReturnType<typeof validateAnnotationDocument>): string[] {
+  const error = failureOf(result)
+  return error.kind === 'parse' ? [] : error.issues
+}
+
 describe('validateAnnotationDocument', () => {
   test('accepts a valid manual document against the canonical schema', () => {
     const manifest = manifestWithSuggestions()
@@ -72,13 +82,10 @@ describe('validateAnnotationDocument', () => {
   test('rejects a different book or source revision', () => {
     const manifest = manifestWithSuggestions()
     const wrongBook = validateAnnotationDocument(document({ book_id: 'other-book' }), manifest)
-    expect(wrongBook.ok).toBe(false)
-    if (!wrongBook.ok) expect(wrongBook.error.kind).toBe('identity')
+    expect(failureOf(wrongBook).kind).toBe('identity')
 
     const wrongSource = validateAnnotationDocument(document({ source_sha256: '0'.repeat(64) }), manifest)
-    expect(wrongSource.ok).toBe(false)
-    if (!wrongSource.error) throw new Error('unreachable')
-    expect(wrongSource.error.kind).toBe('identity')
+    expect(failureOf(wrongSource).kind).toBe('identity')
   })
 
   test('rejects unknown pages and pdf page number mismatches', () => {
@@ -87,8 +94,7 @@ describe('validateAnnotationDocument', () => {
       document({ pages: [override({ page_id: 'p-gone' })] }),
       manifest,
     )
-    expect(unknown.ok).toBe(false)
-    if (!unknown.ok) expect(unknown.error.issues[0]).toContain('mismatch')
+    expect(issuesOf(unknown)[0]).toContain('mismatch')
 
     const wrongNumber = validateAnnotationDocument(
       document({ pages: [override({ pdf_page_number: 2 })] }),
@@ -123,8 +129,7 @@ describe('validateAnnotationDocument', () => {
       document({ pages: [override({ added_regions: [{ ...SUGGESTED }], order: ['r1'] })] }),
       manifest,
     )
-    expect(result.ok).toBe(false)
-    if (!result.ok) expect(result.error.issues.join(' ')).toContain('collides')
+    expect(issuesOf(result).join(' ')).toContain('collides')
   })
 
   test('the manual order must reference known regions and cover survivors', () => {
@@ -147,9 +152,7 @@ describe('validateAnnotationDocument', () => {
       manifest,
     )
     expect(missingSurvivor.ok).toBe(false)
-    if (!missingSurvivor.ok) {
-      expect(missingSurvivor.error.issues.join(' ')).toContain('surviving region r1')
-    }
+    expect(issuesOf(missingSurvivor).join(' ')).toContain('surviving region r1')
   })
 
   test('tombstones for ids absent from current suggestions are accepted', () => {

@@ -141,7 +141,6 @@ describe('editor session', () => {
 
     // The rerun adds r2 and drops r1.
     const rerun = bookWith([syntheticSuggestions(R2)])
-    const rerunPage = rerun.pages[0]
     const doc = toDocument(reordered, rerun)
     expect(doc.pages[0].order).toEqual(['m-1', 'r2'])
 

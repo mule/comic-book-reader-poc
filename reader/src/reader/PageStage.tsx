@@ -4,18 +4,27 @@ import type { PageImagesApi } from '../reading/usePageImages'
 import {
   IDENTITY_CAMERA,
   computeFrame,
+  clampCamera,
   isIdentity,
   panBy,
   zoomAt,
   type Camera,
+  type Frame,
+  type Rect,
   type Size,
 } from '../reading/camera'
-import { FULL_PAGE_RECT } from '../reading/camera'
+import { FrameAnimator } from '../reading/transition'
 
 interface PageStageProps {
   book: ReaderBook
   page: ReaderPage
   images: PageImagesApi
+  /** Camera focus rectangle (full page or one guided region). */
+  focus: Rect
+  /** Changing this key resets the user camera and triggers a transition. */
+  cameraKey: string
+  reducedMotion: boolean
+  showFocusOutline?: boolean
   onNext(): void
   onPrev(): void
   onFirst(): void
@@ -35,7 +44,21 @@ const DOUBLE_TAP_WINDOW_MS = 300
 const DOUBLE_TAP_MAX_DISTANCE = 40
 
 export function PageStage(props: PageStageProps) {
-  const { book, page, images, onNext, onPrev, onFirst, onLast, onEscape, registerZoomControls } = props
+  const {
+    book,
+    page,
+    images,
+    focus,
+    cameraKey,
+    reducedMotion,
+    showFocusOutline = false,
+    onNext,
+    onPrev,
+    onFirst,
+    onLast,
+    onEscape,
+    registerZoomControls,
+  } = props
   const stageRef = useRef<HTMLDivElement | null>(null)
   const [viewport, setViewport] = useState<Size>({ width: 0, height: 0 })
   const [camera, setCamera] = useState<Camera>(IDENTITY_CAMERA)
@@ -43,6 +66,29 @@ export function PageStage(props: PageStageProps) {
   cameraRef.current = camera
   const viewportRef = useRef(viewport)
   viewportRef.current = viewport
+  const pageSize = { width: page.width, height: page.height }
+
+  // A camera key change (page or guided step) resets the user camera. Doing
+  // this during render keeps the committed frame consistent with the new key.
+  const cameraKeyRef = useRef(cameraKey)
+  if (cameraKeyRef.current !== cameraKey) {
+    cameraKeyRef.current = cameraKey
+    setCamera(IDENTITY_CAMERA)
+  }
+
+  const [displayFrame, setDisplayFrame] = useState<Frame | null>(null)
+  const animatorRef = useRef<FrameAnimator | null>(null)
+  useEffect(() => {
+    const animator = new FrameAnimator({
+      reducedMotion,
+      onFrame: (frame) => setDisplayFrame(frame),
+    })
+    animatorRef.current = animator
+    return () => {
+      animator.destroy()
+      animatorRef.current = null
+    }
+  }, [reducedMotion])
 
   useEffect(() => {
     const element = stageRef.current
@@ -60,37 +106,40 @@ export function PageStage(props: PageStageProps) {
     return () => observer.disconnect()
   }, [])
 
+  // Resize / orientation change: keep the active focus (the focus prop is
+  // unchanged) and refit — preserve the user zoom but re-clamp the pan.
   useEffect(() => {
-    setCamera(IDENTITY_CAMERA)
-  }, [page.id])
+    if (viewport.width === 0 || viewport.height === 0) return
+    setCamera((current) => clampCamera(viewport, pageSize, focus, current))
+  }, [viewport.width, viewport.height, page.id])
 
   const zoomIn = useCallback(() => {
     const { width, height } = viewportRef.current
     setCamera((current) =>
       zoomAt(
         { width, height },
-        { width: page.width, height: page.height },
-        FULL_PAGE_RECT,
+        pageSize,
+        focus,
         current,
         { x: width / 2, y: height / 2 },
         1.25,
       ),
     )
-  }, [page.width, page.height])
+  }, [page.width, page.height, focus.x, focus.y, focus.width, focus.height])
 
   const zoomOut = useCallback(() => {
     const { width, height } = viewportRef.current
     setCamera((current) =>
       zoomAt(
         { width, height },
-        { width: page.width, height: page.height },
-        FULL_PAGE_RECT,
+        pageSize,
+        focus,
         current,
         { x: width / 2, y: height / 2 },
         1 / 1.25,
       ),
     )
-  }, [page.width, page.height])
+  }, [page.width, page.height, focus.x, focus.y, focus.width, focus.height])
 
   const resetZoom = useCallback(() => setCamera(IDENTITY_CAMERA), [])
 
@@ -107,12 +156,12 @@ export function PageStage(props: PageStageProps) {
       const anchor = { x: event.clientX - rect.left, y: event.clientY - rect.top }
       const factor = Math.exp(-event.deltaY * 0.0015)
       setCamera((current) =>
-        zoomAt(viewportRef.current, { width: page.width, height: page.height }, FULL_PAGE_RECT, current, anchor, factor),
+        zoomAt(viewportRef.current, pageSize, focus, current, anchor, factor),
       )
     }
     element.addEventListener('wheel', onWheel, { passive: false })
     return () => element.removeEventListener('wheel', onWheel)
-  }, [page.width, page.height])
+  }, [page.width, page.height, focus.x, focus.y, focus.width, focus.height])
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -227,13 +276,12 @@ export function PageStage(props: PageStageProps) {
     const point = localPoint(event)
     pointers.current.set(event.pointerId, point)
     const state = gesture.current
-    const pageSize = { width: page.width, height: page.height }
     if (state.mode === 'pan' && pointers.current.size === 1) {
       const dx = point.x - state.startX
       const dy = point.y - state.startY
       if (Math.hypot(dx, dy) > 4) state.moved = true
       setCamera(
-        panBy(viewportRef.current, pageSize, FULL_PAGE_RECT, state.startCamera, { x: dx, y: dy }),
+        panBy(viewportRef.current, pageSize, focus, state.startCamera, { x: dx, y: dy }),
       )
     } else if (state.mode === 'pinch' && pointers.current.size >= 2) {
       const [a, b] = [...pointers.current.values()]
@@ -241,7 +289,7 @@ export function PageStage(props: PageStageProps) {
       const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }
       const factor = distance / state.pinchStartDistance
       setCamera(
-        zoomAt(viewportRef.current, pageSize, FULL_PAGE_RECT, state.startCamera, mid, factor),
+        zoomAt(viewportRef.current, pageSize, focus, state.startCamera, mid, factor),
       )
     }
   }
@@ -276,7 +324,7 @@ export function PageStage(props: PageStageProps) {
         const current = cameraRef.current
         const target = current.zoom > 1 ? 1 : DOUBLE_TAP_ZOOM
         setCamera(
-          zoomAt(viewportRef.current, { width: page.width, height: page.height }, FULL_PAGE_RECT, current, point, target / current.zoom),
+          zoomAt(viewportRef.current, pageSize, focus, current, point, target / current.zoom),
         )
         return
       }
@@ -302,14 +350,40 @@ export function PageStage(props: PageStageProps) {
     const current = cameraRef.current
     const target = current.zoom > 1 ? 1 : DOUBLE_TAP_ZOOM
     setCamera(
-      zoomAt(viewportRef.current, { width: page.width, height: page.height }, FULL_PAGE_RECT, current, point, target / current.zoom),
+      zoomAt(viewportRef.current, pageSize, focus, current, point, target / current.zoom),
     )
   }
 
-  const frame =
+  const targetFrame =
     viewport.width > 0 && viewport.height > 0
-      ? computeFrame(viewport, { width: page.width, height: page.height }, FULL_PAGE_RECT, camera)
+      ? computeFrame(viewport, pageSize, focus, camera)
       : null
+  const frame = displayFrame ?? targetFrame
+
+  // Step changes animate the frame (unless reduced motion is requested or the
+  // page itself changes); direct camera changes and viewport refits snap.
+  const lastKeyRef = useRef<string | null>(null)
+  const lastPageRef = useRef<string | null>(null)
+  const frameDeps = targetFrame
+    ? [targetFrame.x, targetFrame.y, targetFrame.scale, cameraKey, page.id]
+    : [null, null, null, cameraKey, page.id]
+  useEffect(() => {
+    if (!targetFrame) return
+    const animator = animatorRef.current
+    if (!animator) {
+      setDisplayFrame(targetFrame)
+      return
+    }
+    const keyChanged = lastKeyRef.current !== cameraKey
+    const pageChanged = lastPageRef.current !== page.id
+    lastKeyRef.current = cameraKey
+    lastPageRef.current = page.id
+    if (keyChanged && !pageChanged && !reducedMotion) {
+      animator.animateTo(targetFrame)
+    } else {
+      animator.snap(targetFrame)
+    }
+  }, [...frameDeps, reducedMotion])
 
   const entry = images.entries.get(page.id)
   const status = entry?.status ?? 'loading'
@@ -339,6 +413,9 @@ export function PageStage(props: PageStageProps) {
             height: `${page.height}px`,
           }}
         />
+      ) : null}
+      {showFocusOutline && status === 'loaded' ? (
+        <div className="guided-outline" data-testid="guided-outline" aria-hidden="true" />
       ) : null}
       {status === 'loading' ? (
         <div className="page-status">
