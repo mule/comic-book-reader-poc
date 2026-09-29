@@ -4400,6 +4400,897 @@
         },
         "buttons": [
           "\u2190 Library",
+          "Full page",
+          "Guided",
+          "Edit regions",
+          "\u2212",
+          "+",
+          "Fit",
+          "Annotations",
+          "Pages"
+        ],
+        "guided_mode": "verified stored suggestions with independent camera geometry",
+        "guided_stops": [
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+            "regionId": "auto-9425d0958ca7484c88a515320cd26592",
+            "rect": {
+              "x": 0.05897435897435897,
+              "y": 0.049166666666666664,
+              "width": 0.8897435897435897,
+              "height": 0.16166666666666668,
+              "id": "auto-9425d0958ca7484c88a515320cd26592"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+            "regionId": "auto-dc2e8f8e472b44cf9a28474d222c706e",
+            "rect": {
+              "x": 0.05512820512820513,
+              "y": 0.21333333333333335,
+              "width": 0.8935897435897435,
+              "height": 0.21333333333333335,
+              "id": "auto-dc2e8f8e472b44cf9a28474d222c706e"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+            "regionId": "auto-1719cac77bb24ad497ea2ecd868615fc",
+            "rect": {
+              "x": 0.05897435897435897,
+              "y": 0.43,
+              "width": 0.8897435897435897,
+              "height": 0.14833333333333337,
+              "id": "auto-1719cac77bb24ad497ea2ecd868615fc"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+            "regionId": "auto-0b8ff4a30a854d469c4ccef3a093c231",
+            "rect": {
+              "x": 0.05897435897435897,
+              "y": 0.58,
+              "width": 0.8897435897435897,
+              "height": 0.1708333333333334,
+              "id": "auto-0b8ff4a30a854d469c4ccef3a093c231"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+            "regionId": "auto-b019e27728234bbe8a85d799643e23cb",
+            "rect": {
+              "x": 0.057692307692307696,
+              "y": 0.7533333333333333,
+              "width": 0.8897435897435897,
+              "height": 0.1975,
+              "id": "auto-b019e27728234bbe8a85d799643e23cb"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+            "regionId": "auto-a5ec24e046f441beb2315bdb2d3e81ca",
+            "rect": {
+              "x": 0.06282051282051282,
+              "y": 0.060833333333333336,
+              "width": 0.8628205128205129,
+              "height": 0.20416666666666666,
+              "id": "auto-a5ec24e046f441beb2315bdb2d3e81ca"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+            "regionId": "auto-4cbd4b49c41d4b99bce55ae433309383",
+            "rect": {
+              "x": 0,
+              "y": 0.2675,
+              "width": 1,
+              "height": 0.7324999999999999,
+              "id": "auto-4cbd4b49c41d4b99bce55ae433309383"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "regionId": "auto-024c7dfbb959499db9fbb4cc8e590f62",
+            "rect": {
+              "x": 0.052564102564102565,
+              "y": 0.04833333333333333,
+              "width": 0.30000000000000004,
+              "height": 0.2825,
+              "id": "auto-024c7dfbb959499db9fbb4cc8e590f62"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "regionId": "auto-30cfbf2b160c416099342f3ab95862ce",
+            "rect": {
+              "x": 0.3564102564102564,
+              "y": 0.04833333333333333,
+              "width": 0.2987179487179487,
+              "height": 0.2833333333333333,
+              "id": "auto-30cfbf2b160c416099342f3ab95862ce"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "regionId": "auto-5645273c29ad4ad192e2fec24e7f7c9b",
+            "rect": {
+              "x": 0.6564102564102564,
+              "y": 0.04083333333333333,
+              "width": 0.30641025641025643,
+              "height": 0.29083333333333333,
+              "id": "auto-5645273c29ad4ad192e2fec24e7f7c9b"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "regionId": "auto-2d74d72cbd394588ac5d21f184de3d78",
+            "rect": {
+              "x": 0.015384615384615385,
+              "y": 0.4266666666666667,
+              "width": 0.2794871794871795,
+              "height": 0.20083333333333325,
+              "id": "auto-2d74d72cbd394588ac5d21f184de3d78"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "regionId": "auto-7c089476d5fb49c7927059fe56aa4339",
+            "rect": {
+              "x": 0.3294871794871795,
+              "y": 0.4,
+              "width": 0.13846153846153847,
+              "height": 0.23333333333333328,
+              "id": "auto-7c089476d5fb49c7927059fe56aa4339"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+            "regionId": "auto-ff5ecdfff3cf445e912bb9afe70348db",
+            "rect": {
+              "x": 0.04871794871794872,
+              "y": 0.7233333333333334,
+              "width": 0.7435897435897435,
+              "height": 0.23249999999999993,
+              "id": "auto-ff5ecdfff3cf445e912bb9afe70348db"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+            "regionId": "auto-9109b617742c4ca994a0aa3c97485e73",
+            "rect": {
+              "x": 0.04358974358974359,
+              "y": 0.04,
+              "width": 0.908974358974359,
+              "height": 0.17333333333333334,
+              "id": "auto-9109b617742c4ca994a0aa3c97485e73"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+            "regionId": "auto-1668e076fc6d4246a4beffe4576a6125",
+            "rect": {
+              "x": 0.04358974358974359,
+              "y": 0.21666666666666667,
+              "width": 0.28076923076923077,
+              "height": 0.5408333333333333,
+              "id": "auto-1668e076fc6d4246a4beffe4576a6125"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+            "regionId": "auto-0d2c08417a50493f9af561fd32f8cd4f",
+            "rect": {
+              "x": 0.3282051282051282,
+              "y": 0.21416666666666667,
+              "width": 0.3641025641025641,
+              "height": 0.5441666666666667,
+              "id": "auto-0d2c08417a50493f9af561fd32f8cd4f"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+            "regionId": "auto-c06681e470544b3583c39b430a571063",
+            "rect": {
+              "x": 0.6923076923076923,
+              "y": 0.21583333333333332,
+              "width": 0.2692307692307693,
+              "height": 0.5416666666666666,
+              "id": "auto-c06681e470544b3583c39b430a571063"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+            "regionId": "auto-876d982d8b1643edbf3d161585e66961",
+            "rect": {
+              "x": 0.046153846153846156,
+              "y": 0.7583333333333333,
+              "width": 0.9089743589743591,
+              "height": 0.20666666666666667,
+              "id": "auto-876d982d8b1643edbf3d161585e66961"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+            "regionId": "auto-fc562f1f30694bc69adf41cc62730b96",
+            "rect": {
+              "x": 0.03717948717948718,
+              "y": 0.04083333333333333,
+              "width": 0.9205128205128206,
+              "height": 0.9216666666666666,
+              "id": "auto-fc562f1f30694bc69adf41cc62730b96"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-bfae72b356344c65950fd55a94c2dc4a",
+            "rect": {
+              "x": 0.038461538461538464,
+              "y": 0.04083333333333333,
+              "width": 0.29358974358974355,
+              "height": 0.30333333333333334,
+              "id": "auto-bfae72b356344c65950fd55a94c2dc4a"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-cfd75f866e9b48579a1b33f86e7941a2",
+            "rect": {
+              "x": 0.3384615384615385,
+              "y": 0.03916666666666667,
+              "width": 0.30512820512820515,
+              "height": 0.30416666666666664,
+              "id": "auto-cfd75f866e9b48579a1b33f86e7941a2"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-3fca4c13ce5d492b801bc9701f0ac75c",
+            "rect": {
+              "x": 0.6487179487179487,
+              "y": 0.0375,
+              "width": 0.2974358974358974,
+              "height": 0.30500000000000005,
+              "id": "auto-3fca4c13ce5d492b801bc9701f0ac75c"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-68b478653a43402e983b9d448cccd1b4",
+            "rect": {
+              "x": 0.04230769230769231,
+              "y": 0.3491666666666667,
+              "width": 0.29358974358974355,
+              "height": 0.3016666666666667,
+              "id": "auto-68b478653a43402e983b9d448cccd1b4"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-6cdb12e5a6b541b1b6334ee51ea2bf73",
+            "rect": {
+              "x": 0.34102564102564104,
+              "y": 0.34833333333333333,
+              "width": 0.3076923076923077,
+              "height": 0.29916666666666664,
+              "id": "auto-6cdb12e5a6b541b1b6334ee51ea2bf73"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-cbbf1fa872894a19967c4e9b5a933bc9",
+            "rect": {
+              "x": 0.6512820512820513,
+              "y": 0.3475,
+              "width": 0.2974358974358974,
+              "height": 0.2983333333333334,
+              "id": "auto-cbbf1fa872894a19967c4e9b5a933bc9"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-43699373ae5c4ebeb2c4391df56d8851",
+            "rect": {
+              "x": 0.04487179487179487,
+              "y": 0.6533333333333333,
+              "width": 0.29615384615384616,
+              "height": 0.3075,
+              "id": "auto-43699373ae5c4ebeb2c4391df56d8851"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-03262438f56242dd8b74665f50806e56",
+            "rect": {
+              "x": 0.34487179487179487,
+              "y": 0.6525,
+              "width": 0.30641025641025643,
+              "height": 0.30666666666666664,
+              "id": "auto-03262438f56242dd8b74665f50806e56"
+            }
+          },
+          {
+            "pageId": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+            "regionId": "auto-b15d278d8b9246568c5ae3fb5771888c",
+            "rect": {
+              "x": 0.6551282051282051,
+              "y": 0.6508333333333334,
+              "width": 0.2974358974358974,
+              "height": 0.30666666666666664,
+              "id": "auto-b15d278d8b9246568c5ae3fb5771888c"
+            }
+          }
+        ],
+        "forward_backward_verified": true,
+        "reload_progress_verified": true,
+        "page_errors": [],
+        "forbidden_requests": []
+      },
+      {
+        "book_id": "harbinger-vol-1-omega-rising",
+        "suggestion_count": 9,
+        "manifest_equal": true,
+        "image": {
+          "complete": true,
+          "width": 1561,
+          "height": 2400
+        },
+        "buttons": [
+          "\u2190 Library",
+          "Full page",
+          "Guided",
+          "Edit regions",
+          "\u2212",
+          "+",
+          "Fit",
+          "Annotations",
+          "Pages"
+        ],
+        "guided_mode": "verified stored suggestions with independent camera geometry",
+        "guided_stops": [
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+            "regionId": "auto-edb6de7f966e46a4b455cb2d69ee8136",
+            "rect": {
+              "x": 0.05897435897435897,
+              "y": 0.0375,
+              "width": 0.8807692307692307,
+              "height": 0.3166666666666667,
+              "id": "auto-edb6de7f966e46a4b455cb2d69ee8136"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+            "regionId": "auto-1477a4089a1d47d5a8520c253f785aab",
+            "rect": {
+              "x": 0.05897435897435897,
+              "y": 0.37,
+              "width": 0.8807692307692307,
+              "height": 0.1891666666666667,
+              "id": "auto-1477a4089a1d47d5a8520c253f785aab"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+            "regionId": "auto-900afb428b184442bbe1d36c9fbbf0e3",
+            "rect": {
+              "x": 0.05897435897435897,
+              "y": 0.5733333333333334,
+              "width": 0.8807692307692307,
+              "height": 0.38916666666666666,
+              "id": "auto-900afb428b184442bbe1d36c9fbbf0e3"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+            "regionId": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+            "regionId": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+            "regionId": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "regionId": "auto-ef391409f0824037a63c6b5ba9ea7041",
+            "rect": {
+              "x": 0.05641025641025641,
+              "y": 0.035833333333333335,
+              "width": 0.26794871794871794,
+              "height": 0.3041666666666667,
+              "id": "auto-ef391409f0824037a63c6b5ba9ea7041"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "regionId": "auto-39e43f85e41b4636aa70a436b17893cc",
+            "rect": {
+              "x": 0.3371794871794872,
+              "y": 0.035833333333333335,
+              "width": 0.6038461538461538,
+              "height": 0.3041666666666667,
+              "id": "auto-39e43f85e41b4636aa70a436b17893cc"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "regionId": "auto-c9d9be8b775d44be8ca8fec618353cca",
+            "rect": {
+              "x": 0.05641025641025641,
+              "y": 0.3491666666666667,
+              "width": 0.2692307692307692,
+              "height": 0.35333333333333333,
+              "id": "auto-c9d9be8b775d44be8ca8fec618353cca"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "regionId": "auto-cec0f7394059446ba1b6cf9f3e7b5a4b",
+            "rect": {
+              "x": 0.3371794871794872,
+              "y": 0.3491666666666667,
+              "width": 0.2717948717948717,
+              "height": 0.35333333333333333,
+              "id": "auto-cec0f7394059446ba1b6cf9f3e7b5a4b"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "regionId": "auto-63f3f8cb81864e4cac174e87daa1e688",
+            "rect": {
+              "x": 0.6205128205128205,
+              "y": 0.3491666666666667,
+              "width": 0.32179487179487176,
+              "height": 0.35333333333333333,
+              "id": "auto-63f3f8cb81864e4cac174e87daa1e688"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+            "regionId": "auto-40cd65b242ca4c5990f64b60c6490ac9",
+            "rect": {
+              "x": 0.05641025641025641,
+              "y": 0.71,
+              "width": 0.8846153846153846,
+              "height": 0.25416666666666665,
+              "id": "auto-40cd65b242ca4c5990f64b60c6490ac9"
+            }
+          },
+          {
+            "pageId": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+            "regionId": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          }
+        ],
+        "forward_backward_verified": true,
+        "reload_progress_verified": true,
+        "page_errors": [],
+        "forbidden_requests": []
+      },
+      {
+        "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+        "suggestion_count": 32,
+        "manifest_equal": true,
+        "image": {
+          "complete": true,
+          "width": 1561,
+          "height": 2400
+        },
+        "buttons": [
+          "\u2190 Library",
+          "Full page",
+          "Guided",
+          "Edit regions",
+          "\u2212",
+          "+",
+          "Fit",
+          "Annotations",
+          "Pages"
+        ],
+        "guided_mode": "verified stored suggestions with independent camera geometry",
+        "guided_stops": [
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-6370305b890c4179950df2683d142cf9",
+            "rect": {
+              "x": 0.021794871794871794,
+              "y": 0.014166666666666666,
+              "width": 0.9538461538461538,
+              "height": 0.15083333333333335,
+              "id": "auto-6370305b890c4179950df2683d142cf9"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-149f743b99b044c1a2f18fd8397be1ac",
+            "rect": {
+              "x": 0.020512820512820513,
+              "y": 0.23833333333333334,
+              "width": 0.28461538461538466,
+              "height": 0.24833333333333335,
+              "id": "auto-149f743b99b044c1a2f18fd8397be1ac"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-9204e88f9544490797d15d84c46be3de",
+            "rect": {
+              "x": 0.3192307692307692,
+              "y": 0.23833333333333334,
+              "width": 0.2730769230769231,
+              "height": 0.24916666666666665,
+              "id": "auto-9204e88f9544490797d15d84c46be3de"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-76133dca16454ccaa503d5c773a5ad49",
+            "rect": {
+              "x": 0.6064102564102564,
+              "y": 0.23666666666666666,
+              "width": 0.36923076923076925,
+              "height": 0.2516666666666667,
+              "id": "auto-76133dca16454ccaa503d5c773a5ad49"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-d9563d09f4044ffba6d7938bb01607cf",
+            "rect": {
+              "x": 0.017948717948717947,
+              "y": 0.49166666666666664,
+              "width": 0.4641025641025641,
+              "height": 0.28416666666666673,
+              "id": "auto-d9563d09f4044ffba6d7938bb01607cf"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-d78cbed7d4b3487b82483ce7271c395a",
+            "rect": {
+              "x": 0.4935897435897436,
+              "y": 0.495,
+              "width": 0.4807692307692307,
+              "height": 0.2816666666666666,
+              "id": "auto-d78cbed7d4b3487b82483ce7271c395a"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+            "regionId": "auto-39d308df55144c1cb8e910ec32adb457",
+            "rect": {
+              "x": 0.020512820512820513,
+              "y": 0.7816666666666666,
+              "width": 0.9551282051282051,
+              "height": 0.1975,
+              "id": "auto-39d308df55144c1cb8e910ec32adb457"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "regionId": "auto-bc857df0265f4e178d79d6e1875de4c7",
+            "rect": {
+              "x": 0.015384615384615385,
+              "y": 0.0125,
+              "width": 0.9628205128205127,
+              "height": 0.21,
+              "id": "auto-bc857df0265f4e178d79d6e1875de4c7"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "regionId": "auto-ec0bb2d92f5f43099d0834f41a83cad3",
+            "rect": {
+              "x": 0.014102564102564103,
+              "y": 0.23083333333333333,
+              "width": 0.6410256410256411,
+              "height": 0.43500000000000005,
+              "id": "auto-ec0bb2d92f5f43099d0834f41a83cad3"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "regionId": "auto-c62265f2266a444e8617c84ebb4d5470",
+            "rect": {
+              "x": 0.6717948717948717,
+              "y": 0.23083333333333333,
+              "width": 0.30512820512820515,
+              "height": 0.22499999999999998,
+              "id": "auto-c62265f2266a444e8617c84ebb4d5470"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "regionId": "auto-e7bee1a768c940c0b4b8ee9bdf1e3196",
+            "rect": {
+              "x": 0.6705128205128205,
+              "y": 0.465,
+              "width": 0.30512820512820515,
+              "height": 0.20083333333333336,
+              "id": "auto-e7bee1a768c940c0b4b8ee9bdf1e3196"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "regionId": "auto-641baef6c0ef4db09436395ed8923b90",
+            "rect": {
+              "x": 0.01282051282051282,
+              "y": 0.6733333333333333,
+              "width": 0.9641025641025641,
+              "height": 0.15583333333333338,
+              "id": "auto-641baef6c0ef4db09436395ed8923b90"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+            "regionId": "auto-7488a623c1cf4d5d949794a8ae8ab7d8",
+            "rect": {
+              "x": 0.01282051282051282,
+              "y": 0.8383333333333334,
+              "width": 0.9615384615384616,
+              "height": 0.14416666666666667,
+              "id": "auto-7488a623c1cf4d5d949794a8ae8ab7d8"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-05c3b02b320045368454f5719d7b68b0",
+            "rect": {
+              "x": 0.029487179487179487,
+              "y": 0.03333333333333333,
+              "width": 0.46282051282051284,
+              "height": 0.21000000000000002,
+              "id": "auto-05c3b02b320045368454f5719d7b68b0"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-194a42df280144bfacfbbb60f20346cf",
+            "rect": {
+              "x": 0.5051282051282051,
+              "y": 0.035,
+              "width": 0.45641025641025645,
+              "height": 0.20833333333333334,
+              "id": "auto-194a42df280144bfacfbbb60f20346cf"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-341d233e54d6473fa3fcf02e014ef248",
+            "rect": {
+              "x": 0.02564102564102564,
+              "y": 0.24833333333333332,
+              "width": 0.9397435897435897,
+              "height": 0.26250000000000007,
+              "id": "auto-341d233e54d6473fa3fcf02e014ef248"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-3296d6296c974583b62172c13270ce4f",
+            "rect": {
+              "x": 0.026923076923076925,
+              "y": 0.5175,
+              "width": 0.2987179487179487,
+              "height": 0.22333333333333338,
+              "id": "auto-3296d6296c974583b62172c13270ce4f"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-4ca18a035fc54c84ae58b05d8e454744",
+            "rect": {
+              "x": 0.3371794871794872,
+              "y": 0.5183333333333333,
+              "width": 0.28076923076923077,
+              "height": 0.22333333333333338,
+              "id": "auto-4ca18a035fc54c84ae58b05d8e454744"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-c813f3f5620c4275a1d6505f0485eb87",
+            "rect": {
+              "x": 0.632051282051282,
+              "y": 0.5175,
+              "width": 0.32948717948717954,
+              "height": 0.2250000000000001,
+              "id": "auto-c813f3f5620c4275a1d6505f0485eb87"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-55627205fdc44716acce91dbd2fb08cf",
+            "rect": {
+              "x": 0.023076923076923078,
+              "y": 0.7483333333333333,
+              "width": 0.3012820512820513,
+              "height": 0.22083333333333333,
+              "id": "auto-55627205fdc44716acce91dbd2fb08cf"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-228e8ff708e84f9abe220e9bd1a2d5d1",
+            "rect": {
+              "x": 0.3371794871794872,
+              "y": 0.7491666666666666,
+              "width": 0.28076923076923077,
+              "height": 0.21916666666666673,
+              "id": "auto-228e8ff708e84f9abe220e9bd1a2d5d1"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+            "regionId": "auto-3908dbe767574913bd7d79a1a5a2dd97",
+            "rect": {
+              "x": 0.6307692307692307,
+              "y": 0.7491666666666666,
+              "width": 0.3307692307692308,
+              "height": 0.22083333333333333,
+              "id": "auto-3908dbe767574913bd7d79a1a5a2dd97"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+            "regionId": "auto-3e1d9aa1f5ab4f52bb5d551b3ed9c2e4",
+            "rect": {
+              "x": 0.04230769230769231,
+              "y": 0.025,
+              "width": 0.46538461538461534,
+              "height": 0.35416666666666663,
+              "id": "auto-3e1d9aa1f5ab4f52bb5d551b3ed9c2e4"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+            "regionId": "auto-6209a46b7c764e7791f003342fd64c65",
+            "rect": {
+              "x": 0.517948717948718,
+              "y": 0.025,
+              "width": 0.46153846153846145,
+              "height": 0.355,
+              "id": "auto-6209a46b7c764e7791f003342fd64c65"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+            "regionId": "auto-388589938ce7420ab148d02a67eb44b9",
+            "rect": {
+              "x": 0.041025641025641026,
+              "y": 0.38416666666666666,
+              "width": 0.9371794871794872,
+              "height": 0.5891666666666667,
+              "id": "auto-388589938ce7420ab148d02a67eb44b9"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+            "regionId": "auto-7d39ae5bf92d4dff8ebe81489819a612",
+            "rect": {
+              "x": 0.4423076923076923,
+              "y": 0.5758333333333333,
+              "width": 0.5333333333333333,
+              "height": 0.19333333333333336,
+              "id": "auto-7d39ae5bf92d4dff8ebe81489819a612"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+            "regionId": "auto-415eb825040048e9acab50ad4390168f",
+            "rect": {
+              "x": 0.04487179487179487,
+              "y": 0.04083333333333333,
+              "width": 0.9089743589743591,
+              "height": 0.925,
+              "id": "auto-415eb825040048e9acab50ad4390168f"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+            "regionId": "auto-00ece2416fe44dfdb0f352a0eadeb52c",
+            "rect": {
+              "x": 0.02435897435897436,
+              "y": 0.019166666666666665,
+              "width": 0.4564102564102564,
+              "height": 0.2941666666666667,
+              "id": "auto-00ece2416fe44dfdb0f352a0eadeb52c"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+            "regionId": "auto-1087a122f54e4104abfe0565a9197f1c",
+            "rect": {
+              "x": 0.4935897435897436,
+              "y": 0.019166666666666665,
+              "width": 0.4884615384615384,
+              "height": 0.295,
+              "id": "auto-1087a122f54e4104abfe0565a9197f1c"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+            "regionId": "auto-01f44ad226e841db8dbee40462a99cc5",
+            "rect": {
+              "x": 0.020512820512820513,
+              "y": 0.31916666666666665,
+              "width": 0.9576923076923076,
+              "height": 0.325,
+              "id": "auto-01f44ad226e841db8dbee40462a99cc5"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+            "regionId": "auto-5a2fb823f7d042c3a12e1ce42538ff27",
+            "rect": {
+              "x": 0.023076923076923078,
+              "y": 0.6491666666666667,
+              "width": 0.4705128205128205,
+              "height": 0.33166666666666667,
+              "id": "auto-5a2fb823f7d042c3a12e1ce42538ff27"
+            }
+          },
+          {
+            "pageId": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+            "regionId": "auto-a0d3cab4620e4b378ae33f6eb2339793",
+            "rect": {
+              "x": 0.5064102564102564,
+              "y": 0.6491666666666667,
+              "width": 0.46794871794871795,
+              "height": 0.3325,
+              "id": "auto-a0d3cab4620e4b378ae33f6eb2339793"
+            }
+          }
+        ],
+        "forward_backward_verified": true,
+        "reload_progress_verified": true,
+        "page_errors": [],
+        "forbidden_requests": []
+      }
+    ],
+    "base_commit": "c36bfb4dd819e9aefbfa6c6ccec32d64c6734c05",
+    "scope": "Existing detected dev packages; no detection rerun; clean browser contexts without reference imports"
+  },
+  "reference_commit_after_rebase": "9c2e1a7165d7072f656865ef83ecb748dd89fd22",
+  "reader_check_before_guided_merge": {
+    "browser": "153.0.8010.12",
+    "checks": [
+      {
+        "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+        "suggestion_count": 28,
+        "manifest_equal": true,
+        "image": {
+          "complete": true,
+          "width": 1561,
+          "height": 2400
+        },
+        "buttons": [
+          "\u2190 Library",
           "\u2212",
           "+",
           "Fit",

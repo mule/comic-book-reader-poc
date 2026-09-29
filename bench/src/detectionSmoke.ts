@@ -41,14 +41,58 @@ try {
     })
     assert(image.complete && image.width > 0 && image.height > 0)
     const buttons = await page.getByRole('button').allTextContents()
-    const guidedControls = await page.getByRole('button', { name: /guided/i }).count()
-    // The tested main revision lacks #6; do not claim guided rendering from data acceptance.
-    assert.equal(guidedControls, 0, 'Reader capability changed: inspect and extend this check')
+    const stops = manifest.page_order.flatMap((pageId: string) => {
+      const entry = manifest.pages.find((p: { id: string }) => p.id === pageId)
+      assert(entry, 'Ordered page missing')
+      if (!entry.suggestions?.regions.length) {
+        return [{ pageId, regionId: null, rect: { x: 0, y: 0, width: 1, height: 1 } }]
+      }
+      return entry.suggestions.order.map((regionId: string) => {
+        const rect = entry.suggestions.regions.find((r: { id: string }) => r.id === regionId)
+        assert(rect, 'Ordered suggestion missing')
+        return { pageId, regionId, rect }
+      })
+    }) as { pageId: string; regionId: string | null;
+      rect: { x: number; y: number; width: number; height: number } }[]
+    const verifyStop = async (stop: typeof stops[number]) => {
+      await page.waitForFunction(({ stop }) => {
+        const reader = document.querySelector('.reader')
+        const stage = document.querySelector('.page-stage')
+        const img = stage?.querySelector<HTMLImageElement>('.page-image')
+        if (reader?.getAttribute('data-mode') !== 'guided' ||
+            reader.getAttribute('data-page-id') !== stop.pageId ||
+            reader.getAttribute('data-region-id') !== (stop.regionId ?? '') ||
+            stage?.getAttribute('data-page-status') !== 'loaded' || !img?.complete || !img.naturalWidth) return false
+        const box = stage.getBoundingClientRect()
+        const width = parseFloat(img.style.width), height = parseFloat(img.style.height)
+        const r = stop.rect
+        const scale = Math.min(box.width / (width * r.width), box.height / (height * r.height))
+        const matrix = new DOMMatrixReadOnly(getComputedStyle(img).transform)
+        return Math.abs(matrix.a - scale) < 0.0001 &&
+          Math.abs(matrix.e - (box.width / 2 - (r.x + r.width / 2) * width * scale)) < 0.1 &&
+          Math.abs(matrix.f - (box.height / 2 - (r.y + r.height / 2) * height * scale)) < 0.1
+      }, { stop }, { timeout: 10000 })
+      assert.equal(await page.getByTestId('guided-outline').count(), stop.regionId === null ? 0 : 1)
+    }
+    await page.getByRole('button', { name: 'Guided', exact: true }).click()
+    await verifyStop(stops[0])
+    await page.screenshot({ path: path.join(output, `${book}-guided.png`) })
+    for (const stop of stops.slice(1)) {
+      await page.keyboard.press('ArrowRight')
+      await verifyStop(stop)
+    }
+    await page.reload()
+    await verifyStop(stops.at(-1)!)
+    for (const stop of stops.slice(0, -1).reverse()) {
+      await page.keyboard.press('ArrowLeft')
+      await verifyStop(stop)
+    }
     assert.deepEqual(errors, [])
     assert.deepEqual(forbidden, [])
     await page.screenshot({ path: path.join(output, `${book}.png`) })
     checks.push({ book_id: book, suggestion_count: count, manifest_equal: true,
-      image, buttons, guided_mode: 'not implemented on tested main revision',
+      image, buttons, guided_mode: 'verified stored suggestions with independent camera geometry',
+      guided_stops: stops, forward_backward_verified: true, reload_progress_verified: true,
       page_errors: errors, forbidden_requests: forbidden })
     await context.close()
   }
