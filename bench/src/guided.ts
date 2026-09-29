@@ -47,7 +47,7 @@ async function selectPage(page: Page, id: string) {
 
 // Verify the actual rendered transform against independently calculated region fit,
 // not a timeout or an application-provided "settled" flag. Two frames follow decode.
-async function settled(page: Page, stop: Stop) {
+export async function settled(page: Page, stop: Stop) {
   await page.waitForFunction(({ stop }) => {
     const reader = document.querySelector('.reader')
     const stage = document.querySelector('.page-stage')

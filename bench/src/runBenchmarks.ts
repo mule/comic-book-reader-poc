@@ -1,3 +1,4 @@
+import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -68,61 +69,26 @@ async function main() {
 
     // 2. Warm page navigation latency
     console.log('\n--- 2. Warm Page Navigation Latency (p50 / p95) ---')
-    const primaryDesktopVp = NAMED_VIEWPORTS[0]
     for (const book of books) {
-      console.log(`Measuring warm navigation: ${book.book_id} (40 consecutive turns)...`)
-      const result = await measureWarmNavigation(
-        browser,
-        server.url,
-        book.book_id,
-        primaryDesktopVp,
-        40,
-      )
-      warmNavigations.push(result)
-      console.log(`  -> p50: ${result.p50Ms} ms | p95: ${result.p95Ms} ms | min: ${result.minMs} ms | max: ${result.maxMs} ms | mean: ${result.meanMs} ms`)
+      for (const vp of NAMED_VIEWPORTS) {
+        console.log(`Warm, extended and offline: ${book.book_id} / ${vp.name}`)
+        warmNavigations.push(await measureWarmNavigation(browser, server.url, book.book_id, vp, 40))
+        extendedReadings.push(await measureExtendedReading(browser, server.url, book.book_id, book.page_count, vp))
+        offlineObservations.push(await measureOfflineBehavior(browser, server.url, book.book_id, vp))
+      }
     }
 
-    // Also measure warm navigation on tablet emulation for Harbinger
-    const tabletVp = NAMED_VIEWPORTS[1]
-    console.log(`Measuring warm navigation: harbinger-vol-1-omega-rising on ${tabletVp.label} (40 turns)...`)
-    const tabletWarm = await measureWarmNavigation(
-      browser,
-      server.url,
-      'harbinger-vol-1-omega-rising',
-      tabletVp,
-      40,
-    )
-    warmNavigations.push(tabletWarm)
-    console.log(`  -> (Tablet Emulation) p50: ${tabletWarm.p50Ms} ms | p95: ${tabletWarm.p95Ms} ms | mean: ${tabletWarm.meanMs} ms`)
-
-    // 3. Extended reading across all 3 books through ALL pages
-    console.log('\n--- 3. Extended Reading & Memory (End-to-End Books) ---')
-    for (const book of books) {
-      console.log(`Reading all ${book.page_count} pages of ${book.book_id}...`)
-      const result = await measureExtendedReading(
-        browser,
-        server.url,
-        book.book_id,
-        book.page_count,
-        primaryDesktopVp,
-      )
-      extendedReadings.push(result)
-      console.log(`  -> Visited: ${result.pagesVisited}/${result.totalPages} | Requests: ${result.pagesRequested} | Zero PDF requests: ${result.pdfRequestsCount === 0} | Zero test-data requests: ${result.testDataRequestsCount === 0} | Max DOM images: ${result.domPageImageCountMax} | Final JS heap used: ${result.finalHeapUsedSizeMb} MB | Bounded prefetch: ${result.boundedPrefetchSatisfied}`)
+    for (const result of extendedReadings) {
+      assert.equal(result.pagesRequested, result.totalPages)
+      assert.equal(result.pdfRequestsCount + result.testDataRequestsCount, 0)
+      assert.equal(result.domPageImageCountMax, 1)
+      assert(result.boundedPrefetchSatisfied)
     }
-
-    // 4. Offline behavior tests
-    console.log('\n--- 4. Offline Behaviour Verification ---')
-    for (const vp of [NAMED_VIEWPORTS[0], NAMED_VIEWPORTS[2]]) {
-      console.log(`Testing offline behavior for harbinger-vol-1-omega-rising on ${vp.label}...`)
-      const obs = await measureOfflineBehavior(
-        browser,
-        server.url,
-        'harbinger-vol-1-omega-rising',
-        vp,
-      )
-      offlineObservations.push(obs)
-      console.log(`  -> Cached page 1: imagePresent=${obs.cachedPage.imagePresent}, naturalWidth=${obs.cachedPage.naturalWidth}, status=${obs.cachedPage.status}`)
-      console.log(`  -> Unvisited page: errorPanelPresent=${obs.unvisitedPage.errorPanelPresent}, status=${obs.unvisitedPage.status}, retryBtn=${obs.unvisitedPage.retryButtonPresent}, prevBtn=${obs.unvisitedPage.previousButtonPresent}`)
+    for (const result of offlineObservations) {
+      assert.equal(result.cachedPage.status, 'loaded')
+      assert(result.cachedPage.naturalWidth > 0)
+      assert(result.unvisitedPage.errorPanelPresent)
+      assert(result.unvisitedPage.retryButtonPresent && result.unvisitedPage.previousButtonPresent)
     }
 
     const guidedNavigations = await measurePanelNavigationLatency(browser, server.url)
