@@ -1,4 +1,4 @@
-import type { Manifest, Orientation } from './types'
+import type { Manifest, Orientation, Suggestions } from './types'
 import { validateManifest, type ManifestError } from './validate'
 
 export interface ReaderPage {
@@ -10,6 +10,7 @@ export interface ReaderPage {
   width: number
   height: number
   orientation: Orientation
+  suggestions?: Suggestions
 }
 
 export interface ReaderBook {
@@ -50,6 +51,7 @@ export function buildReaderBook(packageId: string, manifest: Manifest): ReaderBo
       width: page.width,
       height: page.height,
       orientation: page.orientation,
+      suggestions: page.suggestions,
     }
   })
   return {

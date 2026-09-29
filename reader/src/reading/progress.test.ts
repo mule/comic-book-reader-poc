@@ -43,6 +43,41 @@ describe('savePosition / loadPosition', () => {
   })
 })
 
+describe('panel-level positions', () => {
+  test('round-trips a region id alongside the page id', () => {
+    savePosition('fixture-book', SHA, 'page-2', 'r7')
+    const loaded = loadPosition('fixture-book', SHA)
+    expect(loaded?.pageId).toBe('page-2')
+    expect(loaded?.regionId).toBe('r7')
+  })
+
+  test('full-page positions store an explicit null region id', () => {
+    savePosition('fixture-book', SHA, 'page-2', null)
+    expect(loadPosition('fixture-book', SHA)?.regionId).toBeNull()
+  })
+
+  test('positions saved before panel support parse with a null region id', () => {
+    localStorage.setItem(
+      'comicpoc:reading-position:v1:fixture-book:' + SHA,
+      JSON.stringify({
+        bookId: 'fixture-book',
+        sourceSha256: SHA,
+        pageId: 'page-1',
+        updatedAt: 1,
+      }),
+    )
+    expect(loadPosition('fixture-book', SHA)?.regionId).toBeNull()
+  })
+
+  test('resolveStartPosition exposes the saved region id for guided restore', () => {
+    const b = book(SHA)
+    savePosition('fixture-book', SHA, b.pages[1].id, 'r3')
+    const result = resolveStartPosition(b)
+    expect(result.status).toBe('restored')
+    if (result.status === 'restored') expect(result.regionId).toBe('r3')
+  })
+})
+
 describe('resolveStartPosition', () => {
   test('starts at the first page without a notice when nothing is saved', () => {
     const result = resolveStartPosition(book(SHA))
