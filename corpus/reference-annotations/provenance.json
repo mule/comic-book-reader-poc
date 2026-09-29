@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-29",
+  "annotator": "AI agent (visual); not human-annotated",
+  "independence": "Authored from original 2400px page assets; no Phase B detector output viewed before reference freeze. Same agent previously inspected several dev detector overlays in Phase A; not a fully blinded dev annotation study.",
+  "config_before_evaluation": {
+    "sha256": "135955b530f8983b06ba02325096eed6120c5d427cc64d3d83a0d804bb1bcaaa",
+    "byte_size": 407
+  },
+  "books": [
+    {
+      "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+      "original_manifest": {
+        "sha256": "0a5672f97c0d65103b25608061de4bea463b7687eacc2dec910c12b98ee8ddb4",
+        "byte_size": 99543
+      },
+      "reference_manifest": {
+        "path": "corpus/reference-annotations/manifests/archer-armstrong-vol-1-the-michelangelo-code.json",
+        "sha256": "18d204b0afb3e80686f7184feae93d4201687647ce88a60175cf48d6a971c6b4",
+        "byte_size": 9556
+      },
+      "annotations": [
+        {
+          "split": "dev",
+          "path": "corpus/reference-annotations/dev/archer-armstrong-vol-1-the-michelangelo-code.json",
+          "sha256": "47241642d89e259646a99f2cc170863494fe81ddd8bd5422a0c39fac468f625a",
+          "byte_size": 9377
+        },
+        {
+          "split": "heldout",
+          "path": "corpus/reference-annotations/heldout/archer-armstrong-vol-1-the-michelangelo-code.json",
+          "sha256": "03bc5efc8577f9581354e7fed4ec26baac5aacbb35f17aa93224e2ae8935d134",
+          "byte_size": 4087
+        }
+      ],
+      "pages": [
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+          "pdf_page_number": 7,
+          "split": "dev",
+          "asset_sha256": "e381f7811e729d706a22652cbb1d11b2bceed64857e3c3545fe884f01321774f",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0010",
+          "pdf_page_number": 10,
+          "split": "dev",
+          "asset_sha256": "94a403cd2aefd7fe6bcb73da19a847e5f7ce4bfff3b1b1a482b1aa1b57b7dc77",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0017",
+          "pdf_page_number": 17,
+          "split": "dev",
+          "asset_sha256": "b5664c2f6f29f8e691c82515f0e28fd9b989665c6e6f7d950eb66cd1438a948a",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0033",
+          "pdf_page_number": 33,
+          "split": "dev",
+          "asset_sha256": "16924796ee4b13f5574883df6fe67a26fdf04c7d0ef6e233fe30fa5012b7ee2e",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0049",
+          "pdf_page_number": 49,
+          "split": "dev",
+          "asset_sha256": "3f0c64f3857a0e3feb684836f5db1fe43aeb4e87ec7b73c8721500234bf49da0",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+          "pdf_page_number": 67,
+          "split": "dev",
+          "asset_sha256": "6f08719e037b0e05bdca69409ff9ba62514071fe6a38c2c2cab26e0be7e7501a",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0054",
+          "pdf_page_number": 54,
+          "split": "heldout",
+          "asset_sha256": "c7d9e0b07b77c2fbf049b0a3717879d82270cc21ef2ad1c921770cc058bf93f1",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0080",
+          "pdf_page_number": 80,
+          "split": "heldout",
+          "asset_sha256": "be1e7d4c86f0d887a9d5be9ea6fc9d36bb09f3ba8d87e8a0f138cdcf930e2af5",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0091",
+          "pdf_page_number": 91,
+          "split": "heldout",
+          "asset_sha256": "85e7e9b9251f7ffe5d4e715e148660fe35c90ca9ac14f25754e6362a3a4efb97",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0095",
+          "pdf_page_number": 95,
+          "split": "heldout",
+          "asset_sha256": "7d7e1d62df9766a0faf4c311d32600f4ab2d9910cc72c4bf44e8d3a3383de7e0",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        }
+      ]
+    },
+    {
+      "book_id": "harbinger-vol-1-omega-rising",
+      "original_manifest": {
+        "sha256": "ef165a061c9b319e65276d44a33288c164b78d47de34d55ed03aa24c9ab1acbe",
+        "byte_size": 133399
+      },
+      "reference_manifest": {
+        "path": "corpus/reference-annotations/manifests/harbinger-vol-1-omega-rising.json",
+        "sha256": "416cf08f3cecfdbc96fe1133ab557f5e57a6011807090ee39da78b76f18ea15d",
+        "byte_size": 9526
+      },
+      "annotations": [
+        {
+          "split": "dev",
+          "path": "corpus/reference-annotations/dev/harbinger-vol-1-omega-rising.json",
+          "sha256": "1699ec9c37ac060fa12149d11b525fb8a05fb74d2cf28a90c56a79b629815542",
+          "byte_size": 9002
+        },
+        {
+          "split": "heldout",
+          "path": "corpus/reference-annotations/heldout/harbinger-vol-1-omega-rising.json",
+          "sha256": "32a24194a36d36b2954f1d326c841b3f80005312f27497dc2e0b56d879d2f436",
+          "byte_size": 4870
+        }
+      ],
+      "pages": [
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+          "pdf_page_number": 11,
+          "split": "dev",
+          "asset_sha256": "fd5448b6fb1653adbd03ce76c83071364930f47359567328748bf2690324fd66",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0023",
+          "pdf_page_number": 23,
+          "split": "dev",
+          "asset_sha256": "ea8d0b8a1d6faabe68b16f93e26d576a6c683b589994a5a90d2eba4a54d80d02",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0034",
+          "pdf_page_number": 34,
+          "split": "dev",
+          "asset_sha256": "d17250618b5d4a3701606b90659fb2d669a4899f3e518e60869f809067fe8293",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0044",
+          "pdf_page_number": 44,
+          "split": "dev",
+          "asset_sha256": "89cd9152f84cd6f36f0c68d6a33d42a4ca8b7cf287b051aa1f3cf636ad76dd53",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0058",
+          "pdf_page_number": 58,
+          "split": "dev",
+          "asset_sha256": "8863249121ab829469aaef26291e68f25fecdafd9d1f5ae6eca2f6a48c605e75",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+          "pdf_page_number": 141,
+          "split": "dev",
+          "asset_sha256": "66947bfe01bafbeab054bacb0b95a9fd361c9cadd0ef5b826b28e882a320a233",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0020",
+          "pdf_page_number": 20,
+          "split": "heldout",
+          "asset_sha256": "ecd12d3be836b12b6feb73dfd820921d90ac39ab6f57da65a93c7468c1325087",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0037",
+          "pdf_page_number": 37,
+          "split": "heldout",
+          "asset_sha256": "ffdc46b53fc0214af93d97e1568795ad56a0f55b82b867938043d80561f712af",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0052",
+          "pdf_page_number": 52,
+          "split": "heldout",
+          "asset_sha256": "0ef62334c0f8a3dda1cc5852b9c8c8c5d0f2c8d2bf5be1ef4374513762cfbe81",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0059",
+          "pdf_page_number": 59,
+          "split": "heldout",
+          "asset_sha256": "0864904d7a79976d6557307a91ff556cdf9e413119f9aafe6aa96dc9cead5d46",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        }
+      ]
+    },
+    {
+      "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+      "original_manifest": {
+        "sha256": "5bb0c96f3aad4d8e0c1b525481c5142e6bc9046b52307dce872552094c64d2bb",
+        "byte_size": 115621
+      },
+      "reference_manifest": {
+        "path": "corpus/reference-annotations/manifests/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+        "sha256": "82b99df9ff671f0ffd4348a12d570cd309d6cbd5f1e5449ee1c97f92c8369682",
+        "byte_size": 9579
+      },
+      "annotations": [
+        {
+          "split": "dev",
+          "path": "corpus/reference-annotations/dev/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+          "sha256": "de3780120cbcef7a92a5f6f16459233e2101f038340c50af18bdff24ffebd34a",
+          "byte_size": 9741
+        },
+        {
+          "split": "heldout",
+          "path": "corpus/reference-annotations/heldout/quantum-and-woody-vol-1-the-worlds-worst-superhero-team.json",
+          "sha256": "1dc8663b7dd0f828a3e5c8a7a6968af1018d7028bd69530853e88e10b7925de6",
+          "byte_size": 5367
+        }
+      ],
+      "pages": [
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+          "pdf_page_number": 10,
+          "split": "dev",
+          "asset_sha256": "7ed3c8bd5b339ff23b2ada2f5a524bb0f46441ac5991e4a00e52212a0c1bcfb9",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+          "pdf_page_number": 12,
+          "split": "dev",
+          "asset_sha256": "ffefc92a14467da5ffec6ae3ee6bbabe34e34b284ea877f375103ef6122a2451",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+          "pdf_page_number": 20,
+          "split": "dev",
+          "asset_sha256": "59e9fe87b949738a8f94058ab75d0c99abd32062ae7a732c7070d1515c84ade4",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+          "pdf_page_number": 29,
+          "split": "dev",
+          "asset_sha256": "b1830023558623d1986648afed0d0a463f007b85ba6fd417799352d0548dd909",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+          "pdf_page_number": 31,
+          "split": "dev",
+          "asset_sha256": "8c432eff57eb38bb480e19796f84f65ba2260263f8466841be81709c33dffaf2",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+          "pdf_page_number": 37,
+          "split": "dev",
+          "asset_sha256": "ef9e4ede1be2e2cee0cf49a5276548651964804ea76ed9011f42fdd82f9bcd57",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+          "pdf_page_number": 65,
+          "split": "heldout",
+          "asset_sha256": "5d6551bef731d3ee86ab6c1798e7c18d5033e7b7d99f81d06185692d75b7bfd6",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+          "pdf_page_number": 73,
+          "split": "heldout",
+          "asset_sha256": "111aa01f658d57197f96c2edd62304b752827424f325f36066746112281adcf0",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+          "pdf_page_number": 79,
+          "split": "heldout",
+          "asset_sha256": "5cc8f0b4d8425b68532126dbc37f8d50747da86c284d96250f19d170814d3cf3",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        },
+        {
+          "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080",
+          "pdf_page_number": 80,
+          "split": "heldout",
+          "asset_sha256": "112c1ba1ed041e35e019f7bac52eebebb97066d94b9cbf1672f79e199d7d5ef8",
+          "original_visually_inspected": true,
+          "overlay_visually_inspected": true
+        }
+      ]
+    }
+  ]
+}

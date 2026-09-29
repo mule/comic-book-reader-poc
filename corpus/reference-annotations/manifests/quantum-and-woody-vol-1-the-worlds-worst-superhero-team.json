@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "book": {
+    "id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+    "title": "Quantum and Woody Vol 1 The Worlds Worst Superhero Team"
+  },
+  "source": {
+    "sha256": "2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71",
+    "byte_size": 124784980,
+    "page_count": 129
+  },
+  "render_profile": {
+    "id": "render-e9c4c14ea687a39d",
+    "format": "webp",
+    "quality": 85,
+    "long_edge_px": 2400,
+    "resolution_policy": "fixed-long-edge",
+    "thumbnail": {
+      "format": "webp",
+      "quality": 80,
+      "long_edge_px": 360
+    }
+  },
+  "selection": "sample",
+  "page_order": [
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+    "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080"
+  ],
+  "pages": [
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+      "pdf_page_number": 10,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010.webp",
+        "sha256": "7ed3c8bd5b339ff23b2ada2f5a524bb0f46441ac5991e4a00e52212a0c1bcfb9",
+        "byte_size": 402616,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010.webp",
+        "sha256": "dd49311008e46fc76e7ee98ce3a152a5da04d68cc235a57e34c89bf317d9c293",
+        "byte_size": 22786,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+      "pdf_page_number": 12,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012.webp",
+        "sha256": "ffefc92a14467da5ffec6ae3ee6bbabe34e34b284ea877f375103ef6122a2451",
+        "byte_size": 383368,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012.webp",
+        "sha256": "a65f9c749da3bceb292a54a61e58a86f7320d344dc491d34a1bdf6feb65a4433",
+        "byte_size": 22782,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020",
+      "pdf_page_number": 20,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020.webp",
+        "sha256": "59e9fe87b949738a8f94058ab75d0c99abd32062ae7a732c7070d1515c84ade4",
+        "byte_size": 426078,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0020.webp",
+        "sha256": "65ea773032376844eff524ddaa8d5259e3ed7407df640d8ff3619821d0c4ef3d",
+        "byte_size": 23728,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029",
+      "pdf_page_number": 29,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029.webp",
+        "sha256": "b1830023558623d1986648afed0d0a463f007b85ba6fd417799352d0548dd909",
+        "byte_size": 445372,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0029.webp",
+        "sha256": "1c4045ae33f2dd9676563d1c2c5577ae51eaa49b32cb66d672070ae76b615ae9",
+        "byte_size": 23274,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031",
+      "pdf_page_number": 31,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031.webp",
+        "sha256": "8c432eff57eb38bb480e19796f84f65ba2260263f8466841be81709c33dffaf2",
+        "byte_size": 342560,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0031.webp",
+        "sha256": "2ffc628023b5f380e68c90d5cdf91708cf6e29fc721d76f9e2ee6facb6beded2",
+        "byte_size": 19538,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037",
+      "pdf_page_number": 37,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037.webp",
+        "sha256": "ef9e4ede1be2e2cee0cf49a5276548651964804ea76ed9011f42fdd82f9bcd57",
+        "byte_size": 543186,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0037.webp",
+        "sha256": "a7d47042a01e6fd2965946fb2e29abb1b78b7a8c86eb34164c231597a45ca2f6",
+        "byte_size": 29114,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065",
+      "pdf_page_number": 65,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065.webp",
+        "sha256": "5d6551bef731d3ee86ab6c1798e7c18d5033e7b7d99f81d06185692d75b7bfd6",
+        "byte_size": 526536,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0065.webp",
+        "sha256": "bd95a4ba01a0f6e0ec2c6ef7e38287d52ab1d10846d51262ce76117ace79b77d",
+        "byte_size": 27430,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073",
+      "pdf_page_number": 73,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073.webp",
+        "sha256": "111aa01f658d57197f96c2edd62304b752827424f325f36066746112281adcf0",
+        "byte_size": 287178,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0073.webp",
+        "sha256": "1f5e327fa2d193c1f215d0d94148585b18af3fd190cde81d8e8ea782a101f947",
+        "byte_size": 17064,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079",
+      "pdf_page_number": 79,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079.webp",
+        "sha256": "5cc8f0b4d8425b68532126dbc37f8d50747da86c284d96250f19d170814d3cf3",
+        "byte_size": 618028,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0079.webp",
+        "sha256": "a026a299b128140f59b881bc16a28fa11314975de58c7bbef46aec575590fe57",
+        "byte_size": 31628,
+        "width": 234,
+        "height": 360
+      }
+    },
+    {
+      "id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080",
+      "pdf_page_number": 80,
+      "width": 1561,
+      "height": 2400,
+      "rotation_degrees": 0,
+      "orientation": "portrait",
+      "page": {
+        "path": "pages/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080.webp",
+        "sha256": "112c1ba1ed041e35e019f7bac52eebebb97066d94b9cbf1672f79e199d7d5ef8",
+        "byte_size": 414292,
+        "width": 1561,
+        "height": 2400
+      },
+      "thumbnail": {
+        "path": "thumbs/p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0080.webp",
+        "sha256": "eae09070d7ad6204261607c4a0f0599ae089ab8c0beafe4c53a62b2cfed90d6a",
+        "byte_size": 22402,
+        "width": 234,
+        "height": 360
+      }
+    }
+  ]
+}
