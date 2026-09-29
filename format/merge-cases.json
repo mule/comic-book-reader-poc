@@ -1,0 +1,250 @@
+[
+  {
+    "name": "empty fallback",
+    "page": {},
+    "override": null,
+    "expected": []
+  },
+  {
+    "name": "detector order",
+    "page": {
+      "suggestions": {
+        "detector": {
+          "name": "fixture",
+          "version": "1",
+          "configuration": {},
+          "run_id": "one"
+        },
+        "regions": [
+          {
+            "id": "r2",
+            "x": 0,
+            "y": 0.5,
+            "width": 1,
+            "height": 0.5
+          },
+          {
+            "id": "r1",
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 0.5
+          }
+        ],
+        "order": [
+          "r2",
+          "r1"
+        ]
+      }
+    },
+    "override": null,
+    "expected": [
+      {
+        "id": "r2",
+        "x": 0,
+        "y": 0.5,
+        "width": 1,
+        "height": 0.5
+      },
+      {
+        "id": "r1",
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.5
+      }
+    ]
+  },
+  {
+    "name": "complete edit addition and deletion",
+    "page": {
+      "suggestions": {
+        "detector": {
+          "name": "fixture",
+          "version": "1",
+          "configuration": {},
+          "run_id": "one"
+        },
+        "regions": [
+          {
+            "id": "r1",
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 0.5
+          },
+          {
+            "id": "r2",
+            "x": 0,
+            "y": 0.5,
+            "width": 1,
+            "height": 0.5
+          }
+        ],
+        "order": [
+          "r1",
+          "r2"
+        ]
+      }
+    },
+    "override": {
+      "page_id": "page",
+      "pdf_page_number": 1,
+      "added_regions": [
+        {
+          "id": "m1",
+          "x": 0.1,
+          "y": 0.1,
+          "width": 0.3,
+          "height": 0.3
+        }
+      ],
+      "edited_regions": [
+        {
+          "id": "r1",
+          "x": 0,
+          "y": 0,
+          "width": 0.6,
+          "height": 0.5
+        }
+      ],
+      "deleted_region_ids": [
+        "r2"
+      ],
+      "order": [
+        "m1",
+        "r1"
+      ]
+    },
+    "expected": [
+      {
+        "id": "m1",
+        "x": 0.1,
+        "y": 0.1,
+        "width": 0.3,
+        "height": 0.3
+      },
+      {
+        "id": "r1",
+        "x": 0,
+        "y": 0,
+        "width": 0.6,
+        "height": 0.5
+      }
+    ]
+  },
+  {
+    "name": "absent edit and tombstone survive new suggestions",
+    "page": {
+      "suggestions": {
+        "detector": {
+          "name": "fixture",
+          "version": "1",
+          "configuration": {},
+          "run_id": "one"
+        },
+        "regions": [
+          {
+            "id": "r2",
+            "x": 0,
+            "y": 0.5,
+            "width": 1,
+            "height": 0.5
+          }
+        ],
+        "order": [
+          "r2"
+        ]
+      }
+    },
+    "override": {
+      "page_id": "page",
+      "pdf_page_number": 1,
+      "added_regions": [],
+      "edited_regions": [
+        {
+          "id": "r1",
+          "x": 0,
+          "y": 0,
+          "width": 0.6,
+          "height": 0.5
+        }
+      ],
+      "deleted_region_ids": [
+        "old"
+      ],
+      "order": [
+        "r1",
+        "vanished"
+      ]
+    },
+    "expected": [
+      {
+        "id": "r1",
+        "x": 0,
+        "y": 0,
+        "width": 0.6,
+        "height": 0.5
+      },
+      {
+        "id": "r2",
+        "x": 0,
+        "y": 0.5,
+        "width": 1,
+        "height": 0.5
+      }
+    ]
+  },
+  {
+    "name": "returning tombstone stays deleted",
+    "page": {
+      "suggestions": {
+        "detector": {
+          "name": "fixture",
+          "version": "1",
+          "configuration": {},
+          "run_id": "one"
+        },
+        "regions": [
+          {
+            "id": "r1",
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 0.5
+          },
+          {
+            "id": "r2",
+            "x": 0,
+            "y": 0.5,
+            "width": 1,
+            "height": 0.5
+          }
+        ],
+        "order": [
+          "r1",
+          "r2"
+        ]
+      }
+    },
+    "override": {
+      "page_id": "page",
+      "pdf_page_number": 1,
+      "added_regions": [],
+      "edited_regions": [],
+      "deleted_region_ids": [
+        "r1"
+      ],
+      "order": []
+    },
+    "expected": [
+      {
+        "id": "r2",
+        "x": 0,
+        "y": 0.5,
+        "width": 1,
+        "height": 0.5
+      }
+    ]
+  }
+]

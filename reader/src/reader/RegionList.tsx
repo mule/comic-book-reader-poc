@@ -48,7 +48,7 @@ export function RegionList(props: RegionListProps) {
         </select>
       </div>
       <p className="region-list-hint">
-        Drag on the page to draw a region. Drag regions or their corners to move and resize.
+        Drag on the page to draw a region. Shift+drag draws over an existing region. Drag regions or their corners to move and resize.
         Alt+↑/↓ moves the selected region in the reading order.
       </p>
       {regions.length === 0 ? (

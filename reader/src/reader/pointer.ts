@@ -1,8 +1,6 @@
-/** Real touches/mice always have valid pointer ids; scripted events may not. */
+/** Pointer capture is absent in DOM test environments. */
 export function capturePointer(element: HTMLElement, pointerId: number): void {
-  try {
+  if (typeof element.setPointerCapture === 'function') {
     element.setPointerCapture(pointerId)
-  } catch {
-    // Ignore: the pointer id is not active (e.g. a synthetic event).
   }
 }

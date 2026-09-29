@@ -1,3 +1,4 @@
+import sharedCases from '../../../format/merge-cases.json'
 import { describe, expect, test } from 'vitest'
 import { effectiveRegions, overrideIsNonEmpty } from './merge'
 import type { Suggestions } from '../manifest/types'
@@ -130,4 +131,9 @@ describe('overrideIsNonEmpty', () => {
       overrideIsNonEmpty({}, { ...empty, added_regions: [{ ...R1 }], order: ['r1'] }),
     ).toBe(true)
   })
+})
+
+// These exact inputs and outputs are also exercised by Python effective_regions.
+test.each(sharedCases)('shared Python/TypeScript merge: $name', ({ page, override, expected }) => {
+  expect(effectiveRegions(page, override)).toEqual(expected)
 })

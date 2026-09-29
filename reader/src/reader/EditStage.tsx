@@ -118,6 +118,10 @@ export function EditStage(props: EditStageProps) {
   const handleRegionDown = (event: React.PointerEvent, id: string) => {
     if (event.button !== 0) return
     event.stopPropagation()
+    if (event.shiftKey) {
+      handleBackgroundDown(event)
+      return
+    }
     event.preventDefault()
     capturePointer(event.currentTarget as HTMLElement, event.pointerId)
     const point = pointerNormalized(event)
@@ -135,6 +139,10 @@ export function EditStage(props: EditStageProps) {
   const handleHandleDown = (event: React.PointerEvent, id: string, corner: Corner) => {
     if (event.button !== 0) return
     event.stopPropagation()
+    if (event.shiftKey) {
+      handleBackgroundDown(event)
+      return
+    }
     event.preventDefault()
     capturePointer(event.currentTarget as HTMLElement, event.pointerId)
     const region = regions.find((entry) => entry.region.id === id)?.region
@@ -155,8 +163,8 @@ export function EditStage(props: EditStageProps) {
       setDrag({ ...drag, current: point })
     } else if (drag.kind === 'move') {
       onUpdate(drag.id, {
-        x: point.x - drag.grab.x,
-        y: point.y - drag.grab.y,
+        x: Math.max(0, Math.min(1 - drag.rect.width, point.x - drag.grab.x)),
+        y: Math.max(0, Math.min(1 - drag.rect.height, point.y - drag.grab.y)),
         width: drag.rect.width,
         height: drag.rect.height,
       })
@@ -169,8 +177,8 @@ export function EditStage(props: EditStageProps) {
       const width = Math.abs(point.x - fixedX)
       const height = Math.abs(point.y - fixedY)
       onUpdate(drag.id, {
-        x: left ? fixedX - width : fixedX,
-        y: top ? fixedY - height : fixedY,
+        x: Math.min(point.x, fixedX),
+        y: Math.min(point.y, fixedY),
         width,
         height,
       })
@@ -269,7 +277,7 @@ export function EditStage(props: EditStageProps) {
               onPointerDown={handleBackgroundDown}
               onPointerMove={handlePointerMove}
               onPointerUp={handlePointerUp}
-              onPointerCancel={handlePointerUp}
+              onPointerCancel={() => setDrag(null)}
             >
               {regions.map((entry, index) => (
                 <div

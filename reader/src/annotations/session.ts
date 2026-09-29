@@ -32,8 +32,8 @@ export function roundRect(rect: Rect): Rect {
 }
 
 export function clampRegionRect(rect: Rect): Rect {
-  const x = Math.min(1, Math.max(0, rect.x))
-  const y = Math.min(1, Math.max(0, rect.y))
+  const x = Math.min(1 - MIN_REGION_SIZE, Math.max(0, rect.x))
+  const y = Math.min(1 - MIN_REGION_SIZE, Math.max(0, rect.y))
   const width = Math.min(1 - x, Math.max(MIN_REGION_SIZE, rect.width))
   const height = Math.min(1 - y, Math.max(MIN_REGION_SIZE, rect.height))
   return roundRect({ x, y, width, height })
@@ -165,9 +165,10 @@ export function deleteRegion(
 ): EditSession {
   const ensured = ensurePageSession(session, page)
   const pageSession = clonePageSession(ensured.pageSession)
+  const wasEdited = pageSession.edited.some((region) => region.id === id)
   pageSession.added = pageSession.added.filter((region) => region.id !== id)
   pageSession.edited = pageSession.edited.filter((region) => region.id !== id)
-  if (isSuggestedRegion(page, id) && !pageSession.deleted.includes(id)) {
+  if ((isSuggestedRegion(page, id) || wasEdited) && !pageSession.deleted.includes(id)) {
     pageSession.deleted.push(id)
   }
   pageSession.order = pageSession.order.filter((regionId) => regionId !== id)
@@ -260,7 +261,9 @@ export function toDocument(
     const override = buildOverride(page, pageSession)
     override.page_id = page.id
     override.pdf_page_number = page.pdfPageNumber
-    if (overrideIsNonEmpty(page, override)) pages.push(override)
+    // An explicit manual order stays authoritative even when a detector run
+    // happens to produce the same order; a later run may change it again.
+    if (overrideIsNonEmpty(page, override) || override.order.length > 0) pages.push(override)
   }
   return {
     schema_version: 1,

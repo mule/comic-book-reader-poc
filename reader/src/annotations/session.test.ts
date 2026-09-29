@@ -105,6 +105,22 @@ describe('editor session', () => {
     expect(validation.ok).toBe(true)
   })
 
+  test('deleting an edit omitted by the detector prevents resurrection', () => {
+    const original = bookWith([syntheticSuggestions(R1)])
+    const edited = updateRegionRect(EMPTY_SESSION, original.pages[0], 'r1', R2)
+    const rerun = bookWith([undefined])
+    const deleted = deleteRegion(edited, rerun.pages[0], 'r1')
+    const doc = toDocument(deleted, rerun)
+    expect(doc.pages[0].deleted_region_ids).toEqual(['r1'])
+    expect(effectiveRegions(original.pages[0], doc.pages[0])).toEqual([])
+    expect(validateAnnotationDocument(doc, fixtureManifest(rerun)).ok).toBe(true)
+  })
+
+  test('edge coordinates never produce zero-sized regions', () => {
+    const rect = clampRegionRect({ x: 1, y: 1, width: 0, height: 0 })
+    expect(rect).toEqual({ x: 0.99, y: 0.99, width: 0.01, height: 0.01 })
+  })
+
   test('deleting a manual region removes it without a tombstone', () => {
     const book = bookWith([undefined])
     const page = book.pages[0]
@@ -148,6 +164,16 @@ describe('editor session', () => {
     const again = bookWith([syntheticSuggestions(R1, R2)])
     const merged = effectiveRegions(again.pages[0], doc.pages[0])
     expect(merged.map((region) => region.id)).toEqual(['m-1', 'r2', 'r1'])
+  })
+
+  test('an order-only override survives a detector run matching that order', () => {
+    const first = bookWith([syntheticSuggestions(R1, R2)])
+    const reordered = reorderRegion(EMPTY_SESSION, first.pages[0], 'r2', 0)
+    const matching = bookWith([syntheticSuggestions(R2, R1)])
+    const exported = toDocument(reordered, matching)
+    expect(exported.pages[0].order).toEqual(['r2', 'r1'])
+    const reloaded = sessionFromDocument(exported)
+    expect(toDocument(reloaded, first).pages[0].order).toEqual(['r2', 'r1'])
   })
 
   test('tombstones survive detector reruns that omit the suggestion', () => {

@@ -102,8 +102,9 @@ export function validateAnnotationDocument(
       )
       continue
     }
-    issues.push(...regionIssues(override.added_regions, `added regions of ${override.page_id}`))
-    issues.push(...regionIssues(override.edited_regions, `edited regions of ${override.page_id}`))
+    issues.push(...regionIssues(
+      [...override.added_regions, ...override.edited_regions], `manual regions of ${override.page_id}`,
+    ))
     const ids = new Set(
       [...override.added_regions, ...override.edited_regions].map((region) => region.id),
     )

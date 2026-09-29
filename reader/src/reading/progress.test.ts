@@ -111,3 +111,8 @@ describe('resolveStartPosition', () => {
     expect(result.notice).toContain('different source revision')
   })
 })
+
+ test('guided full-page fallback retains mode across reload', () => {
+  savePosition('fixture-book', SHA, 'page-2', null, 'guided')
+  expect(loadPosition('fixture-book', SHA)?.mode).toBe('guided')
+})

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { createHash } from 'node:crypto'
 import { ReaderView } from './ReaderView'
 import { makeManifest, makePage, manifestText, FIXTURE_SHA } from '../testing/manifestFixture'
@@ -153,6 +153,21 @@ describe('ReaderView guided mode', () => {
     await waitFor(() => expect(screen.getByText(/Panel 1 \/ 4/)).toBeInTheDocument())
   })
 
+  test('multiple navigation events in one render batch do not skip steps', async () => {
+    mockBookFetch(guidedManifestText())
+    render(<ReaderView packageId="fixture-book" />)
+    await screen.findByText('PDF page 1 / 3')
+    fireEvent.click(screen.getByRole('button', { name: 'Guided' }))
+    act(() => {
+      for (let i = 0; i < 3; i++) window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }))
+    })
+    await waitFor(() => expect(screen.getByText(/Panel 4 \/ 4/)).toBeInTheDocument())
+    act(() => {
+      for (let i = 0; i < 3; i++) window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft' }))
+    })
+    await waitFor(() => expect(screen.getByText(/Panel 1 \/ 4/)).toBeInTheDocument())
+  })
+
   test('full page mode remains reachable and pages without regions fall back', async () => {
     mockBookFetch(guidedManifestText())
     render(<ReaderView packageId="fixture-book" />)
@@ -172,8 +187,9 @@ describe('ReaderView guided mode', () => {
     await waitFor(() => expect(screen.getByText(/Panel 2 \/ 4/)).toBeInTheDocument())
     unmount()
 
-    render(<ReaderView packageId="fixture-book" />)
+    const restored = render(<ReaderView packageId="fixture-book" />)
     await waitFor(() => expect(screen.getByText(/Panel 2 \/ 4/)).toBeInTheDocument())
+    restored.unmount()
 
     localStorage.setItem(
       POSITION_KEY,

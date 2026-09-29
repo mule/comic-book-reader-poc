@@ -106,6 +106,7 @@ describe('validateAnnotationDocument', () => {
   test('rejects regions out of bounds, duplicate ids and add/delete overlap', () => {
     const manifest = manifestWithSuggestions()
     const cases = [
+      override({ added_regions: [{ ...SUGGESTED, id: 'm-1' }], edited_regions: [{ ...SUGGESTED, id: 'm-1' }], order: ['r1', 'm-1'] }),
       override({ added_regions: [{ id: 'm-1', x: 0.9, y: 0, width: 0.2, height: 1 }], order: ['m-1'] }),
       override({
         added_regions: [

@@ -82,7 +82,7 @@ export function ReaderView({ packageId }: ReaderViewProps) {
       setCurrentIndex(start.index)
       let startNotice = start.notice
       if (stored.warning && startNotice === null) startNotice = stored.warning
-      if (start.status === 'restored' && start.regionId !== null) {
+      if (start.status === 'restored' && start.mode === 'guided') {
         const steps = buildGuidedSequence(book, (page) => {
           const pageSession = restoredSession.pages.get(page.id)
           return pageSession ? buildOverride(page, pageSession) : null
@@ -119,6 +119,8 @@ export function ReaderView({ packageId }: ReaderViewProps) {
     return findStep(steps, guidedKey.pageId, guidedKey.regionId) ?? firstStepOfPage(steps, guidedKey.pageId) ?? 0
   }, [guidedKey, steps])
   const guidedStep = steps[guidedIndex] ?? null
+  const navigationIndex = useRef(guidedIndex)
+  navigationIndex.current = guidedIndex
 
   const count = book ? book.pages.length : 0
   const safeIndex = count > 0 ? clampIndex(currentIndex, count) : 0
@@ -131,7 +133,7 @@ export function ReaderView({ packageId }: ReaderViewProps) {
   useEffect(() => {
     if (!book || !page) return
     if (mode === 'guided' && guidedStep) {
-      savePosition(book.id, book.sourceSha256, guidedStep.pageId, guidedStep.regionId)
+      savePosition(book.id, book.sourceSha256, guidedStep.pageId, guidedStep.regionId, 'guided')
     } else {
       savePosition(book.id, book.sourceSha256, page.id, null)
     }
@@ -151,6 +153,7 @@ export function ReaderView({ packageId }: ReaderViewProps) {
   const goToStep = (index: number) => {
     const step = steps[index]
     if (!step) return
+    navigationIndex.current = index
     setGuidedKey({ pageId: step.pageId, regionId: step.regionId })
     setCurrentIndex(step.pageIndex)
   }
@@ -198,11 +201,11 @@ export function ReaderView({ packageId }: ReaderViewProps) {
 
   const handleNext =
     mode === 'guided'
-      ? () => goToStep(stepForward(steps, guidedIndex))
+      ? () => goToStep(stepForward(steps, navigationIndex.current))
       : () => setCurrentIndex(clampIndex(safeIndex + 1, count))
   const handlePrev =
     mode === 'guided'
-      ? () => goToStep(stepBackward(steps, guidedIndex))
+      ? () => goToStep(stepBackward(steps, navigationIndex.current))
       : () => setCurrentIndex(clampIndex(safeIndex - 1, count))
   const handleFirst = mode === 'guided' ? () => goToStep(0) : () => setCurrentIndex(0)
   const handleLast =
@@ -227,7 +230,8 @@ export function ReaderView({ packageId }: ReaderViewProps) {
   }
 
   return (
-    <main className="reader" data-mode={mode}>
+    <main className="reader" data-mode={mode} data-page-id={currentPage.id}
+      data-region-id={mode === 'guided' ? guidedStep?.regionId ?? '' : ''}>
       <header className="reader-bar">
         <button type="button" className="ghost" onClick={() => navigate('#/')}>
           ← Library
@@ -348,7 +352,7 @@ export function ReaderView({ packageId }: ReaderViewProps) {
           focus={mode === 'guided' && guidedStep ? guidedStep.rect : FULL_PAGE_RECT}
           cameraKey={
             mode === 'guided' && guidedStep
-              ? `${guidedStep.pageId}#${guidedStep.regionId ?? 'full'}`
+              ? JSON.stringify([guidedStep.pageId, guidedStep.regionId])
               : currentPage.id
           }
           reducedMotion={reducedMotion}
