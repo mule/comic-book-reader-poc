@@ -1,7 +1,11 @@
 import '@testing-library/jest-dom/vitest'
 import { afterEach } from 'vitest'
-import { cleanup } from '@testing-library/react'
+import { cleanup, configure } from '@testing-library/react'
 import { webcrypto } from 'node:crypto'
+
+// CI runners are slower than dev machines: manifest loading plus WebCrypto
+// hashing can exceed the default 1000 ms findBy* timeout.
+configure({ asyncUtilTimeout: 5000 })
 
 if (!globalThis.crypto?.subtle) {
   Object.defineProperty(globalThis, 'crypto', {
