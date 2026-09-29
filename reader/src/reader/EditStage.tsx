@@ -3,6 +3,7 @@ import type { ReaderPage } from '../manifest/load'
 import type { AnnotatedRegion } from '../annotations/session'
 import type { Rect } from '../reading/camera'
 import { RegionList } from './RegionList'
+import { capturePointer } from './pointer'
 
 interface EditStageProps {
   book: ReaderPage[]
@@ -108,7 +109,7 @@ export function EditStage(props: EditStageProps) {
   const handleBackgroundDown = (event: React.PointerEvent) => {
     if (event.button !== 0) return
     event.preventDefault()
-    ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
+    capturePointer(event.currentTarget as HTMLElement, event.pointerId)
     const point = pointerNormalized(event)
     onSelect(null)
     setDrag({ kind: 'draw', anchor: point, current: point })
@@ -118,7 +119,7 @@ export function EditStage(props: EditStageProps) {
     if (event.button !== 0) return
     event.stopPropagation()
     event.preventDefault()
-    ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
+    capturePointer(event.currentTarget as HTMLElement, event.pointerId)
     const point = pointerNormalized(event)
     const region = regions.find((entry) => entry.region.id === id)?.region
     if (!region) return
@@ -135,7 +136,7 @@ export function EditStage(props: EditStageProps) {
     if (event.button !== 0) return
     event.stopPropagation()
     event.preventDefault()
-    ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
+    capturePointer(event.currentTarget as HTMLElement, event.pointerId)
     const region = regions.find((entry) => entry.region.id === id)?.region
     if (!region) return
     setDrag({

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "book_id": "harbinger-vol-1-omega-rising",
+  "source_sha256": "69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979",
+  "pages": [
+    {
+      "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+      "pdf_page_number": 11,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.01,
+          "y": 0.01,
+          "width": 0.98,
+          "height": 0.3346
+        },
+        {
+          "id": "m-2",
+          "x": 0.01,
+          "y": 0.3804,
+          "width": 0.98,
+          "height": 0.1704
+        },
+        {
+          "id": "m-3",
+          "x": 0.01,
+          "y": 0.5833,
+          "width": 0.98,
+          "height": 0.3687
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-3"
+      ]
+    },
+    {
+      "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+      "pdf_page_number": 141,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.01,
+          "y": 0.01,
+          "width": 0.48,
+          "height": 0.98
+        },
+        {
+          "id": "m-2",
+          "x": 0.51,
+          "y": 0.01,
+          "width": 0.48,
+          "height": 0.98
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2"
+      ]
+    }
+  ]
+}

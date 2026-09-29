@@ -88,6 +88,10 @@ The reader validates each manifest with ajv against the canonical `format/manife
 
 Evidence from reading all three books end to end (network counts, bounded prefetch, memory, restore and failure behavior) is in [docs/reader-report.md](docs/reader-report.md).
 
+### Guided reading and panel editing
+
+The reader bar switches between **Full page**, **Guided** and **Edit regions** modes. Guided mode steps through the effective reading regions (suggestions merged with your manual overrides), fits each complete region in the viewport and crosses page boundaries; unannotated pages contribute one transient full-page step, and full-page mode always stays one click away. The editor draws/moves/resizes/reorders normalized rectangles over the page; edits are saved in localStorage per `(book.id, source.sha256)` and exported as an annotation document via **Annotations → Download**. See [docs/editor.md](docs/editor.md) for the merge semantics and the export → `work/annotations/<book_id>.annotations.json` → `comicpoc validate <package> --annotations <file>` handoff; the static server never writes edits to disk. Curated region sets for dev pages live in `corpus/curated-annotations/`, with browser evidence in [docs/editor-report.md](docs/editor-report.md).
+
 ### LAN tablet (no hosted infrastructure)
 
 Everything is served from your machine; there is no backend beyond the Vite dev/preview server:

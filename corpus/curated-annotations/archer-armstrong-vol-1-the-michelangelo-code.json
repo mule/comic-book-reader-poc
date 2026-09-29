@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "book_id": "archer-armstrong-vol-1-the-michelangelo-code",
+  "source_sha256": "53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a",
+  "pages": [
+    {
+      "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0007",
+      "pdf_page_number": 7,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.01,
+          "y": 0.06,
+          "width": 0.98,
+          "height": 0.14
+        },
+        {
+          "id": "m-2",
+          "x": 0.01,
+          "y": 0.2242,
+          "width": 0.98,
+          "height": 0.1921
+        },
+        {
+          "id": "m-3",
+          "x": 0.01,
+          "y": 0.4404,
+          "width": 0.98,
+          "height": 0.1271
+        },
+        {
+          "id": "m-4",
+          "x": 0.01,
+          "y": 0.5904,
+          "width": 0.98,
+          "height": 0.15
+        },
+        {
+          "id": "m-5",
+          "x": 0.01,
+          "y": 0.7646,
+          "width": 0.98,
+          "height": 0.1708
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-3",
+        "m-4",
+        "m-5"
+      ]
+    },
+    {
+      "page_id": "p-53ef05d949a1e0c98472e19008ce052214dc4b4c776d1f87aeb8fe720ae1222a-0067",
+      "pdf_page_number": 67,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.0429,
+          "y": 0.0358,
+          "width": 0.2536,
+          "height": 0.3022
+        },
+        {
+          "id": "m-2",
+          "x": 0.3432,
+          "y": 0.005,
+          "width": 0.2943,
+          "height": 0.3342
+        },
+        {
+          "id": "m-3",
+          "x": 0.6539,
+          "y": 0.005,
+          "width": 0.2866,
+          "height": 0.3342
+        },
+        {
+          "id": "m-4",
+          "x": 0.005,
+          "y": 0.3525,
+          "width": 0.3257,
+          "height": 0.2913
+        },
+        {
+          "id": "m-5",
+          "x": 0.3464,
+          "y": 0.3525,
+          "width": 0.2956,
+          "height": 0.2913
+        },
+        {
+          "id": "m-6",
+          "x": 0.6565,
+          "y": 0.3525,
+          "width": 0.2872,
+          "height": 0.2913
+        },
+        {
+          "id": "m-7",
+          "x": 0.005,
+          "y": 0.6562,
+          "width": 0.3295,
+          "height": 0.2992
+        },
+        {
+          "id": "m-8",
+          "x": 0.3503,
+          "y": 0.6562,
+          "width": 0.2956,
+          "height": 0.2992
+        },
+        {
+          "id": "m-9",
+          "x": 0.661,
+          "y": 0.6562,
+          "width": 0.286,
+          "height": 0.2992
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-3",
+        "m-4",
+        "m-5",
+        "m-6",
+        "m-7",
+        "m-8",
+        "m-9"
+      ]
+    }
+  ]
+}

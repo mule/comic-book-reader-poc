@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "book_id": "quantum-and-woody-vol-1-the-worlds-worst-superhero-team",
+  "source_sha256": "2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71",
+  "pages": [
+    {
+      "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0010",
+      "pdf_page_number": 10,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.01,
+          "y": 0.01,
+          "width": 0.98,
+          "height": 0.1446
+        },
+        {
+          "id": "m-2",
+          "x": 0.01,
+          "y": 0.1817,
+          "width": 0.98,
+          "height": 0.0413
+        },
+        {
+          "id": "m-3",
+          "x": 0.01,
+          "y": 0.2483,
+          "width": 0.2849,
+          "height": 0.2292
+        },
+        {
+          "id": "m-4",
+          "x": 0.3203,
+          "y": 0.2483,
+          "width": 0.2623,
+          "height": 0.2292
+        },
+        {
+          "id": "m-5",
+          "x": 0.6088,
+          "y": 0.2483,
+          "width": 0.2758,
+          "height": 0.2292
+        },
+        {
+          "id": "m-6",
+          "x": 0.01,
+          "y": 0.5026,
+          "width": 0.2849,
+          "height": 0.2292
+        },
+        {
+          "id": "m-7",
+          "x": 0.3203,
+          "y": 0.5026,
+          "width": 0.2623,
+          "height": 0.2292
+        },
+        {
+          "id": "m-8",
+          "x": 0.6088,
+          "y": 0.5026,
+          "width": 0.2758,
+          "height": 0.2292
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-3",
+        "m-4",
+        "m-5",
+        "m-6",
+        "m-7",
+        "m-8"
+      ]
+    },
+    {
+      "page_id": "p-2c10cfe55eac42984025e7e86ed4c9c3d78e3a4a22219fbedda0862ab9b8dd71-0012",
+      "pdf_page_number": 12,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.01,
+          "y": 0.01,
+          "width": 0.98,
+          "height": 0.2029
+        },
+        {
+          "id": "m-2",
+          "x": 0.01,
+          "y": 0.2517,
+          "width": 0.6347,
+          "height": 0.4138
+        },
+        {
+          "id": "m-3",
+          "x": 0.6714,
+          "y": 0.2517,
+          "width": 0.2949,
+          "height": 0.2038
+        },
+        {
+          "id": "m-4",
+          "x": 0.6714,
+          "y": 0.48,
+          "width": 0.2949,
+          "height": 0.1804
+        },
+        {
+          "id": "m-5",
+          "x": 0.01,
+          "y": 0.69,
+          "width": 0.47,
+          "height": 0.3
+        },
+        {
+          "id": "m-6",
+          "x": 0.52,
+          "y": 0.69,
+          "width": 0.47,
+          "height": 0.3
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-3",
+        "m-4",
+        "m-5",
+        "m-6"
+      ]
+    }
+  ]
+}

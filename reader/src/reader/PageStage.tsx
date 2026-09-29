@@ -14,6 +14,7 @@ import {
   type Size,
 } from '../reading/camera'
 import { FrameAnimator } from '../reading/transition'
+import { capturePointer } from './pointer'
 
 interface PageStageProps {
   book: ReaderBook
@@ -254,7 +255,7 @@ export function PageStage(props: PageStageProps) {
     state.lastPointerType = event.pointerType
     const point = localPoint(event)
     pointers.current.set(event.pointerId, point)
-    ;(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId)
+    capturePointer(event.currentTarget as HTMLElement, event.pointerId)
     if (pointers.current.size === 1) {
       state.mode = 'pan'
       state.startX = point.x
