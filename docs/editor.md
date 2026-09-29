@@ -24,7 +24,7 @@ The reader bar offers three modes for any open book:
   Resizing the window or rotating the device preserves the active region and
   refits it.
 - **Edit regions** — the current page fitted as an editing canvas. Drag on the
-  page to draw a rectangle; drag inside a rectangle to move it; drag a corner
+  page to draw a rectangle; Shift+drag draws an overlapping rectangle; drag inside a rectangle to move it; drag a corner
   handle to resize; the side list shows the reading order with visible numbers
   and supports reordering by drag, ↑/↓ buttons or Alt+↑/↓ with the keyboard.
   Delete via ✕ or Delete/Backspace. Suggested regions (once #7 lands) render
@@ -47,7 +47,8 @@ suggestion stores a complete replacement rectangle with the original id.
   `(book.id, source.sha256)` and survive reloads. They never migrate across a
   source revision boundary.
 - Reading progress stores page id **plus region id** (or `null` for the
-  full-page fallback / full-page mode). A saved position whose page is gone is
+  full-page fallback / full-page mode), together with the reading mode so a
+  guided fallback also restores as guided. A saved position whose page is gone is
   reported explicitly; a stale region id falls back to the page with a notice.
 
 ## Export / import handoff
@@ -88,5 +89,26 @@ gitignore pattern so they can be committed. The browser evidence (versions,
 viewports, reduced-motion and resize checks) is recorded in
 [editor-report.md](editor-report.md).
 
-Known limitation: real tablet testing is explicitly **PENDING** (issue #6
-acceptance requires it on named devices).
+Real tablet testing is explicitly **PENDING**. Chromium tablet emulation is not
+physical-device evidence. See the measured desktop/emulation results in the report.
+
+## Repeatable browser verification
+
+```sh
+cd reader && pnpm install --frozen-lockfile && pnpm build
+cd ../bench && pnpm install --frozen-lockfile
+pnpm exec playwright install chromium
+pnpm guided
+# Synthetic fixtures only, also run by CI:
+pnpm bench:smoke
+```
+
+`pnpm guided` starts the real Vite preview on loopback port 5197 with
+`COMIC_PACKAGES_DIR` resolved to `work/packages`. It imports all three committed
+curated files via the file chooser at each named viewport, exercises editor
+gestures and guided navigation, and writes `work/bench/guided.json`. `pnpm bench`
+also runs this check through `measurePanelNavigationLatency` in `warmNav.ts`.
+The timing endpoint is the expected fitted camera transform with the page image
+decoded plus two animation frames. Timings include Playwright overhead and the
+260 ms animation, and mix panel steps with the explicitly recorded boundary
+fallbacks. Raw samples distinguish both; percentiles use nearest rank.
