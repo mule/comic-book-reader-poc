@@ -1,6 +1,6 @@
 # Comic reader POC
 
-Independent local PDF-to-web-reader experiment. Purchased source files and all derived artwork stay outside Git. The `tools/` side inventories and imports purchased PDFs into local packages; the `reader/` app (React + TypeScript) reads them with bounded loading, zoom/pan and local progress. Guided reading and panel editing arrive in subsequent issues of epic #1.
+Independent local PDF-to-web-reader experiment. Purchased source files and all derived artwork stay outside Git. The `tools/` side inventories and imports purchased PDFs into local packages; the `reader/` app (React + TypeScript) reads them with bounded loading, zoom/pan and local progress. Guided reading and persistent manual panel editing are available in the reader.
 
 ## Setup and checks
 
@@ -88,6 +88,10 @@ The reader validates each manifest with ajv against the canonical `format/manife
 
 Evidence from reading all three books end to end (network counts, bounded prefetch, memory, restore and failure behavior) is in [docs/reader-report.md](docs/reader-report.md).
 
+### Guided reading and panel editing
+
+The reader bar switches between **Full page**, **Guided** and **Edit regions** modes. Guided mode steps through the effective reading regions (suggestions merged with your manual overrides), fits each complete region in the viewport and crosses page boundaries; unannotated pages contribute one transient full-page step, and full-page mode always stays one click away. The editor draws/moves/resizes/reorders normalized rectangles over the page; edits are saved in localStorage per `(book.id, source.sha256)` and exported as an annotation document via **Annotations → Download**. See [docs/editor.md](docs/editor.md) for the merge semantics and the export → `work/annotations/<book_id>.annotations.json` → `comicpoc validate <package> --annotations <file>` handoff; the static server never writes edits to disk. Curated region sets for dev pages live in `corpus/curated-annotations/`, with browser evidence in [docs/editor-report.md](docs/editor-report.md).
+
 ### LAN tablet (no hosted infrastructure)
 
 Everything is served from your machine; there is no backend beyond the Vite dev/preview server:
@@ -100,6 +104,18 @@ pnpm build && pnpm preview   # preview also binds 0.0.0.0 (port 4173)
 ```
 
 `pnpm dev` binds to localhost only, so purchased artwork is never exposed to the network by default. Use `dev:lan` only on a trusted network. Open the printed LAN URL on a tablet connected to the same network. The reader is a static client; packages are streamed from the local packages directory only. Real tablet/touch hardware testing is **PENDING** — see the reader report; only desktop Chrome and a touch-enabled viewport emulation have been verified so far.
+
+Guided browser verification (requires the real local packages):
+
+```sh
+cd reader && pnpm build
+cd ../bench && pnpm install --frozen-lockfile && pnpm exec playwright install chromium
+pnpm guided
+```
+
+Raw results go to `work/bench/guided.json`; `pnpm bench:smoke` exercises the same
+checks against a generated synthetic package, including in CI. See
+[editor report](docs/editor-report.md) for measured results and limitations.
 
 ## Detect panels on dev packages (Phase A)
 

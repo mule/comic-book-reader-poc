@@ -6,11 +6,14 @@ export interface SavedPosition {
   bookId: string
   sourceSha256: string
   pageId: string
+  /** Current guided region, or null for the full-page fallback/full mode. */
+  regionId: string | null
+  mode: 'full' | 'guided'
   updatedAt: number
 }
 
 export type StartResolution =
-  | { status: 'restored'; index: number; pageId: string; notice: string | null }
+  | { status: 'restored'; index: number; pageId: string; regionId: string | null; mode: 'full' | 'guided'; notice: string | null }
   | { status: 'fallback'; index: 0; notice: string }
 
 function storage(): Storage {
@@ -23,8 +26,14 @@ function positionKey(bookId: string, sourceSha256: string): string {
   return `${KEY_PREFIX}${bookId}:${sourceSha256}`
 }
 
-export function savePosition(bookId: string, sourceSha256: string, pageId: string): void {
-  const value: SavedPosition = { bookId, sourceSha256, pageId, updatedAt: Date.now() }
+export function savePosition(
+  bookId: string,
+  sourceSha256: string,
+  pageId: string,
+  regionId: string | null = null,
+  mode: 'full' | 'guided' = regionId === null ? 'full' : 'guided',
+): void {
+  const value: SavedPosition = { bookId, sourceSha256, pageId, regionId, mode, updatedAt: Date.now() }
   storage().setItem(positionKey(bookId, sourceSha256), JSON.stringify(value))
 }
 
@@ -73,6 +82,8 @@ function parsePosition(
     bookId: candidate.bookId,
     sourceSha256: candidate.sourceSha256,
     pageId: candidate.pageId,
+    regionId: typeof candidate.regionId === 'string' ? candidate.regionId : null,
+    mode: candidate.mode === 'guided' || typeof candidate.regionId === 'string' ? 'guided' : 'full',
     updatedAt: typeof candidate.updatedAt === 'number' ? candidate.updatedAt : 0,
   }
 }
@@ -83,7 +94,9 @@ export function clearPosition(bookId: string, sourceSha256: string): void {
 
 export function resolveStartPosition(book: ReaderBook): StartResolution {
   const saved = findPositionForBook(book.id)
-  if (saved.length === 0) return { status: 'restored', index: 0, pageId: book.pages[0].id, notice: null }
+  if (saved.length === 0) {
+    return { status: 'restored', index: 0, pageId: book.pages[0].id, regionId: null, mode: 'full', notice: null }
+  }
   const exact = saved.find((entry) => entry.sourceSha256 === book.sourceSha256)
   if (!exact) {
     const other = saved.map((entry) => entry.sourceSha256.slice(0, 12)).join(', ')
@@ -110,5 +123,12 @@ export function resolveStartPosition(book: ReaderBook): StartResolution {
     page.orderIndex === book.pages.length - 1
       ? 'Restored your position at the last page.'
       : null
-  return { status: 'restored', index: page.orderIndex, pageId: page.id, notice }
+  return {
+    status: 'restored',
+    index: page.orderIndex,
+    pageId: page.id,
+    regionId: exact.regionId,
+    mode: exact.mode,
+    notice,
+  }
 }

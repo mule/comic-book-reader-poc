@@ -197,13 +197,37 @@ cd bench && pnpm bench:smoke
 
 ---
 
-## 9. PENDING sections
+## 9. Guided results and remaining PENDING sections
 
-The following areas are explicitly marked as **PENDING** as required by the POC brief and issue scope:
+Guided measurements are now available; the remaining unmeasured areas stay explicitly **PENDING**.
 
-### A. Guided / panel reading navigation latency — PENDING
-- **Status:** PENDING.
-- **Rationale:** Guided reading and manual panel regions are currently being implemented in `reader/` under GitHub issue #6. An extensible hook is established in `bench/src/warmNav.ts` (`measurePanelNavigationLatency`), but no numbers are reported until issue #6 lands.
+### A. Guided / panel reading navigation latency — measured 2026-09-29
+
+Chromium 153.0.8010.12, local production preview, six curated dev pages and
+36 regions. Desktop DPR1; tablet **EMULATION** DPR2/mobile/touch flags.
+Fresh context per book/viewport, HTTP cache enabled. Each distribution mixes
+same-page panel transitions (configured 260 ms) and adjacent full-page boundary
+fallbacks; timings include Playwright overhead, target camera fit, image decode
+and two animation frames. Nearest-rank percentiles, one final run:
+
+| Book | Viewport | Steps | p50 ms | p95 ms |
+| --- | --- | ---: | ---: | ---: |
+| Archer & Armstrong | desktop-1280x800 | 34 | 299.86 | 300.39 |
+| Archer & Armstrong | tablet-emulation-1180x820 | 34 | 299.86 | 300.37 |
+| Archer & Armstrong | tablet-emulation-820x1180 | 34 | 299.90 | 317.24 |
+| Harbinger | desktop-1280x800 | 22 | 299.52 | 317.00 |
+| Harbinger | tablet-emulation-1180x820 | 22 | 299.72 | 317.23 |
+| Harbinger | tablet-emulation-820x1180 | 22 | 299.94 | 316.67 |
+| Q&W | desktop-1280x800 | 34 | 299.91 | 316.84 |
+| Q&W | tablet-emulation-1180x820 | 34 | 300.06 | 316.93 |
+| Q&W | tablet-emulation-820x1180 | 34 | 299.99 | 316.87 |
+
+Raw 270 step samples: `work/bench/guided.json`. Repeat with `cd bench && pnpm guided`
+after building the reader. The full benchmark now calls the implemented
+`measurePanelNavigationLatency` hook in `bench/src/warmNav.ts`. See
+[editor-report.md](editor-report.md) for UI assertions, curation observations,
+exact environment, and limitations. These figures do not replace physical-tablet
+validation or the earlier full-page benchmark measurements.
 
 ### B. Automatic detector results on held-out pages (#7 Phase B) — PENDING
 - **Status:** PENDING.

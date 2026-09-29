@@ -7,7 +7,8 @@
   "scripts": {
     "bench": "tsx src/runBenchmarks.ts",
     "bench:smoke": "tsx src/smoke.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "guided": "tsx src/guided.ts"
   },
   "dependencies": {
     "playwright": "^1.50.0"

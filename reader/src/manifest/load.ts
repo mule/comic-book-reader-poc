@@ -1,4 +1,4 @@
-import type { Manifest, Orientation } from './types'
+import type { Manifest, Orientation, Suggestions } from './types'
 import { validateManifest, type ManifestError } from './validate'
 
 export interface ReaderPage {
@@ -10,6 +10,7 @@ export interface ReaderPage {
   width: number
   height: number
   orientation: Orientation
+  suggestions?: Suggestions
 }
 
 export interface ReaderBook {
@@ -21,6 +22,8 @@ export interface ReaderBook {
   selection: 'all' | 'sample'
   pages: ReaderPage[]
   byId: Map<string, ReaderPage>
+  /** The validated manifest, kept for annotation import validation. */
+  manifest: Manifest
 }
 
 export type BookLoadError =
@@ -50,6 +53,7 @@ export function buildReaderBook(packageId: string, manifest: Manifest): ReaderBo
       width: page.width,
       height: page.height,
       orientation: page.orientation,
+      suggestions: page.suggestions,
     }
   })
   return {
@@ -61,6 +65,7 @@ export function buildReaderBook(packageId: string, manifest: Manifest): ReaderBo
     selection: manifest.selection,
     pages,
     byId: new Map(pages.map((page) => [page.id, page])),
+    manifest,
   }
 }
 

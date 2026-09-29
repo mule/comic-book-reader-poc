@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "book_id": "harbinger-vol-1-omega-rising",
+  "source_sha256": "69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979",
+  "pages": [
+    {
+      "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0011",
+      "pdf_page_number": 11,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.0571,
+          "y": 0.0357,
+          "width": 0.8847,
+          "height": 0.3207
+        },
+        {
+          "id": "m-2",
+          "x": 0.0571,
+          "y": 0.3693,
+          "width": 0.8847,
+          "height": 0.1914
+        },
+        {
+          "id": "m-3",
+          "x": 0.0571,
+          "y": 0.5729,
+          "width": 0.8847,
+          "height": 0.3914
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-3"
+      ]
+    },
+    {
+      "page_id": "p-69975ea54b0a0d047a64151a22a2338fc1c330b51f7c2691b5f214ddce7cb979-0141",
+      "pdf_page_number": 141,
+      "added_regions": [
+        {
+          "id": "m-1",
+          "x": 0.0533,
+          "y": 0.0314,
+          "width": 0.1375,
+          "height": 0.3814
+        },
+        {
+          "id": "m-2",
+          "x": 0.1858,
+          "y": 0.1213,
+          "width": 0.1425,
+          "height": 0.3814
+        },
+        {
+          "id": "m-3",
+          "x": 0.6525,
+          "y": 0.5374,
+          "width": 0.1575,
+          "height": 0.338
+        },
+        {
+          "id": "m-4",
+          "x": 0.8033,
+          "y": 0.5829,
+          "width": 0.16,
+          "height": 0.3846
+        },
+        {
+          "id": "m-5",
+          "x": 0.0508,
+          "y": 0.0282,
+          "width": 0.9,
+          "height": 0.9426
+        }
+      ],
+      "edited_regions": [],
+      "deleted_region_ids": [],
+      "order": [
+        "m-1",
+        "m-2",
+        "m-5",
+        "m-3",
+        "m-4"
+      ]
+    }
+  ]
+}
