@@ -97,7 +97,7 @@ export async function measureOfflineBehavior(
       const img = document.querySelector('img.page-image') as HTMLImageElement | null
       const errorPanel = document.querySelector('.page-status-error')
       const label = document.querySelector('.reader-page-label')?.textContent ?? ''
-      const pageMatch = label.match(/Page (\d+)/)
+      const pageMatch = label.match(/page (\d+)/i)
       const pageNum = pageMatch ? parseInt(pageMatch[1], 10) : 0
 
       let retryFound = false

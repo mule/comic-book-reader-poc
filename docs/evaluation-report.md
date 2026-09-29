@@ -175,7 +175,9 @@ Tested by loading a book online, navigating to page 2 (populating the HTTP cache
 | Test case | Action | Observed reader state | DOM verification | Script observation |
 | --- | --- | --- | --- | --- |
 | **Recently visited page (cached)** | `ArrowLeft` back to page 1 | Page rendered successfully | `.page-stage[data-page-status="loaded"]`, `img.page-image` present with `naturalWidth=1570px`, `naturalHeight=2400px` | Asset served transparently from HTTP cache. No error banner rendered. |
-| **Unvisited page (uncached)** | Navigated forward past prefetch window | Page error state triggered | `.page-status.page-status-error[role="alert"]`, text: *"Page image could not be loaded (missing or corrupt asset...)"*, retry and previous page buttons present | Handled gracefully via per-page error UI; reader does not crash or freeze. |
+| **Unvisited page (uncached)** | Navigated forward past prefetch window | Page error state triggered | `.page-status.page-status-error[role="alert"]`, text: *"Page image could not be loaded (missing or corrupt asset...)"*, retry and previous page buttons present | Handled via per-page error UI (PDF page 9); reader does not crash or freeze. |
+
+**Finding (reader UX):** the offline failure is reported with the same message as a missing or corrupt asset. The reader does not distinguish network loss from package damage; a follow-up could check `navigator.onLine` or the fetch error type to show a "you are offline" message. No offline installation or service worker is claimed.
 
 ---
 
