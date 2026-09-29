@@ -108,19 +108,5 @@ export async function measureWarmNavigation(
 }
 
 // ============================================================================
-// TODO(#6): Guided / Panel Navigation Latency Extensibility Hook
-// ============================================================================
-// Once GitHub issue #6 (guided reading + panel editor) lands in reader/,
-// panel-to-panel transition latency can be measured here using this hook.
-// Do NOT report fake or guessed numbers; keep guided reading latency PENDING
-// until reader/ implements the panel navigation controls and regions.
-//
-// export async function measurePanelNavigationLatency(
-//   browser: Browser,
-//   serverUrl: string,
-//   bookId: string,
-//   viewport: NamedViewport,
-// ): Promise<WarmNavResult> {
-//   // TODO: Navigate panel-by-panel using reader guided-reading key/tap bindings.
-//   throw new Error('Panel navigation benchmarking is PENDING implementation of issue #6.')
-// }
+// Real guided UI checks and camera-settled latency, shared by pnpm guided and the suite.
+export { runCuratedGuided as measurePanelNavigationLatency } from './guided.js'

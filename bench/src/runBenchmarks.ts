@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 
+import { measurePanelNavigationLatency } from './warmNav.js'
 import { measureColdLoad } from './coldLoad.js'
 import { measureExtendedReading } from './extendedReading.js'
 import { measureOfflineBehavior } from './offline.js'
@@ -124,7 +125,10 @@ async function main() {
       console.log(`  -> Unvisited page: errorPanelPresent=${obs.unvisitedPage.errorPanelPresent}, status=${obs.unvisitedPage.status}, retryBtn=${obs.unvisitedPage.retryButtonPresent}, prevBtn=${obs.unvisitedPage.previousButtonPresent}`)
     }
 
+    const guidedNavigations = await measurePanelNavigationLatency(browser, server.url)
+
     const report: BenchmarkReport = {
+      guidedNavigations,
       timestamp: new Date().toISOString(),
       environment: systemInfo,
       coldLoads,
@@ -239,6 +243,10 @@ function generateMarkdownSummary(report: BenchmarkReport): string {
     )
   }
 
+  lines.push('', '## Guided navigation', '', '| Book | Viewport | Steps | p50 ms | p95 ms |', '| --- | --- | ---: | ---: | ---: |')
+  for (const g of report.guidedNavigations) {
+    lines.push(`| ${g.bookId} | ${g.viewport} | ${g.samples.length} | ${g.p50Ms} | ${g.p95Ms} |`)
+  }
   lines.push('')
   return lines.join('\n')
 }

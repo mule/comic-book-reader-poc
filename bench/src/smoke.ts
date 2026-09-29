@@ -4,6 +4,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 
+import { verifyGuided } from './guided.js'
 import { measureColdLoad } from './coldLoad.js'
 import { startReaderServer } from './server.js'
 import { NAMED_VIEWPORTS } from './viewports.js'
@@ -124,6 +125,20 @@ async function runSmoke(): Promise<void> {
     console.log(`  -> Cached page restored offline with naturalWidth=${cachedStatus.imgNaturalWidth}px`)
 
     await offlineContext.close()
+    const manifest = JSON.parse(fs.readFileSync(path.join(SYNTHETIC_DIR, SMOKE_BOOK_ID, 'manifest.json'), 'utf8'))
+    const annotationFile = path.join(SYNTHETIC_DIR, 'guided-smoke.json')
+    fs.writeFileSync(annotationFile, JSON.stringify({
+      schema_version: 1, book_id: SMOKE_BOOK_ID, source_sha256: manifest.source.sha256,
+      pages: [{ page_id: manifest.pages[1].id, pdf_page_number: 2,
+        added_regions: [
+          { id: 'upper', x: 0, y: 0, width: 1, height: 0.4 },
+          { id: 'lower', x: 0.1, y: 0.6, width: 0.8, height: 0.4 },
+        ], edited_regions: [], deleted_region_ids: [], order: ['upper', 'lower'] }],
+    }))
+    const guided = await verifyGuided(browser, server.url, annotationFile, desktopVp)
+    fs.mkdirSync(path.join(REPO_ROOT, 'work/bench'), { recursive: true })
+    fs.writeFileSync(path.join(REPO_ROOT, 'work/bench/guided-smoke.json'), JSON.stringify(guided, null, 2) + '\n')
+    console.log(`Guided smoke: ${guided.checks.length} checks; p50 ${guided.p50Ms} / p95 ${guided.p95Ms} ms`)
     console.log('=== Bench Smoke Test Passed Successfully ===')
   } finally {
     await browser.close()

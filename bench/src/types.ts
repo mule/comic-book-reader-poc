@@ -1,3 +1,4 @@
+import type { GuidedResult } from './guided.js'
 export interface NamedViewport {
   name: string
   label: string
@@ -114,6 +115,7 @@ export interface SystemInfo {
 }
 
 export interface BenchmarkReport {
+  guidedNavigations: GuidedResult[]
   timestamp: string
   environment: SystemInfo
   coldLoads: ColdLoadResult[]
